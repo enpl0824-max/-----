@@ -1,0 +1,18 @@
+{
+	"pid": 6372,
+	"port": 4321,
+	"url": "http://localhost:4321",
+	"urls": {
+		"local": [
+			"http://localhost:4321/"
+		],
+		"network": [
+			"http://165.194.5.114:4321/"
+		],
+		"networkInterfaceNames": [
+			"이더넷"
+		]
+	},
+	"background": false,
+	"startedAt": "2026-09-29T06:46:08.463Z"
+}

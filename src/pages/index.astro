@@ -1,0 +1,650 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PlaceholderImage from '../components/PlaceholderImage.astro';
+import { currentResearchTopics, coreConcept } from '../data/research';
+import { getSelectedPublications } from '../data/publications';
+import { galleryData } from '../data/gallery';
+import { labInfo } from '../data/labInfo';
+
+const selectedPubs = getSelectedPublications();
+const recentGallery = galleryData.slice(0, 3);
+---
+
+<BaseLayout title="Sookil Kim Lab | Energy Nano-material Process Laboratory (ENPL)">
+  <!-- 1. HERO SECTION -->
+  <section class="hero-section section--white">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge-wrapper">
+          <span class="hero-accent-bar"></span>
+          <span class="hero-badge">{coreConcept.title}</span>
+        </div>
+
+        <h1 class="hero-title">
+          ADVANCED ELECTROCHEMICAL<br />
+          MATERIALS FOR<br />
+          <span class="text-highlight">SUSTAINABLE HYDROGEN</span>
+        </h1>
+
+        <p class="hero-description">
+          Welcome to the <strong>Energy Nano-material Process Laboratory (ENPL)</strong> led by 
+          <strong>Prof. Soo-Kil Kim</strong> at Chung-Ang University. We design next-generation electrocatalysts, 
+          tailored 3D nanostructured electrodes, and interfacial architectures for high-efficiency water electrolysis 
+          and clean energy conversion.
+        </p>
+
+        <!-- Research Keywords -->
+        <div class="hero-keywords">
+          <span class="badge-keyword">PEMWE</span>
+          <span class="keyword-dot">·</span>
+          <span class="badge-keyword">AEMWE</span>
+          <span class="keyword-dot">·</span>
+          <span class="badge-keyword">HER / OER</span>
+          <span class="keyword-dot">·</span>
+          <span class="badge-keyword">ELECTROCATALYSTS</span>
+          <span class="keyword-dot">·</span>
+          <span class="badge-keyword">ELECTRODEPOSITION</span>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="/research/" class="btn-primary">EXPLORE RESEARCH</a>
+          <a href="/publications/papers/" class="btn-secondary">PUBLICATIONS</a>
+        </div>
+      </div>
+
+      <!-- Large Hero Visual Placeholder -->
+      <div class="hero-visual">
+        <PlaceholderImage 
+          type="hero" 
+          title="ELECTROCHEMICAL ENERGY CONVERSION" 
+          subtitle="Chung-Ang University · ENPL Research Framework"
+          aspectRatio="16/9"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. RESEARCH TOPICS (EDITORIAL NUMBERED LAYOUT) -->
+  <section class="section section--gray" id="research-topics">
+    <div class="container">
+      <SectionHeader 
+        category="CORE FOCUS"
+        title="RESEARCH TOPICS"
+        subtitle="Our laboratory pioneers electrochemical energy conversion across three distinct research frontiers."
+      />
+
+      <div class="research-editorial-list">
+        {currentResearchTopics.map((topic, index) => (
+          <article class="research-editorial-item">
+            <div class="topic-grid">
+              <!-- Column 1: Number & Title -->
+              <div class="topic-header-col">
+                <span class="topic-number">{topic.number}</span>
+                <h3 class="topic-title">{topic.title}</h3>
+                <span class="topic-tagline">{topic.tagline}</span>
+                
+                <div class="topic-keywords">
+                  {topic.keywords.map((kw) => (
+                    <span class="badge-keyword">{kw}</span>
+                  ))}
+                </div>
+              </div>
+
+              <!-- Column 2: Overview & Details -->
+              <div class="topic-body-col">
+                <p class="topic-overview">{topic.overview}</p>
+                
+                {topic.keyTopics && (
+                  <div class="topic-bullet-block">
+                    <span class="block-subtitle">KEY INVESTIGATION AREAS</span>
+                    <ul class="bullet-list">
+                      {topic.keyTopics.slice(0, 3).map((item) => (
+                        <li>
+                          <span class="bullet-dash">—</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                <div class="topic-action">
+                  <a href={`/research/#${topic.id}`} class="topic-link">
+                    EXPLORE TOPIC DETAILS <span class="arrow">→</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Column 3: Scientific Placeholder Illustration -->
+              <div class="topic-visual-col">
+                <PlaceholderImage 
+                  type={topic.id as any}
+                  title={topic.title}
+                  subtitle={topic.shortTitle}
+                  aspectRatio="16/9"
+                />
+              </div>
+            </div>
+
+            {index < currentResearchTopics.length - 1 && <div class="editorial-divider"></div>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SELECTED PUBLICATIONS (CLEAN LIST FORMAT) -->
+  <section class="section section--white" id="selected-publications">
+    <div class="container">
+      <div class="section-title-row">
+        <SectionHeader 
+          category="ACADEMIC OUTCOMES"
+          title="SELECTED PUBLICATIONS"
+          subtitle="Representative journal papers highlighting our latest research breakthroughs."
+        />
+        <a href="/publications/papers/" class="view-all-link">
+          VIEW ALL PAPERS <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="pub-clean-list">
+        {selectedPubs.map((pub) => (
+          <div class="pub-row">
+            <div class="pub-year-col">
+              <span class="pub-year">{pub.year}</span>
+            </div>
+            <div class="pub-info-col">
+              <h4 class="pub-title">
+                <a href={pub.link || "#"} target="_blank" rel="noopener noreferrer">
+                  {pub.title}
+                </a>
+              </h4>
+              <p class="pub-authors">{pub.authors}</p>
+              <p class="pub-journal">
+                <em>{pub.journal}</em>
+                {pub.volume && `, Vol. ${pub.volume}`}
+                {pub.doi && <span class="pub-doi"> · DOI: {pub.doi}</span>}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. GALLERY / LAB HIGHLIGHTS -->
+  <section class="section section--gray" id="lab-highlights">
+    <div class="container">
+      <div class="section-title-row">
+        <SectionHeader 
+          category="ACTIVITIES & LIFE"
+          title="LAB HIGHLIGHTS"
+          subtitle="Moments of academic discovery, symposiums, and group collaborations."
+        />
+        <a href="/gallery/" class="view-all-link">
+          FULL GALLERY <span class="arrow">→</span>
+        </a>
+      </div>
+
+      <div class="gallery-preview-grid">
+        {recentGallery.map((item) => (
+          <div class="gallery-preview-card">
+            <div class="card-visual">
+              <PlaceholderImage 
+                type="general" 
+                title={item.placeholderLabel || item.title}
+                subtitle={`${item.category} · ${item.date}`}
+                aspectRatio="4/3"
+              />
+            </div>
+            <div class="card-caption">
+              <div class="caption-meta">
+                <span class="badge-orange">{item.category}</span>
+                <span class="caption-date">{item.date}</span>
+              </div>
+              <h4 class="caption-title">{item.title}</h4>
+              <p class="caption-desc">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CONTACT / JOIN OUR LAB -->
+  <section class="section section--white" id="join-us">
+    <div class="container">
+      <div class="contact-cta-box">
+        <div class="cta-text-col">
+          <span class="badge-orange">OPPORTUNITIES</span>
+          <h2 class="cta-title">JOIN OUR RESEARCH GROUP</h2>
+          <p class="cta-desc">
+            We are consistently seeking passionate and motivated graduate students (M.S., Ph.D., Integrated) 
+            and undergraduate researchers interested in electrochemical energy conversion, electrocatalyst synthesis, 
+            and water electrolysis technologies.
+          </p>
+          <div class="cta-contact-details">
+            <p><strong>Principal Investigator:</strong> {labInfo.professorName} ({labInfo.email})</p>
+            <p><strong>Location:</strong> {labInfo.officeLocation} & {labInfo.labLocation}, {labInfo.university}</p>
+          </div>
+        </div>
+        <div class="cta-action-col">
+          <a href="/contact/" class="btn-primary">CONTACT & DIRECTIONS</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* HERO STYLES */
+  .hero-section {
+    padding-top: 4.5rem;
+    padding-bottom: 5.5rem;
+    border-bottom: 1px solid var(--color-gray);
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-badge-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-accent-bar {
+    width: 32px;
+    height: 3px;
+    background-color: var(--color-primary);
+  }
+
+  .hero-badge {
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    margin-bottom: 1.75rem;
+  }
+
+  .text-highlight {
+    color: var(--color-primary);
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    max-width: 620px;
+  }
+
+  .hero-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .keyword-dot {
+    color: var(--color-primary);
+    font-weight: bold;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  /* EDITORIAL RESEARCH TOPICS */
+  .research-editorial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  .topic-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1.3fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+  }
+
+  .topic-header-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .topic-number {
+    font-size: clamp(2.5rem, 4.5vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-primary);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .topic-title {
+    font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin-top: 0.25rem;
+  }
+
+  .topic-tagline {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-top: 0.5rem;
+  }
+
+  .topic-keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1.25rem;
+  }
+
+  .topic-body-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .topic-overview {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-text);
+  }
+
+  .block-subtitle {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+
+  .bullet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .bullet-list li {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  .bullet-dash {
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .topic-action {
+    margin-top: 0.5rem;
+  }
+
+  .topic-link {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .topic-link:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  .arrow {
+    transition: transform 0.2s ease;
+  }
+
+  .editorial-divider {
+    height: 1px;
+    background-color: #d1d1d1;
+    margin-top: 3.5rem;
+    width: 100%;
+  }
+
+  /* SELECTED PUBLICATIONS */
+  .section-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .view-all-link {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .view-all-link:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  .pub-clean-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pub-row {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 2rem;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid var(--color-gray);
+    align-items: baseline;
+  }
+
+  .pub-year {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .pub-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .pub-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .pub-title a {
+    color: var(--color-text);
+  }
+
+  .pub-title a:hover {
+    color: var(--color-primary);
+  }
+
+  .pub-authors {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+  }
+
+  .pub-journal {
+    font-size: 0.875rem;
+    color: var(--color-text);
+  }
+
+  .pub-doi {
+    color: var(--color-text-secondary);
+  }
+
+  /* GALLERY PREVIEW */
+  .gallery-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .gallery-preview-card {
+    background-color: var(--color-white);
+    border: 1px solid #d4d4d4;
+    border-radius: var(--radius-subtle);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .gallery-preview-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+
+  .card-caption {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .caption-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .caption-date {
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+  }
+
+  .caption-title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .caption-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  /* CONTACT / RECRUITMENT CTA BOX */
+  .contact-cta-box {
+    background-color: #FAFAFA;
+    border: 1px solid var(--color-gray);
+    border-left: 4px solid var(--color-primary);
+    border-radius: var(--radius-subtle);
+    padding: 3.5rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .cta-text-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cta-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .cta-desc {
+    font-size: 1.0625rem;
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    max-width: 720px;
+  }
+
+  .cta-contact-details {
+    margin-top: 0.5rem;
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  @media (max-width: 1024px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .topic-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .topic-visual-col {
+      grid-column: 1 / -1;
+    }
+
+    .gallery-preview-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .topic-grid {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+    }
+
+    .pub-row {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    .gallery-preview-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-cta-box {
+      grid-template-columns: 1fr;
+      padding: 2rem 1.5rem;
+      gap: 2rem;
+    }
+  }
+</style>

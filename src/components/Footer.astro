@@ -1,0 +1,201 @@
+---
+import { labInfo } from '../data/labInfo';
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div class="footer-branding">
+        <h2 class="footer-lab-name">{labInfo.labName}</h2>
+        <p class="footer-sub">{labInfo.labFullName}</p>
+        <p class="footer-institution">{labInfo.department} · {labInfo.university}</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-nav-col">
+          <span class="col-title">NAVIGATION</span>
+          <ul class="col-list">
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/people/professor/">People</a></li>
+            <li><a href="/publications/papers/">Publications</a></li>
+            <li><a href="/gallery/">Gallery</a></li>
+            <li><a href="/contact/">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="col-title">RESEARCH FOCUS</span>
+          <ul class="col-list">
+            <li><a href="/research/#pemwe">PEM Water Electrolysis</a></li>
+            <li><a href="/research/#aemwe">AEM Water Electrolysis</a></li>
+            <li><a href="/research/#electrodeposition">Electrodeposition</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav-col">
+          <span class="col-title">CONTACT</span>
+          <div class="contact-brief">
+            <p><strong>Email:</strong> <a href={`mailto:${labInfo.email}`}>{labInfo.email}</a></p>
+            <p><strong>Tel:</strong> {labInfo.phone}</p>
+            <p><strong>Office:</strong> {labInfo.officeLocation}</p>
+            <p><strong>Lab:</strong> {labInfo.labLocation}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom">
+      <p class="address-text">
+        {labInfo.address} ({labInfo.postalCode})
+      </p>
+      <p class="copyright">
+        &copy; {currentYear} {labInfo.labName}, Chung-Ang University. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-gray);
+    padding-top: 4.5rem;
+    padding-bottom: 3.5rem;
+    margin-top: auto;
+  }
+
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1.4fr 2fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .footer-lab-name {
+    font-size: 1.375rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+    margin-bottom: 0.35rem;
+  }
+
+  .footer-sub {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+  }
+
+  .footer-institution {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .col-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-text);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .col-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .col-list a {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    transition: color 0.2s ease;
+  }
+
+  .col-list a:hover {
+    color: var(--color-primary);
+  }
+
+  .contact-brief {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  .contact-brief strong {
+    color: var(--color-text);
+  }
+
+  .contact-brief a {
+    color: var(--color-text);
+  }
+
+  .contact-brief a:hover {
+    color: var(--color-primary);
+  }
+
+  .footer-divider {
+    height: 1px;
+    background-color: var(--color-gray);
+    width: 100%;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+  }
+
+  .address-text {
+    font-size: 0.8125rem;
+  }
+
+  .copyright {
+    font-size: 0.8125rem;
+  }
+
+  @media (max-width: 900px) {
+    .footer-top {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .footer-links {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer-links {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

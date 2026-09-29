@@ -1,0 +1,245 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import { getAllPublicationsByYear } from '../../data/publications';
+
+const pubsByYear = getAllPublicationsByYear();
+const years = Object.keys(pubsByYear).map(Number).sort((a, b) => b - a);
+---
+
+<BaseLayout 
+  title="Papers | Sookil Kim Lab (ENPL)"
+  description="Peer-reviewed scientific journal publications by the Energy Nano-material Process Laboratory."
+>
+  <section class="section section--white">
+    <div class="container">
+      <SectionHeader 
+        category="SCHOLARLY ARTICLES"
+        title="JOURNAL PAPERS"
+        subtitle="Peer-reviewed publications detailing our innovations in electrocatalysts, water electrolysis, and electrodeposition."
+      />
+
+      <!-- Quick Nav for Years -->
+      <div class="years-nav-bar">
+        <span class="jump-label">JUMP TO YEAR:</span>
+        <div class="years-links">
+          {years.map((y) => (
+            <a href={`#year-${y}`} class="year-pill">{y}</a>
+          ))}
+        </div>
+      </div>
+
+      <div class="publications-chronological">
+        {years.map((year) => (
+          <div class="year-section" id={`year-${year}`}>
+            <div class="year-header">
+              <span class="year-title">{year}</span>
+              <span class="year-count">{pubsByYear[year].length} Articles</span>
+            </div>
+
+            <div class="papers-list">
+              {pubsByYear[year].map((pub, idx) => (
+                <article class="paper-item">
+                  <div class="paper-index">
+                    <span>{String(idx + 1).padStart(2, '0')}</span>
+                  </div>
+
+                  <div class="paper-details">
+                    <h3 class="paper-title">
+                      {pub.link ? (
+                        <a href={pub.link} target="_blank" rel="noopener noreferrer">
+                          {pub.title}
+                        </a>
+                      ) : (
+                        pub.title
+                      )}
+                    </h3>
+
+                    <p class="paper-authors">{pub.authors}</p>
+
+                    <p class="paper-journal-line">
+                      <strong class="journal-name">{pub.journal}</strong>
+                      {pub.volume && <span class="journal-vol">, Vol. {pub.volume}</span>}
+                      {pub.pages && <span class="journal-pages">, pp. {pub.pages}</span>}
+                      <span class="journal-year"> ({pub.year})</span>
+                    </p>
+
+                    {pub.doi && (
+                      <div class="paper-doi-line">
+                        <span class="doi-label">DOI:</span>
+                        <a href={pub.link || `https://doi.org/${pub.doi}`} target="_blank" rel="noopener noreferrer" class="doi-link">
+                          {pub.doi}
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .years-nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.25rem 1.75rem;
+    background-color: #FAFAFA;
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-subtle);
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .jump-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+  }
+
+  .years-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .year-pill {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 2px;
+    transition: all 0.2s ease;
+  }
+
+  .year-pill:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .publications-chronological {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+  }
+
+  .year-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    scroll-margin-top: 100px;
+  }
+
+  .year-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-primary);
+  }
+
+  .year-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .year-count {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+  }
+
+  .papers-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .paper-item {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 1.5rem;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--color-gray);
+    align-items: baseline;
+  }
+
+  .paper-index {
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--color-text-secondary);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .paper-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .paper-title {
+    font-size: 1.1875rem;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .paper-title a {
+    color: var(--color-text);
+  }
+
+  .paper-title a:hover {
+    color: var(--color-primary);
+  }
+
+  .paper-authors {
+    font-size: 0.9375rem;
+    color: var(--color-text-secondary);
+  }
+
+  .paper-journal-line {
+    font-size: 0.9375rem;
+    color: var(--color-text);
+  }
+
+  .journal-name {
+    color: var(--color-text);
+  }
+
+  .journal-year {
+    color: var(--color-primary);
+    font-weight: 600;
+  }
+
+  .paper-doi-line {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    margin-top: 0.25rem;
+  }
+
+  .doi-label {
+    font-weight: 700;
+    color: var(--color-text-secondary);
+  }
+
+  .doi-link {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    .paper-item {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+  }
+</style>

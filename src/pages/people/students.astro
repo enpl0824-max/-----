@@ -1,0 +1,211 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import PlaceholderImage from '../../components/PlaceholderImage.astro';
+import { getStudentsByCategory } from '../../data/students';
+
+const { phd, ms, undergraduate } = getStudentsByCategory();
+
+const categories = [
+  { title: "PH.D. CANDIDATES", list: phd },
+  { title: "M.S. CANDIDATES", list: ms },
+  { title: "UNDERGRADUATE RESEARCHERS", list: undergraduate }
+].filter(cat => cat.list.length > 0);
+---
+
+<BaseLayout 
+  title="Students | Sookil Kim Lab (ENPL)"
+  description="Current graduate students and researchers at Energy Nano-material Process Laboratory."
+>
+  <section class="section section--white">
+    <div class="container">
+      <SectionHeader 
+        category="CURRENT MEMBERS"
+        title="STUDENTS & RESEARCHERS"
+        subtitle="Meet the talented researchers advancing electrochemical energy conversion and water electrolysis materials at ENPL."
+      />
+
+      <div class="students-container">
+        {categories.map((cat) => (
+          <div class="category-block">
+            <div class="category-header">
+              <span class="category-badge">{cat.title}</span>
+              <span class="count-tag">{cat.list.length} Researchers</span>
+            </div>
+
+            <div class="members-grid">
+              {cat.list.map((student) => (
+                <div class="member-card">
+                  <div class="member-photo-wrapper">
+                    {student.photo ? (
+                      <img src={student.photo} alt={student.name} class="member-photo" />
+                    ) : (
+                      <PlaceholderImage 
+                        type="person" 
+                        title={student.name}
+                        subtitle={student.position}
+                        aspectRatio="1/1"
+                      />
+                    )}
+                  </div>
+
+                  <div class="member-info">
+                    <h3 class="member-name">
+                      {student.name}
+                      {student.nameKo && <span class="member-name-ko">({student.nameKo})</span>}
+                    </h3>
+                    <p class="member-position">{student.position}</p>
+                    
+                    <div class="member-divider"></div>
+
+                    <div class="member-field">
+                      <span class="field-label">RESEARCH FOCUS</span>
+                      <p class="field-value">{student.researchInterest}</p>
+                    </div>
+
+                    <div class="member-field">
+                      <span class="field-label">CONTACT</span>
+                      <a href={`mailto:${student.email}`} class="field-email">{student.email}</a>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .students-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+  }
+
+  .category-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid var(--color-gray);
+  }
+
+  .category-badge {
+    font-size: 0.9375rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: var(--color-text);
+  }
+
+  .count-tag {
+    font-size: 0.8125rem;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .members-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .member-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-subtle);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .member-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+
+  .member-photo-wrapper {
+    width: 100%;
+    background-color: #FAFAFA;
+  }
+
+  .member-info {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    flex: 1;
+  }
+
+  .member-name {
+    font-size: 1.1875rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.3;
+  }
+
+  .member-name-ko {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+  }
+
+  .member-position {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+
+  .member-divider {
+    height: 1px;
+    background-color: var(--color-gray);
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+
+  .member-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .field-label {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-text-secondary);
+  }
+
+  .field-value {
+    font-size: 0.875rem;
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+
+  .field-email {
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    word-break: break-all;
+  }
+
+  @media (max-width: 1024px) {
+    .members-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .members-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

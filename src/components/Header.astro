@@ -1,0 +1,363 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { label: "HOME", href: "/" },
+  { label: "RESEARCH", href: "/research/" },
+  {
+    label: "PEOPLE",
+    href: "/people/professor/",
+    children: [
+      { label: "Professor", href: "/people/professor/" },
+      { label: "Students", href: "/people/students/" },
+      { label: "Alumni", href: "/people/alumni/" },
+    ]
+  },
+  {
+    label: "PUBLICATIONS",
+    href: "/publications/papers/",
+    children: [
+      { label: "Papers", href: "/publications/papers/" },
+      { label: "Patents", href: "/publications/patents/" },
+    ]
+  },
+  { label: "GALLERY", href: "/gallery/" },
+  { label: "CONTACT", href: "/contact/" },
+];
+
+const isActive = (itemHref: string, children?: { href: string }[]) => {
+  if (itemHref === "/" && currentPath === "/") return true;
+  if (itemHref !== "/" && currentPath.startsWith(itemHref)) return true;
+  if (children && children.some(c => currentPath.startsWith(c.href))) return true;
+  return false;
+};
+---
+
+<header class="header">
+  <div class="header-inner container">
+    <a href="/" class="logo">
+      <span class="logo-title">SOOKIL KIM LAB</span>
+      <span class="logo-sub">CHUNG-ANG UNIVERSITY · ENPL</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav" aria-label="Main Navigation">
+      <ul class="nav-list">
+        {navItems.map((item) => {
+          const active = isActive(item.href, item.children);
+          return (
+            <li class={`nav-item ${item.children ? 'has-dropdown' : ''}`}>
+              <a 
+                href={item.href} 
+                class={`nav-link ${active ? 'active' : ''}`}
+                aria-haspopup={item.children ? 'true' : undefined}
+              >
+                {item.label}
+                {item.children && (
+                  <svg class="chevron-icon" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                )}
+              </a>
+              {item.children && (
+                <ul class="dropdown-menu">
+                  {item.children.map((child) => (
+                    <li>
+                      <a 
+                        href={child.href}
+                        class={`dropdown-link ${currentPath.startsWith(child.href) ? 'active' : ''}`}
+                      >
+                        {child.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+
+    <!-- Mobile Hamburger Button -->
+    <button class="hamburger-btn" id="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-content">
+      <ul class="mobile-nav-list">
+        {navItems.map((item) => (
+          <li class="mobile-nav-item">
+            {item.children ? (
+              <div class="mobile-dropdown-group">
+                <span class="mobile-group-title">{item.label}</span>
+                <ul class="mobile-sub-list">
+                  {item.children.map((child) => (
+                    <li>
+                      <a 
+                        href={child.href}
+                        class={`mobile-sub-link ${currentPath.startsWith(child.href) ? 'active' : ''}`}
+                      >
+                        {child.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : (
+              <a 
+                href={item.href} 
+                class={`mobile-nav-link ${isActive(item.href) ? 'active' : ''}`}
+              >
+                {item.label}
+              </a>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-gray);
+    width: 100%;
+  }
+
+  .header-inner {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+
+  .logo-title {
+    font-size: 1.1875rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+  }
+
+  .logo-sub {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--color-text-secondary);
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 2.25rem;
+  }
+
+  .nav-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--color-text);
+    padding: 0.5rem 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--color-primary);
+  }
+
+  .chevron-icon {
+    transition: transform 0.2s ease;
+  }
+
+  .has-dropdown:hover .chevron-icon {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown Menu */
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-subtle);
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  }
+
+  .has-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .dropdown-link {
+    display: block;
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .dropdown-link:hover,
+  .dropdown-link.active {
+    background-color: #fafafa;
+    color: var(--color-primary);
+  }
+
+  /* Hamburger Button */
+  .hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .hamburger-btn .bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .hamburger-btn.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger-btn.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-btn.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-gray);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .mobile-menu.open {
+    display: block;
+  }
+
+  .mobile-menu-content {
+    padding: 1.5rem 2rem 2rem;
+  }
+
+  .mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .mobile-nav-link {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-text);
+    display: block;
+    padding: 0.25rem 0;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
+    color: var(--color-primary);
+  }
+
+  .mobile-group-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .mobile-sub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid var(--color-gray);
+  }
+
+  .mobile-sub-link {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text);
+  }
+
+  .mobile-sub-link:hover,
+  .mobile-sub-link.active {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: 900px) {
+    .desktop-nav {
+      display: none;
+    }
+    .hamburger-btn {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (toggleBtn && mobileMenu) {
+    toggleBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      toggleBtn.classList.toggle('open', isOpen);
+      toggleBtn.setAttribute('aria-expanded', isOpen.toString());
+    });
+  }
+</script>

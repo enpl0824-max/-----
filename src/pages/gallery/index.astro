@@ -1,0 +1,378 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import PlaceholderImage from '../../components/PlaceholderImage.astro';
+import { galleryData, galleryCategories } from '../../data/gallery';
+---
+
+<BaseLayout 
+  title="Gallery | Sookil Kim Lab (ENPL)"
+  description="Lab life, academic conferences, workshops, and achievements of Energy Nano-material Process Laboratory."
+>
+  <section class="section section--white">
+    <div class="container">
+      <SectionHeader 
+        category="LIFE & ACTIVITIES"
+        title="LAB GALLERY"
+        subtitle="Moments of academic innovation, conference presentations, workshops, and lab milestones."
+      />
+
+      <!-- Category Filter Pills -->
+      <div class="gallery-filter-bar">
+        {galleryCategories.map((cat, idx) => (
+          <button 
+            class={`filter-btn ${idx === 0 ? 'active' : ''}`}
+            data-category={cat}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        {galleryData.map((item) => (
+          <div 
+            class="gallery-item-card" 
+            data-category={item.category}
+            data-title={item.title}
+            data-desc={item.description}
+            data-date={item.date}
+          >
+            <div class="gallery-image-box">
+              <PlaceholderImage 
+                type="general" 
+                title={item.placeholderLabel || item.title}
+                subtitle={`${item.category} · ${item.date}`}
+                aspectRatio="4/3"
+              />
+              <div class="gallery-overlay">
+                <span class="view-btn">ENLARGE</span>
+              </div>
+            </div>
+
+            <div class="gallery-info">
+              <div class="gallery-meta">
+                <span class="badge-orange">{item.category}</span>
+                <span class="gallery-date">{item.date}</span>
+              </div>
+              <h3 class="gallery-title">{item.title}</h3>
+              <p class="gallery-desc">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Close modal">&times;</button>
+      <div class="lightbox-visual" id="lightbox-visual">
+        <!-- Injected via JS -->
+      </div>
+      <div class="lightbox-caption">
+        <div class="modal-meta">
+          <span class="badge-orange" id="modal-category"></span>
+          <span class="modal-date" id="modal-date"></span>
+        </div>
+        <h3 class="modal-title" id="modal-title"></h3>
+        <p class="modal-desc" id="modal-desc"></p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .gallery-filter-bar {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 3.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-text);
+    background-color: #FAFAFA;
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-subtle);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .filter-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+
+  .filter-btn.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.25rem;
+  }
+
+  .gallery-item-card {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-subtle);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .gallery-item-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+  }
+
+  .gallery-image-box {
+    position: relative;
+    width: 100%;
+    background-color: #FAFAFA;
+    overflow: hidden;
+  }
+
+  .gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(34, 34, 34, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .gallery-item-card:hover .gallery-overlay {
+    opacity: 1;
+  }
+
+  .view-btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    border-radius: 2px;
+  }
+
+  .gallery-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    flex: 1;
+  }
+
+  .gallery-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .gallery-date {
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    font-weight: 600;
+  }
+
+  .gallery-title {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.35;
+  }
+
+  .gallery-desc {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+  }
+
+  /* LIGHTBOX MODAL */
+  .lightbox-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .lightbox-modal.active {
+    display: flex;
+  }
+
+  .lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(2px);
+  }
+
+  .lightbox-content {
+    position: relative;
+    z-index: 10;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-subtle);
+    max-width: 680px;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    font-size: 1.5rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text);
+    z-index: 20;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .lightbox-close:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+  }
+
+  .lightbox-visual {
+    width: 100%;
+    background-color: #FAFAFA;
+  }
+
+  .lightbox-caption {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .modal-meta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .modal-date {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+
+  .modal-title {
+    font-size: 1.375rem;
+    font-weight: 800;
+    color: var(--color-text);
+  }
+
+  .modal-desc {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 1024px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  // Category Filtering
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.gallery-item-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const selectedCat = btn.getAttribute('data-category');
+
+      cards.forEach(card => {
+        const itemCat = card.getAttribute('data-category');
+        if (selectedCat === 'ALL' || itemCat === selectedCat) {
+          (card as HTMLElement).style.display = 'flex';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Lightbox Modal
+  const modal = document.getElementById('lightbox-modal');
+  const backdrop = document.getElementById('lightbox-backdrop');
+  const closeBtn = document.getElementById('lightbox-close');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalDate = document.getElementById('modal-date');
+  const modalCat = document.getElementById('modal-category');
+  const modalVisual = document.getElementById('lightbox-visual');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      const title = card.getAttribute('data-title') || '';
+      const desc = card.getAttribute('data-desc') || '';
+      const date = card.getAttribute('data-date') || '';
+      const cat = card.getAttribute('data-category') || '';
+      const visualHtml = card.querySelector('.gallery-image-box')?.innerHTML || '';
+
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalDesc) modalDesc.textContent = desc;
+      if (modalDate) modalDate.textContent = date;
+      if (modalCat) modalCat.textContent = cat;
+      if (modalVisual) modalVisual.innerHTML = visualHtml;
+
+      modal?.classList.add('active');
+      modal?.setAttribute('aria-hidden', 'false');
+    });
+  });
+
+  const closeModal = () => {
+    modal?.classList.remove('active');
+    modal?.setAttribute('aria-hidden', 'true');
+  };
+
+  backdrop?.addEventListener('click', closeModal);
+  closeBtn?.addEventListener('click', closeModal);
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>

@@ -1,0 +1,88 @@
+---
+interface Props {
+  category?: string;
+  title: string;
+  subtitle?: string;
+  align?: 'left' | 'center';
+}
+
+const { category, title, subtitle, align = 'left' } = Astro.props;
+---
+
+<div class={`section-header align-${align}`}>
+  {category && (
+    <div class="category-wrapper">
+      <span class="category-line"></span>
+      <span class="category-text">{category}</span>
+    </div>
+  )}
+  <h2 class="section-title">{title}</h2>
+  {subtitle && <p class="section-subtitle">{subtitle}</p>}
+</div>
+
+<style>
+  .section-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .align-left {
+    text-align: left;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .category-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .category-line {
+    width: 28px;
+    height: 2px;
+    background-color: var(--color-primary);
+    display: inline-block;
+  }
+
+  .category-text {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--color-text);
+    line-height: 1.15;
+  }
+
+  .section-subtitle {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+    max-width: 680px;
+    line-height: 1.7;
+  }
+
+  .align-center .category-wrapper {
+    justify-content: center;
+  }
+
+  .align-center .section-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media (max-width: 768px) {
+    .section-header {
+      margin-bottom: 2.5rem;
+    }
+  }
+</style>

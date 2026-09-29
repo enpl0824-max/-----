@@ -1,0 +1,101 @@
+이전 대화를 통해 만들었던 홈페이지의 로컬 서버 주소입니다. 
+홈페이지의 전체적인 구조는 유지, 이미 잘 구현된 기능은 유지해주세요.
+현재 홈페이지에서 다음 문구를 찾아 수정해주세요.
+
+맨 위에 고정으로 떠 있는 'SOOKIL KIM LAB'은 ENPL로 수정해주세요.
+그 밑에 'CHUNG-ANG UNIVERSITY ENPL'에서 'ENPL은 삭제해주세요.
+'주황색 글씨로 된 ELECTROCHEMICAL ENERGY CONVERSION'은 '중앙대학교 에너지나노소재공정 연구실'로 수정해주세요.
+그 밑에 Energy Nanomaterial Process Lab으로 굵은 글씨를 유지하되 각각의 단어 앞글자 E, N, P, L만 포인트 색깔로 강조해주세요.
+ENPL이라는 글자가 세로로 보일 수 있도록 배치해주세요.
+그 밑에 'Welcome to the Energy Nano-material Process Laboratory (ENPL) led by Prof. Soo-Kil Kim at Chung-Ang University. 
+We design next-generation electrocatalysts, tailored 3D nanostructured electrodes, and interfacial architectures for high-efficiency water electrolysis and clean energy conversion.'
+로 되어 있는 문장은 'We focus on the development of electrochemical energy conversion devices of water electrolysis, CO2 conversion, and fuel cell, which are the core technologies of next-generation clean energy storage/conversion systems based on hydrogen.
+The research is to synthesize nano electrode materials through a variety of methods, including Electrodeposition, Sputter Deposition, and Chemical Reduction, to maximize energy conversion/storage efficiency. 
+In addition, the manufacturing process of these nanomaterials can extend its application by grafting them into various fields such as thin films, catalysts, and electronic materials.'로 수정해주세요.
+그 밑에 Research topics는 크게 Hydrogen production, Fuel cell, Electrochemical CO2 conversion, electrodepostion on 3D Nano structure 네 개로 구성해주세요.
+그 옆에 자세한 설명은 전부 삭제해주고 각각의 탭을 클릭하면 RESEARCH 탭으로 넘어갈 수 있도록 연결해주세요.
+
+다음은 RESEARCH 탭에서 수정할 내용입니다.
+큰 제목으로 Hydrogen Production을 작성하고 밑줄을 그어주세요.
+그 밑에 간략한 설명을 위해 조금 더 작은 글씨로 'Water electrolysis in both acid and base electrolytes to produce hydrgoen'으로 수정해주세요.
+그 밑에는 사진을 넣을 것입니다.
+그 밑에는 
+- Development of nano catalysts for water splitting
+- Development of hydrogen production system
+- Electrodeposition/sputter deposition for fabrication of non-precious catalsyts' 
+총 세 가지 내용을 넣어주세요.
+그 밑에 REPRESENTATIVE PUBLICATIONS는 유지하되 논문을 수정 예정입니다.
+
+그 다음 연구 주제는 Fuel Cell 입니다. 
+Hydrogen Production과 동일한 포맷을 유지해주세요.
+Fuel Cell 제목 밑에 들어갈 간략한 설명은 'Power generation system to convert chemical energy of fuels (H2)  to electricity directly by electrochemical reaction'입니다.
+역시 그 밑에 사진을 추가할 예정이며, 그 밑에 다음과 같은 내용을 작성할 것입니다.
+- Development of nano catalysts for fuel cell reaction
+- Electrodeposition/Sputter Deposition for Fabrication of Alloy Catalyst
+- Proton Exchange Membrane Fuel Cell (PEMFC)
+- Direct Methanol Fuel Cell (DMFC)
+마찬가지로 REPRESENTATIVE PUBLICATIONS는 유지하되 논문을 수정 예정입니다.
+
+다음 연구 주제는 Electrochemical CO2 Conversion입니다. (2는 아래첨자로 해주세요.)
+제목 밑에 들어갈 간략한 설명은 'Low temperature conversion of carbon dioxide to hydrocarbon fuel using electrochemical technology'입니다.
+역시 그 밑에 사진을 추가할 예정이며, 그 밑에 다음과 같은 내용을 작성할 것입니다.
+- Development of nano catalysts CO2 electro-reduction
+- Development of fuel production system
+- Electrodeposition/Sputter deposition for fabrication of non-precious catalysts
+마찬가지로 REPRESENTATIVE PUBLICATIONS는 유지하되 논문을 수정 예정입니다.
+
+마지막 연구 주제는 Electrodeposition on 3D Nano Structure입니다. 
+제목 밑에 들어갈 간략한 설명은 'Electrochemical fabrication of nano structures for electronic/storage devices'입니다.
+역시 그 밑에 사진을 추가할 예정이며, 그 밑에 다음과 같은 내용을 작성할 것입니다.
+- Metal Electro/Electroless deposition
+- for Electronic/Storage devices
+- Electrodeposition chemistry
+- Thin film fabrication and characterization
+마찬가지로 REPRESENTATIVE PUBLICATIONS는 유지하되 논문을 수정 예정입니다.
+
+그 아래에 historical archive 부분은 없애주세요.
+
+다음은 PEOPLE 탭에 Professor 탭을 수정할거야. 
+Education은 BS from SNU (1999, School of Chem. Eng.), MS from SNU (2001, School of Chem. Eng.), Ph. D. from SNU (2004, School of Chem. Eng.) : Advanced Metallization for High Performance Devices using Superconformal Cu Electrodeposition
+이렇게 총 세 가지이고 내용을 참고해서 수정해주세요.
+Academic experiences에 들어갈 내용은 아래와 같습니다.
+- Post-Doc at SNU ERC (2004~2005)
+- Post-Doc at National Institute of Standards and Technology, USA (2005~2006)
+- Senior Research Scientist at KIST (2006~2011)
+- Editor, J. Kor. Electrochem. Soc. (2008~2009), E-Chem Magazine (2010~2011), KECS
+- General Secretary, Fuel Cell Division (2010~2011), KECS
+- Chairman of Human Resources Development (2014~2015), KECS
+- Director of Public Relations (2022~2023), KECS
+- Secretary/Treasurer, Korea Section, The Electrochemical Society, USA (2012~2017)
+- Planning Secretary, Materials Division, KIChE (2010~2011)
+- Public Relations Director (2013, 2022), Business Director, (2014), Academic Director (2015), Planning Director (2021), KIChE
+- Editor, J. Kor. Chem. Engineering, KIChE (2015~)
+- Business Director, KISE (2016~2017)
+- RB, National Strategic R&D Programs, NRF (2020~2023)
+
+아래에 ACADEMIC activities & affiliations는 삭제해줘.
+
+Students는 유지해주세요. 추후 사진 추가와 수정 예정입니다.
+
+Alumni는 보낸 엑셀 파일의 세번째 시트 'Alumni'에 있습니다.
+해당 내용을 참고해서 수정해주세요. 연도는 삭제해주세요.
+
+Publication과 Patent의 포멧은 유지해주세요. 내용은 보낸 엑셀 파일을 참고해서 수정해주세요.
+
+그리고 홈페이지 맨 밑에 Research focus는 삭제해주세요.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
