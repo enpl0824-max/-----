@@ -19,7 +19,7 @@ export interface LabInfo {
 }
 
 export const labInfo: LabInfo = {
-  labName: "SOOKIL KIM LAB",
+  labName: "ENPL",
   labFullName: "Energy Nano-material Process Laboratory (ENPL)",
   professorName: "Prof. Soo-Kil Kim",
   professorNameKo: "김수길 교수",
