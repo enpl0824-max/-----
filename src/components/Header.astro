@@ -1,9 +1,10 @@
 ---
 const currentPath = Astro.url.pathname;
+const base = "/-----";
 
 const navItems = [
-  { label: "HOME", href: "/" },
-  { label: "RESEARCH", href: "/research/" },
+  { label: "HOME", href: base + "/"},
+  { label: "RESEARCH", href: base + "/research/" },
   {
     label: "PEOPLE",
     href: "/people/professor/",
