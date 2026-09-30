@@ -135,8 +135,16 @@ const categories = [
 
   .member-photo-wrapper {
     width: 100%;
+    aspect-ratio: 1 / 1;    
     background-color: #FAFAFA;
   }
+
+.member-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 
   .member-info {
     padding: 1.75rem;
@@ -151,12 +159,6 @@ const categories = [
     font-weight: 700;
     color: var(--color-text);
     line-height: 1.3;
-  }
-
-  .member-name-ko {
-    font-size: 0.9375rem;
-    font-weight: 500;
-    color: var(--color-text-secondary);
   }
 
   .member-position {
