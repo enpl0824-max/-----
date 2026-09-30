@@ -203,7 +203,7 @@ export const patentsData: Patent[] = [
   {
     id: "pat-20",
     title: "연료전지용 코어-쉘 구조 전극촉매 및 그 제조방법",
-    inventors: "황승준, 김수길, 유성종, 장홍현, 조은애, 김형준, 남석우, 임태훈",
+    inventors: "황승준, 김수길, 유성종, 장종현, 조은애, 김형준, 남석우, 임태훈",
     patentNumber: "US 14/812,289",
     year: 2016,
     country: "미국",
