@@ -101,20 +101,6 @@ import { professorData } from '../../data/professor';
           </div>
         </div>
 
-        <!-- Academic Activities -->
-        {professorData.academicActivities && professorData.academicActivities.length > 0 && (
-          <div class="activities-box">
-            <h3 class="column-title">ACADEMIC ACTIVITIES & AFFILIATIONS</h3>
-            <ul class="activities-list">
-              {professorData.academicActivities.map(act => (
-                <li>
-                  <span class="bullet-dash">—</span>
-                  <span>{act}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     </div>
   </section>
