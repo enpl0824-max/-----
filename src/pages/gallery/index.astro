@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
-import PlaceholderImage from '../../components/PlaceholderImage.astro';
-import { galleryData, galleryCategories } from '../../data/gallery';
+import { galleryData } from '../../data/gallery';
 ---
 
 <BaseLayout 
@@ -17,35 +16,24 @@ import { galleryData, galleryCategories } from '../../data/gallery';
         subtitle="Moments of academic innovation, conference presentations, workshops, and lab milestones."
       />
 
-      <!-- Category Filter Pills -->
-      <div class="gallery-filter-bar">
-        {galleryCategories.map((cat, idx) => (
-          <button 
-            class={`filter-btn ${idx === 0 ? 'active' : ''}`}
-            data-category={cat}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
-
       <!-- Gallery Grid -->
       <div class="gallery-grid" id="gallery-grid">
         {galleryData.map((item) => (
           <div 
             class="gallery-item-card" 
-            data-category={item.category}
             data-title={item.title}
             data-desc={item.description}
             data-date={item.date}
+            data-category={item.category}
+            data-images={JSON.stringify(item.images)}
           >
             <div class="gallery-image-box">
-              <PlaceholderImage 
-                type="general" 
-                title={item.placeholderLabel || item.title}
-                subtitle={`${item.category} · ${item.date}`}
-                aspectRatio="4/3"
+              <img 
+                src={item.images[0]} 
+                alt={item.title} 
+                class="gallery-main-image"
               />
+
               <div class="gallery-overlay">
                 <span class="view-btn">ENLARGE</span>
               </div>
@@ -56,7 +44,9 @@ import { galleryData, galleryCategories } from '../../data/gallery';
                 <span class="badge-orange">{item.category}</span>
                 <span class="gallery-date">{item.date}</span>
               </div>
+
               <h3 class="gallery-title">{item.title}</h3>
+
               <p class="gallery-desc">{item.description}</p>
             </div>
           </div>
@@ -66,56 +56,76 @@ import { galleryData, galleryCategories } from '../../data/gallery';
   </section>
 
   <!-- Lightbox Modal -->
-  <div class="lightbox-modal" id="lightbox-modal" aria-hidden="true" role="dialog">
+  <div 
+    class="lightbox-modal" 
+    id="lightbox-modal" 
+    aria-hidden="true" 
+    role="dialog"
+  >
     <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+
     <div class="lightbox-content">
-      <button class="lightbox-close" id="lightbox-close" aria-label="Close modal">&times;</button>
+
+      <button 
+        class="lightbox-close" 
+        id="lightbox-close" 
+        aria-label="Close modal"
+      >
+        &times;
+      </button>
+
       <div class="lightbox-visual" id="lightbox-visual">
-        <!-- Injected via JS -->
+
+        <button 
+          class="lightbox-nav lightbox-prev" 
+          id="lightbox-prev"
+          aria-label="Previous image"
+        >
+          &#10094;
+        </button>
+
+        <img 
+          id="lightbox-image" 
+          class="lightbox-image" 
+          src="" 
+          alt=""
+        />
+
+        <button 
+          class="lightbox-nav lightbox-next" 
+          id="lightbox-next"
+          aria-label="Next image"
+        >
+          &#10095;
+        </button>
+
+        <span 
+          class="lightbox-counter" 
+          id="lightbox-counter"
+        >
+          1 / 1
+        </span>
+
       </div>
+
       <div class="lightbox-caption">
+
         <div class="modal-meta">
           <span class="badge-orange" id="modal-category"></span>
           <span class="modal-date" id="modal-date"></span>
         </div>
+
         <h3 class="modal-title" id="modal-title"></h3>
+
         <p class="modal-desc" id="modal-desc"></p>
+
       </div>
     </div>
   </div>
 </BaseLayout>
 
 <style>
-  .gallery-filter-bar {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    margin-bottom: 3.5rem;
-  }
-
-  .filter-btn {
-    padding: 0.6rem 1.25rem;
-    font-size: 0.8125rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    color: var(--color-text);
-    background-color: #FAFAFA;
-    border: 1px solid var(--color-gray);
-    border-radius: var(--radius-subtle);
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
-
-  .filter-btn:hover {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-  }
-
-  .filter-btn.active {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border-color: var(--color-primary);
-  }
+  /* GALLERY GRID */
 
   .gallery-grid {
     display: grid;
@@ -139,11 +149,26 @@ import { galleryData, galleryCategories } from '../../data/gallery';
     transform: translateY(-2px);
   }
 
+  /* IMAGE */
+
   .gallery-image-box {
     position: relative;
     width: 100%;
+    aspect-ratio: 4 / 3;
     background-color: #FAFAFA;
     overflow: hidden;
+  }
+
+  .gallery-main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item-card:hover .gallery-main-image {
+    transform: scale(1.02);
   }
 
   .gallery-overlay {
@@ -170,6 +195,8 @@ import { galleryData, galleryCategories } from '../../data/gallery';
     letter-spacing: 0.1em;
     border-radius: 2px;
   }
+
+  /* INFO */
 
   .gallery-info {
     padding: 1.5rem;
@@ -204,7 +231,8 @@ import { galleryData, galleryCategories } from '../../data/gallery';
     line-height: 1.6;
   }
 
-  /* LIGHTBOX MODAL */
+  /* LIGHTBOX */
+
   .lightbox-modal {
     position: fixed;
     inset: 0;
@@ -222,7 +250,7 @@ import { galleryData, galleryCategories } from '../../data/gallery';
   .lightbox-backdrop {
     position: absolute;
     inset: 0;
-    background-color: rgba(15, 23, 42, 0.75);
+    background-color: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(2px);
   }
 
@@ -232,8 +260,9 @@ import { galleryData, galleryCategories } from '../../data/gallery';
     background-color: var(--color-white);
     border: 1px solid var(--color-gray);
     border-radius: var(--radius-subtle);
-    max-width: 680px;
+    max-width: 900px;
     width: 100%;
+    max-height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -256,7 +285,7 @@ import { galleryData, galleryCategories } from '../../data/gallery';
     justify-content: center;
     cursor: pointer;
     color: var(--color-text);
-    z-index: 20;
+    z-index: 30;
     transition: color 0.2s ease, border-color 0.2s ease;
   }
 
@@ -265,13 +294,81 @@ import { galleryData, galleryCategories } from '../../data/gallery';
     border-color: var(--color-primary);
   }
 
+  /* LIGHTBOX IMAGE */
+
   .lightbox-visual {
+    position: relative;
     width: 100%;
+    height: min(65vh, 650px);
     background-color: #FAFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
+  .lightbox-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* PREVIOUS / NEXT BUTTON */
+
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--color-gray);
+    background-color: rgba(255, 255, 255, 0.95);
+    color: var(--color-text);
+    font-size: 1.5rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.2s ease;
+  }
+
+  .lightbox-nav:hover {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    background-color: var(--color-white);
+  }
+
+  .lightbox-prev {
+    left: 1rem;
+  }
+
+  .lightbox-next {
+    right: 1rem;
+  }
+
+  .lightbox-counter {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    background-color: rgba(34, 34, 34, 0.7);
+    color: var(--color-white);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    z-index: 20;
+  }
+
+  /* CAPTION */
+
   .lightbox-caption {
-    padding: 2rem;
+    padding: 1.75rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -300,6 +397,8 @@ import { galleryData, galleryCategories } from '../../data/gallery';
     line-height: 1.7;
   }
 
+  /* RESPONSIVE */
+
   @media (max-width: 1024px) {
     .gallery-grid {
       grid-template-columns: repeat(2, 1fr);
@@ -310,69 +409,157 @@ import { galleryData, galleryCategories } from '../../data/gallery';
     .gallery-grid {
       grid-template-columns: 1fr;
     }
+
+    .lightbox-modal {
+      padding: 1rem;
+    }
+
+    .lightbox-content {
+      max-height: 92vh;
+    }
+
+    .lightbox-visual {
+      height: 55vh;
+    }
+
+    .lightbox-nav {
+      width: 38px;
+      height: 38px;
+      font-size: 1.25rem;
+    }
+
+    .lightbox-prev {
+      left: 0.5rem;
+    }
+
+    .lightbox-next {
+      right: 0.5rem;
+    }
+
+    .lightbox-caption {
+      padding: 1.25rem;
+    }
   }
 </style>
 
 <script>
-  // Category Filtering
-  const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.gallery-item-card');
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const selectedCat = btn.getAttribute('data-category');
-
-      cards.forEach(card => {
-        const itemCat = card.getAttribute('data-category');
-        if (selectedCat === 'ALL' || itemCat === selectedCat) {
-          (card as HTMLElement).style.display = 'flex';
-        } else {
-          (card as HTMLElement).style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // Lightbox Modal
   const modal = document.getElementById('lightbox-modal');
   const backdrop = document.getElementById('lightbox-backdrop');
   const closeBtn = document.getElementById('lightbox-close');
+
   const modalTitle = document.getElementById('modal-title');
   const modalDesc = document.getElementById('modal-desc');
   const modalDate = document.getElementById('modal-date');
   const modalCat = document.getElementById('modal-category');
-  const modalVisual = document.getElementById('lightbox-visual');
+
+  const modalImage = document.getElementById('lightbox-image') as HTMLImageElement | null;
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+  const counter = document.getElementById('lightbox-counter');
+
+  let currentImages: string[] = [];
+  let currentIndex = 0;
+
+  const updateLightboxImage = () => {
+    if (!modalImage || currentImages.length === 0) return;
+
+    modalImage.src = currentImages[currentIndex];
+    modalImage.alt = String(modalTitle?.textContent || '');
+
+    if (counter) {
+      counter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+    }
+
+    if (prevBtn) {
+      (prevBtn as HTMLButtonElement).style.display =
+        currentImages.length > 1 ? 'flex' : 'none';
+    }
+
+    if (nextBtn) {
+      (nextBtn as HTMLButtonElement).style.display =
+        currentImages.length > 1 ? 'flex' : 'none';
+    }
+  };
 
   cards.forEach(card => {
     card.addEventListener('click', () => {
       const title = card.getAttribute('data-title') || '';
       const desc = card.getAttribute('data-desc') || '';
       const date = card.getAttribute('data-date') || '';
-      const cat = card.getAttribute('data-category') || '';
-      const visualHtml = card.querySelector('.gallery-image-box')?.innerHTML || '';
+      const category = card.getAttribute('data-category') || '';
+      const imagesData = card.getAttribute('data-images') || '[]';
+
+      try {
+        currentImages = JSON.parse(imagesData);
+      } catch {
+        currentImages = [];
+      }
+
+      currentIndex = 0;
 
       if (modalTitle) modalTitle.textContent = title;
       if (modalDesc) modalDesc.textContent = desc;
       if (modalDate) modalDate.textContent = date;
-      if (modalCat) modalCat.textContent = cat;
-      if (modalVisual) modalVisual.innerHTML = visualHtml;
+      if (modalCat) modalCat.textContent = category;
+
+      updateLightboxImage();
 
       modal?.classList.add('active');
       modal?.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
     });
+  });
+
+  prevBtn?.addEventListener('click', (event) => {
+    event.stopPropagation();
+
+    if (currentImages.length <= 1) return;
+
+    currentIndex =
+      (currentIndex - 1 + currentImages.length) % currentImages.length;
+
+    updateLightboxImage();
+  });
+
+  nextBtn?.addEventListener('click', (event) => {
+    event.stopPropagation();
+
+    if (currentImages.length <= 1) return;
+
+    currentIndex =
+      (currentIndex + 1) % currentImages.length;
+
+    updateLightboxImage();
   });
 
   const closeModal = () => {
     modal?.classList.remove('active');
     modal?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
   };
 
   backdrop?.addEventListener('click', closeModal);
   closeBtn?.addEventListener('click', closeModal);
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
+
+  window.addEventListener('keydown', (event) => {
+    if (!modal?.classList.contains('active')) return;
+
+    if (event.key === 'Escape') {
+      closeModal();
+    }
+
+    if (event.key === 'ArrowLeft' && currentImages.length > 1) {
+      currentIndex =
+        (currentIndex - 1 + currentImages.length) % currentImages.length;
+      updateLightboxImage();
+    }
+
+    if (event.key === 'ArrowRight' && currentImages.length > 1) {
+      currentIndex =
+        (currentIndex + 1) % currentImages.length;
+      updateLightboxImage();
+    }
   });
 </script>
