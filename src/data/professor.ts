@@ -50,43 +50,103 @@ export const professorData: ProfessorProfile = {
   education: [
     {
       degree: "Ph.D.",
-      field: "Materials Science / Chemical Engineering",
-      institution: "Official verification required [Placeholder]",
-      year: ""
+      field: "School of Chemical Engineering",
+      institution: "Seoul National University",
+      year: "2004"
     },
     {
       degree: "M.S.",
-      field: "Materials Science / Chemical Engineering",
-      institution: "Official verification required [Placeholder]",
-      year: ""
+      field: "School of Chemical Engineering",
+      institution: "Seoul National University",
+      year: "2001"
     },
     {
       degree: "B.S.",
-      field: "Materials Science / Chemical Engineering",
-      institution: "Official verification required [Placeholder]",
+      field: "School of Chemical Engineering",
+      institution: "Seoul National University",
       year: ""
     }
   ],
   experience: [
     {
-      role: "Professor",
-      institution: "School of Integrative Engineering, Chung-Ang University",
-      period: "Present"
+      role: "Post-Doc",
+      institution: "SNU ERC",
+      period: "2004–2005"
+    },
+    {
+      role: "Post-Doc",
+      institution: "National Institute of Standards and Technology (NIST), USA",
+      period: "2005–2006"
+    },
+    {
+      role: "Senior Research Scientist",
+      institution: "Korea Institute of Science and Technology (KIST)",
+      period: "2006–2011"
     },
     {
       role: "Editor",
-      institution: "Korean Chemical Engineering Research",
-      period: "Current"
+      institution: "J. Kor. Electrochem. Soc., KECS",
+      period: "2008–2009"
     },
     {
-      role: "Principal Investigator",
-      institution: "Energy Nano-material Process Laboratory (ENPL)",
-      period: "Present"
+      role: "Editor",
+      institution: "E-Chem Magazine, KECS",
+      period: "2010–2011"
+    },
+    {
+      role: "General Secretary, Fuel Cell Division",
+      institution: "KECS",
+      period: "2010–2011"
+    },
+    {
+      role: "Planning Secretary, Materials Division",
+      institution: "KIChE",
+      period: "2010–2011"
+    },
+    {
+      role: "Secretary/Treasurer, Korea Section",
+      institution: "The Electrochemical Society (ECS), USA",
+      period: "2012–2017"
+    },
+    {
+      role: "Public Relations Director",
+      institution: "KIChE",
+      period: "2013, 2022"
+    },
+    {
+      role: "Chairman of Human Resources Development",
+      institution: "KECS",
+      period: "2014–2015"
+    },
+    {
+      role: "Business Director",
+      institution: "KIChE",
+      period: "2014"
+    },
+    {
+      role: "Academic Director",
+      institution: "KIChE",
+      period: "2015"
+    },
+    {
+      role: "Editor",
+      institution: "J. Kor. Chem. Engineering, KIChE",
+      period: "2015–Present"
+    },
+    {
+      role: "Business Director",
+      institution: "KISE",
+      period: "2016–2017"
+    },
+    {
+      role: "RB, National Strategic R&D Programs",
+      institution: "National Research Foundation of Korea (NRF)",
+      period: "2020–2023"
+    },
+    {
+      role: "Planning Director",
+      institution: "KIChE",
+      period: "2021"
     }
   ],
-  academicActivities: [
-    "Korean Institute of Chemical Engineers (KIChE) Member & Journal Editor",
-    "The Korean Electrochemical Society (KECS) Active Member",
-    "Electrochemical Society (ECS) Active Member"
-  ]
 };
