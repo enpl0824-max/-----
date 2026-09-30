@@ -7,6 +7,9 @@ import { getSelectedPublications } from '../data/publications';
 import { galleryData } from '../data/gallery';
 import { labInfo } from '../data/labInfo';
 
+const base = "/-----";
+const withBase = (path: string) => base + (path.startWith("/") ? path : '/${path}');
+
 const selectedPubs = getSelectedPublications();
 const recentGallery = galleryData.slice(0, 3);
 ---
@@ -48,8 +51,8 @@ const recentGallery = galleryData.slice(0, 3);
         </div>
 
         <div class="hero-cta-group">
-          <a href="/research/" class="btn-primary">EXPLORE RESEARCH</a>
-          <a href="/publications/papers/" class="btn-secondary">PUBLICATIONS</a>
+          <a href={withBase("/research/")} class="btn-primary">EXPLORE RESEARCH</a>
+          <a href={withBase("/publications/papers/")} class="btn-secondary">PUBLICATIONS</a>
         </div>
       </div>
 
@@ -110,7 +113,7 @@ const recentGallery = galleryData.slice(0, 3);
                 )}
 
                 <div class="topic-action">
-                  <a href={`/research/#${topic.id}`} class="topic-link">
+                  <a href={withBase(`/research/#${topic.id}`)} class="topic-link">
                     EXPLORE TOPIC DETAILS <span class="arrow">→</span>
                   </a>
                 </div>
@@ -143,7 +146,7 @@ const recentGallery = galleryData.slice(0, 3);
           title="SELECTED PUBLICATIONS"
           subtitle="Representative journal papers highlighting our latest research breakthroughs."
         />
-        <a href="/publications/papers/" class="view-all-link">
+        <a href={withBase("/publications/papers/")} class="view-all-link">
           VIEW ALL PAPERS <span class="arrow">→</span>
         </a>
       </div>
