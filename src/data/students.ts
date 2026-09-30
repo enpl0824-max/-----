@@ -12,20 +12,27 @@ export interface Student {
 // Update this file with current lab members.
 // Categories with 0 members will be automatically hidden.
 export const studentsData: Student[] = [
-  {
+   {
     id: "phd-1",
-    name: "[Ph.D. Student Name]",
-    nameKo: "박사과정 학생",
+    name: "[Suyeon Lee]",
     degreeCategory: "phd",
     position: "Ph.D. Candidate",
-    researchInterest: "PEM Water Electrolysis, Low-Ir Electrocatalysts",
-    email: "enpl_student@cau.ac.kr",
-    photo: ""
+    researchInterest: "TBD",
+    email: "sylee6276@cau.ac.kr",
+    photo: "/-----/images/2.%20이수연%20박사%20프로필%20사진"
+  },
+  {
+    id: "phd-2",
+    name: "[Suyeon Lee]",
+    degreeCategory: "phd",
+    position: "Ph.D. Candidate",
+    researchInterest: "TBD",
+    email: "sylee6276@cau.ac.kr",
+    photo: "/-----/images/2.%20이수연%20박사%20프로필%20사진"
   },
   {
     id: "ms-1",
     name: "[M.S. Student Name]",
-    nameKo: "석사과정 학생",
     degreeCategory: "ms",
     position: "M.S. Candidate",
     researchInterest: "AEM Water Electrolysis, Non-precious Catalysts",
@@ -35,12 +42,29 @@ export const studentsData: Student[] = [
   {
     id: "ms-2",
     name: "[M.S. Student Name]",
-    nameKo: "석사과정 학생",
     degreeCategory: "ms",
     position: "M.S. Candidate",
     researchInterest: "Electrodeposition, 3D Porous Electrodes",
     email: "enpl_student@cau.ac.kr",
     photo: ""
+  },
+  {
+    id: "ms-3",
+    name: "[Ga-Yeong Nam]",
+    degreeCategory: "ms",
+    position: "M.S. Candidate",
+    researchInterest: "TBD",
+    email: "ngy6412@naver.com",
+    photo: "/-----/images/2.%20남가영%20석사%20프로필%20사진"
+  },
+  {
+    id: "ms-4",
+    name: "[Seong-Jae Bang]",
+    degreeCategory: "ms",
+    position: "M.S. Candidate",
+    researchInterest: "TBD",
+    email: "jcynns@naver.com",
+    photo: "/-----/images/2.%20방성재%20석사%20프로필%20사진"
   },
   {
     id: "intern-1",
