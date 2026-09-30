@@ -5,12 +5,11 @@ export interface Patent {
   patentNumber: string;
   year: number;
   country: string;
-  status: "Registered" | "Pending";
+  status: "등록" | "출원";
   link?: string;
 }
 
 export const patentsData: Patent[] = [
-export const patents = [
   {
     id: "pat-1",
     title: "초저함량 Pt 장식 Ni 전기촉매, 그 제조방법 및 이를 이용한 음이온교환막 수전해 장치",
@@ -191,5 +190,4 @@ export const patents = [
     status: "출원",
     link: ""
   }
-];
 ];
