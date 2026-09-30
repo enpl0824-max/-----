@@ -21,14 +21,14 @@ export const galleryData: GalleryItem[] = [
 
   {
     id: "gal-2",
-    title: "Annual Lab Workshop & Dinner",
+    title: "2026 ENPL Summer MT",
     category: "LAB LIFE",
-    date: "2024",
-    description: "ENPL group members discussing semester research outcomes and celebrating milestones.",
+    date: "2026.07.10-11",
+    description: "2026 ENPL Summer MT in Yongin",
     images: [
-      "/-----/images/gallery/workshop-01.jpg",
-      "/-----/images/gallery/workshop-02.jpg",
-      "/-----/images/gallery/workshop-03.jpg"
+      "/-----/images/2607%20MT%203.jpg",
+      "/-----/images/2607%20MT%202.jpg",
+      "/-----/images/2607%20MT%201.jpg"
     ]
   },
 
