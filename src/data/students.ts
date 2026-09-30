@@ -14,12 +14,12 @@ export interface Student {
 export const studentsData: Student[] = [
    {
     id: "phd-1",
-    name: "[Suyeon Lee]",
+    name: "[Charlie Moon]",
     degreeCategory: "phd",
-    position: "Ph.D. Candidate",
+    position: "Integrated Ph.D. course",
     researchInterest: "TBD",
-    email: "sylee6276@cau.ac.kr",
-    photo: "/-----/images/2.%20이수연%20박사%20프로필%20사진"
+    email: "charliehmoon@cau.ac.kr",
+    photo: "/-----/images/2.%20문창환%20박사%20프로필%20사진.png"
   },
   {
     id: "phd-2",
@@ -28,7 +28,7 @@ export const studentsData: Student[] = [
     position: "Ph.D. Candidate",
     researchInterest: "TBD",
     email: "sylee6276@cau.ac.kr",
-    photo: "/-----/images/2.%20이수연%20박사%20프로필%20사진"
+    photo: "/-----/images/2.%20이수연%20박사%20프로필%20사진.png"
   },
   {
     id: "ms-1",
@@ -55,7 +55,7 @@ export const studentsData: Student[] = [
     position: "M.S. Candidate",
     researchInterest: "TBD",
     email: "ngy6412@naver.com",
-    photo: "/-----/images/2.%20남가영%20석사%20프로필%20사진"
+    photo: "/-----/images/2.%20남가영%20석사%20프로필%20사진.png"
   },
   {
     id: "ms-4",
@@ -64,7 +64,7 @@ export const studentsData: Student[] = [
     position: "M.S. Candidate",
     researchInterest: "TBD",
     email: "jcynns@naver.com",
-    photo: "/-----/images/2.%20방성재%20석사%20프로필%20사진"
+    photo: "/-----/images/2.%20방성재%20석사%20프로필%20사진.png"
   },
   {
     id: "intern-1",
