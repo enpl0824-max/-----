@@ -19,7 +19,7 @@ export const studentsData: Student[] = [
     position: "Integrated Ph.D. course",
     researchInterest: "TBD",
     email: "charliehmoon@cau.ac.kr",
-    photo: "/-----/images/2.%20문창환%20박사%20프로필%20사진.png"
+    photo: "/-----/images/2.%20문창환%20박사%20프로필%20사진.jpg"
   },
   {
     id: "phd-2",
@@ -28,7 +28,7 @@ export const studentsData: Student[] = [
     position: "Ph.D. Candidate",
     researchInterest: "TBD",
     email: "sylee6276@cau.ac.kr",
-    photo: "/-----/images/2.%20이수연%20박사%20프로필%20사진.png"
+    photo: "/-----/images/2.%20이수연%20박사%20프로필%20사진.jpg"
   },
   {
     id: "ms-1",
@@ -64,7 +64,7 @@ export const studentsData: Student[] = [
     position: "M.S. Candidate",
     researchInterest: "TBD",
     email: "jcynns@naver.com",
-    photo: "/-----/images/2.%20방성재%20석사%20프로필%20사진.png"
+    photo: "/-----/images/2.%20방성재%20석사%20프로필%20사진.jpg"
   },
   {
     id: "intern-1",
