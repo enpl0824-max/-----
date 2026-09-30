@@ -1276,20 +1276,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-94",
-  number: 94,
-  year: 2013,
-  title: "Hyungbin Son, Juan Martin Hernandez, Suk Woo Nam, Tae-Hoon Lim, Soo-Kil Kim, and Jong Hyun Jang. Electrochemically fabricated NiCu alloy catalysts for hydrogen production in alkaline water electrolysis",
-  authors: "Sang Hyun Ahn, Hee-Young Park, Insoo Choi, Sung Jong Yoo, Seung Jun Hwang, Hyoung-Juhn Kim, EunAe Cho, Chang Won Yoon, Hansoo Park",
-  journal: "International Journal of Hydrogen Energy",
-  volume: "38",
-  pages: "13493-13501",
-  impactFactor: null,
-  doi: "10.1016/j.ijhydene.2013.07.103",
-  link: "https://doi.org/10.1016/j.ijhydene.2013.07.103",
-  selected: true
-},
-{
   id: "pub-93",
   number: 93,
   year: 2013,
