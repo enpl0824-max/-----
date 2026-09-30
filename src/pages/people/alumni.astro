@@ -17,23 +17,16 @@ import { alumniData } from '../../data/alumni';
       />
 
       <div class="alumni-table-container">
-        {years.map((year) => (
-          <div class="year-block">
-            <div class="year-heading">
-              <span class="year-number">{year}</span>
-              <span class="year-line"></span>
-            </div>
-
-            <div class="alumni-list">
-              {alumniByYear[year].map((alumnus) => (
-                <div class="alumnus-card">
-                  <div class="alumnus-primary">
-                    <h3 class="alumnus-name">
-                      {alumnus.name}
-                      {alumnus.nameKo && <span class="alumnus-name-ko">({alumnus.nameKo})</span>}
-                    </h3>
-                    <span class="badge-orange">{alumnus.degree}</span>
-                  </div>
+          <div class="alumni-list">
+            {alumniData.map((alumnus) => (
+              <div class="alumnus-card">
+                <div class="alumnus-primary">
+                  <h3 class="alumnus-name">
+                    {alumnus.name}
+                    {alumnus.nameKo && <span class="alumnus-name-ko">({alumnus.nameKo})</span>}
+                  </h3>
+                  <span class="badge-orange">{alumnus.degree}</span>
+                </div>
 
                   <div class="alumnus-details">
                     <div class="detail-item">
@@ -49,7 +42,6 @@ import { alumniData } from '../../data/alumni';
               ))}
             </div>
           </div>
-        ))}
       </div>
     </div>
   </section>
@@ -60,31 +52,6 @@ import { alumniData } from '../../data/alumni';
     display: flex;
     flex-direction: column;
     gap: 4rem;
-  }
-
-  .year-block {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .year-heading {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .year-number {
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--color-primary);
-    font-variant-numeric: tabular-nums;
-  }
-
-  .year-line {
-    flex: 1;
-    height: 1px;
-    background-color: var(--color-gray);
   }
 
   .alumni-list {
