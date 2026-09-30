@@ -1,6 +1,7 @@
 ---
 const currentPath = Astro.url.pathname;
 const base = "/-----";
+const withBase = (path: string) => base + (path.startWith("/") ? path : '/${path}');
 
 const navItems = [
   { label: "HOME", href: base + "/"},
@@ -9,17 +10,17 @@ const navItems = [
     label: "PEOPLE",
     href: base + "/people/professor/",
     children: [
-      { label: "Professor", href: "/people/professor/" },
-      { label: "Students", href: "/people/students/" },
-      { label: "Alumni", href: "/people/alumni/" },
+      { label: "Professor", href: withBase("/people/professor/") },
+      { label: "Students", href: withBase("/people/students/") },
+      { label: "Alumni", href: withBase("/people/alumni/") },
     ]
   },
   {
     label: "PUBLICATIONS",
     href: base + "/publications/papers/",
     children: [
-      { label: "Papers", href: "/publications/papers/" },
-      { label: "Patents", href: "/publications/patents/" },
+      { label: "Papers", href: withBase("/publications/papers/") },
+      { label: "Patents", href: withBase("/publications/patents/") },
     ]
   },
   { label: "GALLERY", href: base + "/gallery/" },
@@ -27,8 +28,8 @@ const navItems = [
 ];
 
 const isActive = (itemHref: string, children?: { href: string }[]) => {
-  if (itemHref === "/" && currentPath === "/") return true;
-  if (itemHref !== "/" && currentPath.startsWith(itemHref)) return true;
+  if (itemHref === base + "/" && currentPath === base + "/") return true;
+  if (itemHref !== base + "/" && currentPath.startsWith(itemHref)) return true;
   if (children && children.some(c => currentPath.startsWith(c.href))) return true;
   return false;
 };
@@ -36,7 +37,7 @@ const isActive = (itemHref: string, children?: { href: string }[]) => {
 
 <header class="header">
   <div class="header-inner container">
-    <a href="/" class="logo">
+    <a href={withBase("/")} class="logo">
       <span class="logo-title">SOOKIL KIM LAB</span>
       <span class="logo-sub">CHUNG-ANG UNIVERSITY · ENPL</span>
     </a>
