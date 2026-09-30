@@ -193,33 +193,6 @@ import { publicationsData } from '../../data/publications';
     </div>
   </section>
 
-  <!-- Previous Research Section (Small Visual Hierarchy) -->
-  <section class="section section--white previous-research-section">
-    <div class="container">
-      <div class="previous-header">
-        <span class="previous-label">HISTORICAL ARCHIVE</span>
-        <h3 class="previous-title">PREVIOUS RESEARCH</h3>
-        <p class="previous-intro">
-          Foundational research completed in prior project phases. These topics are preserved for academic archival purposes.
-        </p>
-      </div>
-
-      <div class="previous-grid">
-        {previousResearchTopics.map(item => (
-          <div class="previous-card">
-            <h4 class="previous-card-title">{item.title}</h4>
-            <span class="previous-period">{item.period}</span>
-            <p class="previous-desc">{item.description}</p>
-            <div class="previous-tags">
-              {item.keywords.map(kw => (
-                <span class="tag-subtle">{kw}</span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
 </BaseLayout>
 
 <style>
@@ -238,6 +211,17 @@ import { publicationsData } from '../../data/publications';
     border: 1px solid var(--color-gray);
     border-radius: var(--radius-subtle);
     padding: 3.5rem;
+  }
+
+  .detail-image {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .detail-image :global(img) {
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .detail-tagline {
