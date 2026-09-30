@@ -4,11 +4,8 @@ export interface GalleryItem {
   category: "CONFERENCES" | "LAB LIFE" | "AWARDS" | "GRADUATION";
   date: string;
   description: string;
-  image?: string;
-  placeholderLabel?: string;
+  images: string[];
 }
-
-export const galleryCategories = ["ALL", "CONFERENCES", "LAB LIFE", "AWARDS", "GRADUATION"] as const;
 
 export const galleryData: GalleryItem[] = [
   {
@@ -17,46 +14,71 @@ export const galleryData: GalleryItem[] = [
     category: "CONFERENCES",
     date: "2024",
     description: "Oral presentation on recent advances in low-Ir PEM water electrolysis electrocatalysts.",
-    placeholderLabel: "Conference Presentation"
+    images: [
+      "/-----/images/gallery/conference-01.jpg",
+      "/-----/images/gallery/conference-02.jpg",
+      "/-----/images/gallery/conference-03.jpg"
+    ]
   },
+
   {
     id: "gal-2",
     title: "Annual Lab Workshop & Dinner",
     category: "LAB LIFE",
     date: "2024",
     description: "ENPL group members discussing semester research outcomes and celebrating milestones.",
-    placeholderLabel: "Lab Workshop"
+    images: [
+      "/-----/images/gallery/workshop-01.jpg",
+      "/-----/images/gallery/workshop-02.jpg",
+      "/-----/images/gallery/workshop-03.jpg"
+    ]
   },
+
   {
     id: "gal-3",
     title: "KECS Conference Academic Award",
     category: "AWARDS",
     date: "2023",
     description: "Recognition for outstanding graduate research poster presentation.",
-    placeholderLabel: "Academic Award"
+    images: [
+      "/-----/images/gallery/award-01.jpg",
+      "/-----/images/gallery/award-02.jpg"
+    ]
   },
+
   {
     id: "gal-4",
     title: "M.S. & Ph.D. Commencement Ceremony",
     category: "GRADUATION",
     date: "2023",
     description: "Celebrating the graduation of lab researchers moving on to institute and industry careers.",
-    placeholderLabel: "Graduation Celebration"
+    images: [
+      "/-----/images/gallery/graduation-01.jpg",
+      "/-----/images/gallery/graduation-02.jpg",
+      "/-----/images/gallery/graduation-03.jpg"
+    ]
   },
+
   {
     id: "gal-5",
     title: "Electrochemical Workstation & Test Station Setup",
     category: "LAB LIFE",
     date: "2023",
     description: "Advanced PEMWE / AEMWE test station operating in CAU Building 202.",
-    placeholderLabel: "Lab Facilities"
+    images: [
+      "/-----/images/gallery/lab-facility-01.jpg",
+      "/-----/images/gallery/lab-facility-02.jpg"
+    ]
   },
+
   {
     id: "gal-6",
     title: "Clean Energy Materials Symposium",
     category: "CONFERENCES",
     date: "2022",
     description: "Invited lecture on 3D structured electrodeposited electrodes.",
-    placeholderLabel: "Symposium"
+    images: [
+      "/-----/images/gallery/symposium-01.jpg"
+    ]
   }
 ];
