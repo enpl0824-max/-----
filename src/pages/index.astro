@@ -185,7 +185,7 @@ const recentGallery = galleryData.slice(0, 3);
           title="LAB HIGHLIGHTS"
           subtitle="Moments of academic discovery, symposiums, and group collaborations."
         />
-        <a href="/gallery/" class="view-all-link">
+        <a href={withBase("/gallery/")} class="view-all-link">
           FULL GALLERY <span class="arrow">→</span>
         </a>
       </div>
@@ -233,7 +233,7 @@ const recentGallery = galleryData.slice(0, 3);
           </div>
         </div>
         <div class="cta-action-col">
-          <a href="/contact/" class="btn-primary">CONTACT & DIRECTIONS</a>
+          <a href={withBase("/contact/")} class="btn-primary">CONTACT & DIRECTIONS</a>
         </div>
       </div>
     </div>
