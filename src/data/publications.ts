@@ -1,11 +1,13 @@
 export interface Publication {
   id: string;
+  number: number;
   year: number;
   title: string;
   authors: string;
   journal: string;
   volume?: string;
   pages?: string;
+  impactFactor?: number;
   doi?: string;
   link?: string;
   selected?: boolean;
@@ -14,60 +16,75 @@ export interface Publication {
 // Papers data sorted automatically by year descending in pages
 export const publicationsData: Publication[] = [
   {
-    id: "pub-2024-1",
-    year: 2024,
-    title: "Promoting Hydrogen Evolution Reaction in Acidic and Neutral Conditions on Co-Based Ternary Electrocatalyst",
-    authors: "ENPL Researchers, Soo-Kil Kim*",
-    journal: "ACS Applied Energy Materials",
-    volume: "7",
-    doi: "10.1021/acsaem.sample",
-    link: "https://doi.org",
+    id: "pub-184",
+    number: 184,
+    year: 2026,
+    title: "High Entropy Materials for Durable Oxygen Evolution in Acidic Water Electrolysis",
+    authors: "Hoyoung Kim, Soo-Kil Kim",
+    journal: "ChemCatChem",
+    volume: "18",
+    pages: "e70909",
+    impactFactor: 4.1,
+    doi: "10.1002/cctc.70909",
+    link: "https://doi.org/10.1002/cctc.70909",
     selected: true
   },
   {
-    id: "pub-2023-1",
-    year: 2023,
-    title: "Tailoring Nanostructured Transition Metal Catalysts via Electrodeposition for Anion Exchange Membrane Water Electrolysis",
-    authors: "ENPL Researchers, Soo-Kil Kim*",
+    id: "pub-183",
+    number: 183,
+    year: 2026,
+    title: "Recent advances in ion exchange membrane-based electrochemical hydrogenation of liquid organic hydrogen carrier",
+    authors: "Seokjin Hong, Gyeong Ho Han, Inho Nam, Don-Hyung Ha, Soo-Kil Kim, Sung Ki Cho, Hyunseo Park, Jong Hyun Jang, Myoung Hwan Oh, Sang Hyun Ahn",
+    journal: "Fuel",
+    volume: "415",
+    pages: "138427",
+    impactFactor: 7.8,
+    doi: "10.1016/j.fuel.2026.138427",
+    link: "https://doi.org/10.1016/j.fuel.2026.138427",
+    selected: true
+  },
+  {
+    id: "pub-182",
+    number: 182,
+    year: 2026,
+    title: "High-performance, acid-durable nonprecious ternary alloy cathode via Zn dealloying for proton exchange membrane water electrolysis",
+    authors: "Chan Hee Lee, Kyeong-Rim Yeo, Soo-Kil Kim",
+    journal: "Chemical Communications",
+    volume: "62",
+    pages: "8723-8727",
+    impactFactor: 4.3,
+    doi: "10.1039/d6cc00986g",
+    link: "https://doi.org/10.1039/d6cc00986g",
+    selected: true
+  },
+  {
+    id: "pub-181",
+    number: 181,
+    year: 2026,
+    title: "Surface-engineered Ni–Pt alloys as robust and cost-effective electrocatalysts for high-performance proton exchange membrane water electrolysis",
+    authors: "Kyeong-Rim Yeo, Daehyun Kim, Hoyoung Kim, Sung Jong Yoo, Jong Hyun Jang, Haesun Park, Soo-Kil Kim",
     journal: "Journal of Materials Chemistry A",
-    volume: "11",
-    doi: "10.1039/sample",
-    link: "https://doi.org",
+    volume: "14",
+    pages: "24506-24516",
+    impactFactor: 9.2,
+    doi: "10.1039/d6ta01806h",
+    link: "https://doi.org/10.1039/d6ta01806h",
     selected: true
   },
   {
-    id: "pub-2023-2",
-    year: 2023,
-    title: "High-Performance Porous Transport Layer Interfacial Engineering for Proton Exchange Membrane Water Electrolysis",
-    authors: "ENPL Researchers, Soo-Kil Kim*",
-    journal: "Applied Surface Science",
-    volume: "610",
-    doi: "10.1016/sample",
-    link: "https://doi.org",
+    id: "pub-180",
+    number: 180,
+    year: 2026,
+    title: "Tailored Electrodeposition for Scalable Fabrication of Uniform and High-Efficiency Large Area Electrodes for PEM Water Electrolysis",
+    authors: "Joon-Young Park, Kyeong-Rim Yeo, Soo-Kil Kim",
+    journal: "International Journal of Energy Research",
+    year: 2026,
+    pages: "5468552",
+    impactFactor: 4.2,
+    doi: "10.1155/er/5468552",
+    link: "https://doi.org/10.1155/er/5468552",
     selected: true
   },
-  {
-    id: "pub-2022-1",
-    year: 2022,
-    title: "Self-Supported 3D Multi-Component Electrodes Prepared by Dynamic Hydrogen Bubble Template Electrodeposition",
-    authors: "ENPL Researchers, Soo-Kil Kim*",
-    journal: "Electrochimica Acta",
-    volume: "425",
-    doi: "10.1016/sample",
-    link: "https://doi.org",
-    selected: true
-  },
-  {
-    id: "pub-2021-1",
-    year: 2021,
-    title: "Electrochemical Synthesis and Characterization of Nanostructured Alloys for Water Splitting",
-    authors: "ENPL Researchers, Soo-Kil Kim*",
-    journal: "Journal of Power Sources",
-    volume: "490",
-    doi: "10.1016/sample",
-    link: "https://doi.org",
-    selected: false
-  }
 ];
 
 export const getSelectedPublications = (): Publication[] => {
