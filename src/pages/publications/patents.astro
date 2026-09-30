@@ -18,16 +18,12 @@ import { patentsData } from '../../data/patents';
 
       <div class="patents-list">
         {patentsData.map((patent, index) => (
-          <article class="patent-card">
-            <div class="patent-meta-col">
-              <span class="patent-idx">{String(index + 1).padStart(2, '0')}</span>
-              <span class="patent-year">{patent.year}</span>
-              <span class={`patent-status-badge ${patent.status.toLowerCase()}`}>
-                {patent.status}
-              </span>
+          <article class="patent-item">
+            <div class="patent-index">
+              {String(index + 1).padStart(2, '0')}
             </div>
 
-            <div class="patent-content-col">
+            <div class="patent-info">
               <h3 class="patent-title">
                 {patent.link ? (
                   <a href={patent.link} target="_blank" rel="noopener noreferrer">
@@ -38,19 +34,16 @@ import { patentsData } from '../../data/patents';
                 )}
               </h3>
 
-              <div class="patent-details-grid">
-                <div class="field-item">
-                  <span class="field-name">INVENTORS</span>
-                  <span class="field-text">{patent.inventors}</span>
-                </div>
-                <div class="field-item">
-                  <span class="field-name">PATENT NUMBER</span>
-                  <span class="field-text">{patent.patentNumber}</span>
-                </div>
-                <div class="field-item">
-                  <span class="field-name">JURISDICTION</span>
-                  <span class="field-text">{patent.country}</span>
-                </div>
+              <div class="patent-meta">
+                <span>{patent.country}</span>
+                <span>{patent.patentNumber}</span>
+                <span class={`patent-status ${patent.status.toLowerCase()}`}>
+                  ({patent.status})
+                </span>
+              </div>
+
+              <div class="patent-inventors">
+                {patent.inventors}
               </div>
             </div>
           </article>
@@ -64,77 +57,33 @@ import { patentsData } from '../../data/patents';
   .patents-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
   }
 
-  .patent-card {
-    background-color: #FAFAFA;
-    border: 1px solid var(--color-gray);
-    border-radius: var(--radius-subtle);
-    padding: 2rem;
+  .patent-item {
     display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 2.5rem;
-    align-items: start;
-    transition: border-color 0.2s ease;
+    grid-template-columns: 48px 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--color-gray);
   }
 
-  .patent-card:hover {
-    border-color: var(--color-primary);
-  }
-
-  .patent-meta-col {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .patent-idx {
+  .patent-index {
     font-size: 0.8125rem;
     font-weight: 800;
     color: var(--color-text-secondary);
-  }
-
-  .patent-year {
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: var(--color-primary);
     font-variant-numeric: tabular-nums;
   }
 
-  .patent-status-badge {
-    display: inline-block;
-    padding: 0.25rem 0.6rem;
-    font-size: 0.6875rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    width: fit-content;
-  }
-
-  .patent-status-badge.registered {
-    background-color: var(--color-white);
-    color: var(--color-primary);
-    border: 1px solid var(--color-primary);
-  }
-
-  .patent-status-badge.pending {
-    background-color: var(--color-white);
-    color: var(--color-text-secondary);
-    border: 1px solid var(--color-gray);
-  }
-
-  .patent-content-col {
+  .patent-info {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 0.6rem;
   }
 
   .patent-title {
-    font-size: 1.1875rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
   .patent-title a {
@@ -145,45 +94,40 @@ import { patentsData } from '../../data/patents';
     color: var(--color-primary);
   }
 
-  .patent-details-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .field-item {
+  .patent-meta {
     display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-  }
-
-  .field-name {
-    font-size: 0.6875rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    gap: 0.75rem;
+    align-items: center;
+    font-size: 0.8125rem;
     color: var(--color-text-secondary);
   }
 
-  .field-text {
-    font-size: 0.875rem;
-    color: var(--color-text);
+  .patent-status {
+    font-weight: 700;
   }
 
-  @media (max-width: 768px) {
-    .patent-card {
+  .patent-status.registered {
+    color: var(--color-primary);
+  }
+
+  .patent-status.pending {
+    color: var(--color-text-secondary);
+  }
+
+  .patent-inventors {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 640px) {
+    .patent-item {
       grid-template-columns: 1fr;
-      gap: 1.25rem;
+      gap: 0.5rem;
     }
 
-    .patent-meta-col {
-      flex-direction: row;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    .patent-details-grid {
-      grid-template-columns: 1fr;
-      gap: 0.75rem;
+    .patent-meta {
+      flex-wrap: wrap;
     }
   }
 </style>
