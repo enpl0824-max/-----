@@ -2567,7 +2567,9 @@ export const publicationsData: Publication[] = [
 ];
 
 export const getSelectedPublications = (): Publication[] => {
-  return publicationsData.filter(p => p.selected).sort((a, b) => b.year - a.year);
+  return publicationsData
+    .sort((a, b) =>b.year - a.year || b.number - a.number)
+    .slice(0, 3);
 };
 
 export const getAllPublicationsByYear = (): Record<number, Publication[]> => {
