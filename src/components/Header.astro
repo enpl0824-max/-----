@@ -1,7 +1,7 @@
 ---
 const currentPath = Astro.url.pathname;
 const base = "/-----";
-const withBase = (path: string) => base + (path.startWith("/") ? path : '/${path}');
+const withBase = (path: string) => base + (path.startsWith("/") ? path : '/${path}');
 
 const navItems = [
   { label: "HOME", href: base + "/"},
