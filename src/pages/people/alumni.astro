@@ -2,15 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import { alumniData } from '../../data/alumni';
-
-// Group alumni by graduation year descending
-const alumniByYear = alumniData.reduce((acc, item) => {
-  if (!acc[item.graduationYear]) acc[item.graduationYear] = [];
-  acc[item.graduationYear].push(item);
-  return acc;
-}, {} as Record<number, typeof alumniData>);
-
-const years = Object.keys(alumniByYear).map(Number).sort((a, b) => b - a);
 ---
 
 <BaseLayout 
