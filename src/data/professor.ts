@@ -64,7 +64,7 @@ export const professorData: ProfessorProfile = {
       degree: "B.S.",
       field: "School of Chemical Engineering",
       institution: "Seoul National University",
-      year: ""
+      year: "1999"
     }
   ],
   experience: [
