@@ -64,6 +64,13 @@ const years = Object.keys(pubsByYear).map(Number).sort((a, b) => b - a);
                       <span class="journal-year"> ({pub.year})</span>
                     </p>
 
+                   {pub.impactFactor && (
+                     <div class="paper-if-line">
+                       <span class="if-label">IF:</span>
+                       <span class="if-value">{pub.impactFactor}</span>
+                     </div>
+                 )}
+
                     {pub.doi && (
                       <div class="paper-doi-line">
                         <span class="doi-label">DOI:</span>
@@ -218,6 +225,22 @@ const years = Object.keys(pubsByYear).map(Number).sort((a, b) => b - a);
     color: var(--color-primary);
     font-weight: 600;
   }
+
+.paper-if-line {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  margin-top: 0.25rem;
+}
+
+.if-label {
+  font-weight: 700;
+  color: var(--color-text-secondary);
+}
+
+.if-value {
+  color: var(--color-text);
+}
 
   .paper-doi-line {
     display: flex;
