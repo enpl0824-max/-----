@@ -10,14 +10,12 @@ export interface GalleryItem {
 export const galleryData: GalleryItem[] = [
   {
     id: "gal-1",
-    title: "International Electrochemical Society Presentation",
-    category: "CONFERENCES",
-    date: "2024",
-    description: "Oral presentation on recent advances in low-Ir PEM water electrolysis electrocatalysts.",
+    title: "Dinner",
+    category: "LAB LIFE",
+    date: "2026.08.14",
+    description: "Dinner w/ prof. Haesun Park's lab members",
     images: [
-      "/-----/images/gallery/conference-01.jpg",
-      "/-----/images/gallery/conference-02.jpg",
-      "/-----/images/gallery/conference-03.jpg"
+      "/-----/images/260814%20박해선교수님%20연구실%20저녁.jpg",
     ]
   },
 
