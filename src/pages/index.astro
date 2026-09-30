@@ -293,6 +293,47 @@ const recentGallery = galleryData.slice(0, 3);
     flex-wrap: wrap;
   }
 
+ /* RESEARCH TOPICS */
+  .research-topic-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+ }
+
+  .research-topic-card {
+    position: relative;
+    min-height: 180px;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: var(--radius-subtle);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .research-topic-card .topic-number {
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: var(--color-primary);
+  }
+
+  .research-topic-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.3;
+    margin: 0;
+  }
+
+  .research-topic-card .topic-arrow {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+  }
+
   /* SELECTED PUBLICATIONS */
   .section-title-row {
     display: flex;
