@@ -21,108 +21,174 @@ import { publicationsData } from '../../data/publications';
     </div>
   </section>
 
-  <!-- Current Research Topics (3 Core Pillars) -->
+  <!-- Current Research Topics -->
   <section class="section section--gray" id="current-research">
     <div class="container">
       <div class="research-detail-list">
-        {currentResearchTopics.map((topic, index) => {
-          // Find related publications if any
-          const relatedPubs = publicationsData.filter(p => 
-            topic.id === 'pemwe' ? p.title.toLowerCase().includes('proton') || p.title.toLowerCase().includes('hydrogen') :
-            topic.id === 'aemwe' ? p.title.toLowerCase().includes('anion') || p.title.toLowerCase().includes('catalyst') :
-            p.title.toLowerCase().includes('electrodeposition') || p.title.toLowerCase().includes('structured')
-          ).slice(0, 2);
 
-          return (
-            <article class="research-detail-card" id={topic.id}>
-              <!-- Top Header Row -->
-              <div class="detail-header">
-                <span class="detail-number">{topic.number}</span>
-                <div class="detail-titles">
-                  <h2 class="detail-title">{topic.title}</h2>
-                  <p class="detail-tagline">{topic.tagline}</p>
-                </div>
-                <div class="detail-keywords">
-                  {topic.keywords.map(kw => (
-                    <span class="badge-keyword">{kw}</span>
-                  ))}
-                </div>
-              </div>
+        <!-- 01. Hydrogen Production -->
+        <article class="research-detail-card" id="hydrogen-production">
+          <h2 class="detail-title">Hydrogen Production</h2>
+          <p class="detail-tagline">
+            Water electrolysis in both acid and base electrolytes to produce hydrogen
+          </p>
 
-              <!-- Main Content Grid -->
-              <div class="detail-body-grid">
-                <!-- Text Column -->
-                <div class="detail-text-col">
-                  <div class="content-block">
-                    <h3 class="block-title">RESEARCH OVERVIEW</h3>
-                    <p class="block-desc">{topic.overview}</p>
-                  </div>
+          <div class="detail-image">
+            <PlaceholderImage
+              type="general"
+              title="Hydrogen Production"
+              subtitle="Water Electrolysis"
+              aspectRatio="16/9"
+            />
+          </div>
 
-                  {topic.keyTopics && (
-                    <div class="content-block">
-                      <h3 class="block-title">KEY RESEARCH TOPICS</h3>
-                      <ul class="block-list">
-                        {topic.keyTopics.map(item => (
-                          <li>
-                            <span class="dash">—</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+          <div class="content-block">
+            <ul class="block-list">
+              <li>
+                <span class="dash">—</span>
+                <span>Development of nano catalysts for water splitting</span>
+              </li>
+              <li>
+                <span class="dash">—</span>
+                <span>Development of hydrogen production system</span>
+              </li>
+              <li>
+                <span class="dash">—</span>
+                <span>Electrodeposition/sputter deposition for fabrication of non-precious catalysts</span>
+              </li>
+            </ul>
+          </div>
 
-                  {topic.scientificApproach && (
-                    <div class="content-block">
-                      <h3 class="block-title">SCIENTIFIC APPROACH</h3>
-                      <ul class="block-list">
-                        {topic.scientificApproach.map(item => (
-                          <li>
-                            <span class="dash">—</span>
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
+          <div class="content-block">
+            <h3 class="block-title">REPRESENTATIVE PUBLICATIONS</h3>
+          </div>
+        </article>
 
-                  {relatedPubs.length > 0 && (
-                    <div class="content-block">
-                      <h3 class="block-title">REPRESENTATIVE PUBLICATIONS</h3>
-                      <div class="related-pubs">
-                        {relatedPubs.map(p => (
-                          <div class="related-pub-item">
-                            <span class="related-pub-year">{p.year}</span>
-                            <span class="related-pub-title">{p.title} (<em>{p.journal}</em>)</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
 
-                <!-- Visual Illustration Column -->
-                <div class="detail-visual-col">
-                  {topic.image ? (
-                    <img src={topic.image} alt={topic.title} class="topic-real-image" />
-                  ) : (
-                    <PlaceholderImage 
-                      type={topic.id as any}
-                      title={topic.title}
-                      subtitle={topic.shortTitle}
-                      aspectRatio="4/3"
-                    />
-                  )}
-                  <p class="figure-caption">
-                    Schematic illustration of electrochemical cell architecture & interfacial kinetics for {topic.shortTitle}.
-                  </p>
-                </div>
-              </div>
+        <!-- 02. Fuel Cell -->
+        <article class="research-detail-card" id="fuel-cell">
+          <h2 class="detail-title">Fuel Cell</h2>
+          <p class="detail-tagline">
+            Power generation system to convert chemical energy of fuels (H2) to electricity directly by electrochemical reaction
+          </p>
 
-              {index < currentResearchTopics.length - 1 && <div class="topic-separator"></div>}
-            </article>
-          );
-        })}
+          <div class="detail-image">
+            <PlaceholderImage
+              type="general"
+              title="Fuel Cell"
+              subtitle="Electrochemical Power Generation"
+              aspectRatio="16/9"
+            />
+          </div>
+
+          <div class="content-block">
+            <ul class="block-list">
+              <li>
+                <span class="dash">—</span>
+                <span>Development of nano catalysts for fuel cell reaction</span>
+              </li>
+              <li>
+                <span class="dash">—</span>
+                <span>Electrodeposition/Sputter Deposition for Fabrication of Alloy Catalyst</span>
+              </li>
+              <li>
+                <span class="dash">—</span>
+                <span>Proton Exchange Membrane Fuel Cell (PEMFC)</span>
+              </li>
+              <li>
+                <span class="dash">—</span>
+                <span>Direct Methanol Fuel Cell (DMFC)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content-block">
+            <h3 class="block-title">REPRESENTATIVE PUBLICATIONS</h3>
+          </div>
+        </article>
+
+
+        <!-- 03. Electrochemical CO2 Conversion -->
+        <article class="research-detail-card" id="co2-conversion">
+          <h2 class="detail-title">Electrochemical CO<sub>2</sub> Conversion</h2>
+          <p class="detail-tagline">
+            Low temperature conversion of carbon dioxide to hydrocarbon fuel using electrochemical technology
+          </p>
+
+          <div class="detail-image">
+            <PlaceholderImage
+              type="general"
+              title="Electrochemical CO2 Conversion"
+              subtitle="CO2 Electro-reduction"
+              aspectRatio="16/9"
+            />
+          </div>
+
+          <div class="content-block">
+            <ul class="block-list">
+              <li>
+                <span class="dash">—</span>
+                <span>Development of nano catalysts CO2 electro-reduction</span>
+              </li>
+              <li>
+                <span class="dash">—</span>
+                <span>Development of fuel production system</span>
+              </li>
+              <li>
+                <span class="dash">—</span>
+                <span>Electrodeposition/Sputter deposition for fabrication of non-precious catalysts</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content-block">
+            <h3 class="block-title">REPRESENTATIVE PUBLICATIONS</h3>
+          </div>
+        </article>
+
+
+        <!-- 04. Electrodeposition on 3D Nano Structure -->
+        <article class="research-detail-card" id="3d-nano-structure">
+          <h2 class="detail-title">Electrodeposition on 3D Nano Structure</h2>
+          <p class="detail-tagline">
+            Electrochemical fabrication of nano structures for electronic/storage devices
+          </p>
+
+          <div class="detail-image">
+            <PlaceholderImage
+              type="general"
+              title="Electrodeposition on 3D Nano Structure"
+              subtitle="Nano Structure Fabrication"
+              aspectRatio="16/9"
+            />
+          </div>
+
+          <div class="content-block">
+            <ul class="block-list">
+              <li>
+                <span class="dash">—</span>
+                <span>Metal Electro/Electroless deposition</span>
+              </li>
+              <li>
+                <span class="dash">—</span>
+                <span>For Electronic/Storage devices</span>
+              </li>
+              <li>
+                <span class="dash">—</span>
+                <span>Electrodeposition chemistry</span>
+              </li>
+              <li>
+                <span class="dash">—</span>
+                <span>Thin film fabrication and characterization</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="content-block">
+            <h3 class="block-title">REPRESENTATIVE PUBLICATIONS</h3>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -198,10 +264,14 @@ import { publicationsData } from '../../data/publications';
   }
 
   .detail-title {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-size: clamp(2rem, 3vw, 3rem);
     font-weight: 800;
     letter-spacing: -0.02em;
     color: var(--color-text);
+    display: inline-block;
+    border-bottom: 3px solid var(--color-primary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   .detail-tagline {
