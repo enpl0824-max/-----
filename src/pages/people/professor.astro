@@ -92,8 +92,10 @@ import { professorData } from '../../data/professor';
                 <div class="timeline-item">
                   <span class="timeline-period">{edu.degree}</span>
                   <div class="timeline-content">
-                    <strong class="timeline-role">{edu.field}</strong>
-                    <span class="timeline-inst">{edu.institution}</span>
+                    <strong class="timeline-role">
+                      {edu.institution} ({edu.field})
+                    </strong>
+                    {edu.year && <span class="timeline-inst">{edu.year}</span>}
                   </div>
                 </div>
               ))}
