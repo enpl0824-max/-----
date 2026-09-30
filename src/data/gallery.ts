@@ -15,7 +15,7 @@ export const galleryData: GalleryItem[] = [
     date: "2026.08.14",
     description: "Dinner w/ prof. Haesun Park's lab members",
     images: [
-      "/-----/images/260814%20박해선교수님%20연구실%20저녁.jpg",
+      "/-----/public/images/260814%20박해선교수님%20연구실%20저녁.jpg",
     ]
   },
 
