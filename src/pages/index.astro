@@ -14,26 +14,22 @@ const selectedPubs = getSelectedPublications();
 const recentGallery = galleryData.slice(0, 3);
 ---
 
-<BaseLayout title="ENPL | Energy Nano-material Process Laboratory (ENPL)">
+<BaseLayout title="ENPL | Energy Nano-material Process Laboratory">
   <!-- 1. HERO SECTION -->
   <section class="hero-section section--white">
     <div class="container hero-container">
       <div class="hero-content">
         <div class="hero-badge-wrapper">
           <span class="hero-accent-bar"></span>
-          <span class="hero-badge">{coreConcept.title}</span>
+          <span class="hero-badge">중앙대학교 에너지나노소재공정 연구실</span>
         </div>
 
         <h1 class="hero-title">
-         중앙대학교 에너지나노소재공정 연구실
-        </h1>
-
-        <div class="hero-lab-name-en">
           <span class="lab-initial">E</span>nergy
           <span class="lab-initial">N</span>anomaterial
           <span class="lab-initial">P</span>rocess
           <span class="lab-initial">L</span>ab
-        </div>
+        </h1>
 
 
         <p class="hero-description">
@@ -297,8 +293,8 @@ const recentGallery = galleryData.slice(0, 3);
   }
 
   .hero-description {
-    font-size: 1.125rem;
-    line-height: 1.8;
+    font-size: 0.9rem;
+    line-height: 1.7;
     color: var(--color-text-secondary);
     margin-bottom: 2rem;
     max-width: 620px;
