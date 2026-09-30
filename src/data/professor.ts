@@ -32,7 +32,7 @@ export const professorData: ProfessorProfile = {
   nameKo: "김수길",
   position: "Professor",
   positionKo: "교수",
-  photo: "", // 사진 추가 시: "/images/people/professor.jpg" (public/images/people/에 파일 저장)
+  photo: "/-----/images/0.%20교수님 사진.png", // 사진 추가 시: "/images/people/professor.jpg" (public/images/people/에 파일 저장)
   department: "School of Integrative Engineering",
   departmentKo: "융합공학부",
   university: "Chung-Ang University",
