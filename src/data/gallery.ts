@@ -423,4 +423,18 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2023.12.15.%202024%20ENPL%20Year-end%20party!.jpg"
     ]
   },
+
+      {
+    id: "gal",
+    title: "2023 7th ICAE",
+    category: "CONFERENCE",
+    date: "2023.10.31-11.02",
+    description: "Attending 7th ICAE in Jeju: Kyeong-Rim (oral), Hongs-seong (poster)",
+    images: [
+      "/-----/images/2023.10.31-11.2.%202023%207th%20ICAE%20conference%20in%20Jeju%20(2).jpg",
+      "/-----/images/2023.10.31-11.2.%202023%207th%20ICAE%20conference%20in%20Jeju_edited_edited.jpg",
+      "/-----/images/2023.10.31-11.2.%202023%207th%20ICAE%20conference,%20Kyeong-Rim%20Yeo%20(Oral%20presentation).jpg",
+      "/-----/images/2023.10.31-11.2.%202023%207th%20ICAE%20conference,%20Hong%20Seong%20Park%20(Poster%20presentation).jpg",
+    ]
+  },
 ];
