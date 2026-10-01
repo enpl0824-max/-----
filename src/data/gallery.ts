@@ -39,7 +39,7 @@ export const galleryData: GalleryItem[] = [
     date: "2026.02.23",
     description: "Lab dinner",
     images: [
-      "/-----/images/260223.jpg"
+      "/-----/images/260223_edited.jpg"
     ]
   },
 
@@ -103,9 +103,9 @@ export const galleryData: GalleryItem[] = [
     title: "Lab Dinner",
     category: "LAB LIFE",
     date: "2025.11.17",
-    description: "Lab dinner after Joon-Young & Taeyoung's defense",
+    description: "Lab dinner after Joon-Young & Taeyoung's Master's defense",
     images: [
-      "/-----/images/251117labdinner.jpg"
+      "/-----/images/251117labdinner_edited.jpg"
     ]
   },
 
@@ -120,6 +120,32 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2025.10.HEREM,%20Suyeon%20Lee%20(Poster%20presentation).jpg",
       "/-----/images/2025.10.HEREM,%20TaeyoungKim%20(Poster%20presentation).jpg",
       "/-----/images/2025.10.HEREM.jpg"
+    ]
+  },
+
+ {
+    id: "gal",
+    title: "2025 ENPL Summer MT",
+    category: "LAB LIFE",
+    date: "2025.07.25-26",
+    description: "2025 ENPL Summer MT in Yangpyeong",
+    images: [
+      "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT%20(3).jpg",
+      "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT%20.jpg",
+      "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT%20(2).jpg",
+      "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT%20(4).jpg",
+      "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT%20(미기재%20사진).jpg",
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Lab Dinner",
+    category: "LAB LIFE",
+    date: "2025.07.21",
+    description: "Congratulations on your appointment as a professor, Hoyoung!",
+    images: [
+      "/-----/images/250721_edited.jpg"
     ]
   },
 ];
