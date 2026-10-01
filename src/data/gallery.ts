@@ -561,4 +561,38 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2022.07.14-15.%202022%20ENPL%20Summer%20MT%20(3).jpg"
     ]
   },
+
+ {
+    id: "gal",
+    title: "Teacher's day poster",
+    category: "LAB LIFE",
+    date: "2022.05",
+    description: "Celebrating 2022 Teacher's day together!",
+    images: [
+      "/-----/images/2022.05.%202022%20Teacher's%20day!.jpg",
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "KES 2022",
+    category: "CONFERENCE",
+    date: "2022.04.08",
+    description: "Attending 2022 spring meeting of the Korean Electrochemical Society in Jeju",
+    images: [
+      "/-----/images/2022.04.08.%20Spring%20Meeting%20of%20the%20Korean%20Electrochemical%20Society,%20jeju_edited.jpg",
+    ]
+  },
+
+    {
+    id: "gal",
+    title: "Ho Tae's graduation",
+    category: "GRADUATION",
+    date: "2022.02.",
+    description: "Congratulations to Ho Tae on his Master's graduation!",
+    images: [
+      "/-----/images/2022.02.%20Bang%20Ho%20Tae's%20graduation_edited_edited.jpg",
+      "/-----/images/2022.02.%20Bang%20Ho%20Tae's%20graduation(Master%20course)(2).jpg"
+    ]
+  },
 ];
