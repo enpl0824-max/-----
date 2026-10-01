@@ -59,24 +59,26 @@ export const galleryData: GalleryItem[] = [
 
   {
     id: "gal-5",
-    title: "Electrochemical Workstation & Test Station Setup",
+    title: "Teacher's day",
     category: "LAB LIFE",
-    date: "2023",
-    description: "Advanced PEMWE / AEMWE test station operating in CAU Building 202.",
+    date: "2026.05.18",
+    description: "Celebrating Teacher's day together with a calendar and a folding fan",
     images: [
-      "/-----/images/gallery/lab-facility-01.jpg",
-      "/-----/images/gallery/lab-facility-02.jpg"
+      "/-----/images/260518%20스승의날.jpg"
     ]
   },
 
   {
     id: "gal-6",
-    title: "Clean Energy Materials Symposium",
-    category: "CONFERENCES",
-    date: "2022",
-    description: "Invited lecture on 3D structured electrodeposited electrodes.",
+    title: "Joon-Young & Taeyoung graduation",
+    category: "GRADUATION",
+    date: "2026.02.13",
+    description: "Congratulations to Joon-Young and Taeyoung on their Master's graduation!",
     images: [
-      "/-----/images/gallery/symposium-01.jpg"
+      "/-----/images/졸업김태영.jpg",
+      "/-----/images/졸업김태영2.jpg",
+      "/-----/images/졸업박준영.jpg",
+      "/-----/images/졸업박준영2.jpg"
     ]
   }
 ];
