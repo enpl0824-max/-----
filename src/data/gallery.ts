@@ -36,7 +36,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal-3",
     title: "Lab Dinner",
     category: "LAB LIFE",
-    date: "2026.02.23",
+    date: "2026.06.23",
     description: "Lab dinner",
     images: [
       "/-----/images/260223_edited.jpg"
@@ -48,7 +48,7 @@ export const galleryData: GalleryItem[] = [
     title: "ECS 249th Meeting",
     category: "CONFERENCE",
     date: "2026.05.24-28",
-    description: "Attending ECS conference ",
+    description: "Attending ECS conference: Suyeon (poster), Tae-Won (poster)",
     images: [
       "/-----/images/260525%20ECS.jpg",
       "/-----/images/260525%20ECS%20태원.jpg",
@@ -65,6 +65,18 @@ export const galleryData: GalleryItem[] = [
     description: "Celebrating Teacher's day together with a calendar and a folding fan",
     images: [
       "/-----/images/260518%20스승의날.jpg"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "KES 2026",
+    category: "CONFERENCE",
+    date: "2026.04.01-03",
+    description: "Attending 2025 Spring meeting & academic of Korean Electrochemical Society in jeju: Seon-Yeong (poster), Dan-Bi (poster)",
+    images: [
+      "/-----/images/2026.04.01-03.%202026%20Spring%20Meeting%20&%20Exhibition%20of%20the%20Korean%20Electrochemical%20Society,%20Busan%20Park%20Seon%20Yeong%20(Poster%20presentatio.jpg",
+      "/-----/images/2026.04.01-03.%202026%20Spring%20Meeting%20&%20Exhibition%20of%20the%20Korean%20Electrochemical%20Society,%20Busan%20Danbi%20Kang%20(Poster%20presentation).jpg"
     ]
   },
 
@@ -199,7 +211,7 @@ export const galleryData: GalleryItem[] = [
     title: "KES 2025",
     category: "CONFERENCE",
     date: "2025.04.04",
-    description: "Attending 2025 Spring meeting & academic of Korean Electrochemical Society in jeju",
+    description: "Attending 2025 Spring meeting & academic of Korean Electrochemical Society in jeju: Joon-Young (poster), Taeyoung (poster)",
     images: [
       "/-----/images/2025.04.04.%20​2025%20Spring%20Meeting%20&%20Academic%20of%20the%20Korean%20Electrochemical%20Society,%20Jeju,%20Joon%20Young%20Park%20(Poster%20presentation).jpg",
       "/-----/images/2025.04.04.%20​2025%20Spring%20Meeting%20&%20Academic%20of%20the%20Korean%20Electrochemical%20Society,%20Jeju,%20Tae%20Young%20Kim%20(Poster%20presentation).jpg"
