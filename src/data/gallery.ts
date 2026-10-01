@@ -70,7 +70,7 @@ export const galleryData: GalleryItem[] = [
 
   {
     id: "gal-6",
-    title: "Joon-Young & Taeyoung graduation",
+    title: "Joon-Young & Taeyoung's graduation",
     category: "GRADUATION",
     date: "2026.02.13",
     description: "Congratulations to Joon-Young and Taeyoung on their Master's graduation!",
@@ -193,4 +193,33 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2025.04.25.%20LAB%20dinner.jpg"
     ]
   },
+
+  {
+    id: "gal",
+    title: "KES 2025",
+    category: "CONFERENCE",
+    date: "2025.04.04",
+    description: "Attending 2025 Spring meeting & academic of Korean Electrochemical Society in jeju",
+    images: [
+      "/-----/images/2025.04.04.%20​2025%20Spring%20Meeting%20&%20Academic%20of%20the%20Korean%20Electrochemical%20Society,%20Jeju,%20Joon%20Young%20Park%20(Poster%20presentation).jpg",
+      "/-----/images/2025.04.04.%20​2025%20Spring%20Meeting%20&%20Academic%20of%20the%20Korean%20Electrochemical%20Society,%20Jeju,%20Tae%20Young%20Kim%20(Poster%20presentation).jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "Kyeong-Rim & Chan-Hee's graduation",
+    category: "GRADUATION",
+    date: "2025.02.21",
+    description: "Congratulations to Kyeong-Rim on her Ph.D. graduation and Chanhee on his Master’s graduation!",
+    images: [
+       "/-----/images2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course).jpg",
+      "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20(3).jpg",
+      "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20(4).jpg",
+      "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20(2).jpg",
+      "/-----/images/2025.02.21.%20Congraturations!%20Kyeong-Rim.jpg",
+      "/-----/images/2025.02.21.%20Thank%20you%20for%20your%20hard%20work!%20Kyeong-Rim _edited.jpg"
+    ]
+  },
+
 ];
