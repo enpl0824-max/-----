@@ -620,4 +620,37 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2021.05.14.%20Congratulations%20to%20Professor%20Kim%20Soo-gil%20on%20his%2010th%20anniversary%20in%20Chung-Ang%20University!.jpg"
     ]
   },
+
+  {
+    id: "gal",
+    title: "KIChE 2021",
+    category: "CONFERENCE",
+    date: "2021.04.21",
+    description: "Attending KIChE spring 2021 in Busan: Kyeong-Rim (poster)",
+    images: [
+      "/-----/images/2021.04.21.%202021%20Spring%20KICHE,%20Busan,%20Kyeong-Rim%20Yeo%20(Poster%20presentation)_edited.jpg",
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "KES 2021",
+    category: "CONFERENCE",
+    date: "2021.04.08",
+    description: "Attending KES spring 2021 in Busan",
+    images: [
+      "/-----/images/2021.04.08.%202021%20Spring%20Meeting%20of%20the%20Korean%20Electrochemical%20Society,%20Busan.jpg",
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Kyeong-Rim's graduation",
+    category: "GRADUATION",
+    date: "2021.02.",
+    description: "Congratulations on Kyeong-Rim Yeo's graduation!",
+    images: [
+      "/-----/2021.02.%20Kyeong-Rim%20Yeo's%20graduation(undergraduation)_edited.jpg"
+    ]
+  },
 ];
