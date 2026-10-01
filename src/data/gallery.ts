@@ -48,7 +48,7 @@ export const galleryData: GalleryItem[] = [
     title: "ECS 249th Meeting",
     category: "CONFERENCE",
     date: "2026.05.24-28",
-    description: "Attending ECS conference: Suyeon (poster), Tae-Won (poster)",
+    description: "Attending ECS conference in US: Suyeon (poster), Tae-Won (poster)",
     images: [
       "/-----/images/260525%20ECS.jpg",
       "/-----/images/260525%20ECS%20태원.jpg",
@@ -73,7 +73,7 @@ export const galleryData: GalleryItem[] = [
     title: "KES 2026",
     category: "CONFERENCE",
     date: "2026.04.01-03",
-    description: "Attending 2025 Spring meeting & academic of Korean Electrochemical Society in jeju: Seon-Yeong (poster), Dan-Bi (poster)",
+    description: "Attending 2025 Spring meeting & academic of Korean Electrochemical Society in Busan: Seon-Yeong (poster), Dan-Bi (poster)",
     images: [
       "/-----/images/2026.04.01-03.%202026%20Spring%20Meeting%20&%20Exhibition%20of%20the%20Korean%20Electrochemical%20Society,%20Busan%20Park%20Seon%20Yeong%20(Poster%20presentatio.jpg",
       "/-----/images/2026.04.01-03.%202026%20Spring%20Meeting%20&%20Exhibition%20of%20the%20Korean%20Electrochemical%20Society,%20Busan%20Danbi%20Kang%20(Poster%20presentation).jpg"
