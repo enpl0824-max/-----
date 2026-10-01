@@ -37,7 +37,7 @@ export const studentsData: Student[] = [
     position: "M.S. Candidate (2025.03~)",
     researchInterest: "TBD",
     email: "taewonkim1017@naver.com",
-    photo: ""
+    photo: "/-----/images/김태원.jpg"
   },
   {
     id: "ms-2",
@@ -46,7 +46,7 @@ export const studentsData: Student[] = [
     position: "M.S. Candidate (2025.09~)",
     researchInterest: "TBD",
     email: "iris3481@naver.com",
-    photo: ""
+    photo: "/-----/images/박선영.jpg"
   },
  {
     id: "ms-3",
@@ -55,7 +55,7 @@ export const studentsData: Student[] = [
     position: "M.S. Candidate (2026.03~)",
     researchInterest: "TBD",
     email: "eksql6545@naver.com",
-    photo: ""
+    photo: "/-----/images/강단비.jpg"
   },
   {
     id: "ms-4",
