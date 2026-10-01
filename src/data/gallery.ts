@@ -584,7 +584,7 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
-    {
+  {
     id: "gal",
     title: "Ho Tae's graduation",
     category: "GRADUATION",
@@ -593,6 +593,31 @@ export const galleryData: GalleryItem[] = [
     images: [
       "/-----/images/2022.02.%20Bang%20Ho%20Tae's%20graduation_edited_edited.jpg",
       "/-----/images/2022.02.%20Bang%20Ho%20Tae's%20graduation(Master%20course)(2).jpg"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Tran Dinh Son's Defense",
+    category: "OTHERS",
+    date: "2021.08.",
+    description: "Tran Dinh Son's Defense",
+    images: [
+      "/-----/images/2021.08.%20Tran%20Dinh%20Son's%20Defence_edited.jpg",
+      "/-----/images/2021.08.%20Tran%20Dinh%20Son's%20Defence.jpg"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Professor Soo-Kil Kim's 10th Anniversary",
+    category: "LAB LIFE",
+    date: "2021.05.14",
+    description: " Congratulations to Professor Soo-Kil Kim on his 10th anniversary in Chung-Ang University!",
+    images: [
+      "/-----/images/2021.05.14.%20Congratulations%20to%20Professor%20Kim%20Soo-gil%20on%20his%2010th%20anniversary%20in%20Chung-Ang%20University!%20(2).jpg",
+      "/-----/images/2021.05.14.%20Congratulations%20to%20Professor%20Kim%20Soo-gil%20on%20his%2010th%20anniversary%20in%20Chung-Ang%20University%20(교수님%20사진).jpg",
+      "/-----/images/2021.05.14.%20Congratulations%20to%20Professor%20Kim%20Soo-gil%20on%20his%2010th%20anniversary%20in%20Chung-Ang%20University!.jpg"
     ]
   },
 ];
