@@ -75,7 +75,7 @@ export const galleryData: GalleryItem[] = [
     date: "2026.02.13",
     description: "Congratulations to Joon-Young and Taeyoung on their Master's graduation!",
     images: [
-      "/-----/images/26.02졸업.jpg"
+      "/-----/images/26.02졸업.jpg",
       "/-----/images/졸업김태영.jpg",
       "/-----/images/졸업김태영2.jpg",
       "/-----/images/졸업박준영.jpg",
@@ -116,9 +116,10 @@ export const galleryData: GalleryItem[] = [
     date: "2025.10.08-12",
     description: "Attending the HEREM 2025 conference in singapore",
     images: [
-      "/-----/images/2510HEREMJY.png"
+      "/-----/images/2510HEREMJY.png",
       "/-----/images/2025.10.HEREM,%20Suyeon%20Lee%20(Poster%20presentation).jpg",
       "/-----/images/2025.10.HEREM,%20TaeyoungKim%20(Poster%20presentation).jpg",
-      "/-----/images/2025.10.HEREM.jpg",
+      "/-----/images/2025.10.HEREM.jpg"
     ]
+  },
 ];
