@@ -1,7 +1,7 @@
 export interface GalleryItem {
   id: string;
   title: string;
-  category: "CONFERENCES" | "LAB LIFE" | "AWARDS" | "GRADUATION";
+  category: "CONFERENCES" | "LAB LIFE" | "AWARDS" | "GRADUATION" | "OTHERS";
   date: string;
   description: string;
   images: string[];
@@ -231,6 +231,44 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20%20(2).jpg",
       "/-----/images/2025.02.21.%20Congraturations!%20Kyeong-Rim.jpg",
       "/-----/images/2025.02.21.%20Thank%20you%20for%20your%20hard%20work!%20Kyeong-Rim _edited.jpg"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "2024 ENPL Year-end party",
+    category: "LAB LIFE",
+    date: "2024.12.20",
+    description: "2024 ENPL Year-end party. Thank you to our alumni for joining us!",
+    images: [
+      "/-----/images/2024.12.20.%202024%20ENPL%20Year-end%20party.PNG"
+    ]
+  },
+
+
+   {
+    id: "gal",
+    title: "BRL Workshop",
+    category: "OTHERS",
+    date: "2024.10.18-19",
+    description: "BRL (Basic Research Lab) workshop in Busan",
+    images: [
+      "/-----/images/2024.10.18-19.%20BRL(Basic%20Research%20Lab)%20workshop,%20Busan.PNG",
+      "/-----/images/2024.10.18-19.%20BRL(Basic%20Research%20Lab)%20workshop,%20Busan%20(2).PNG"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "KIChE Fall 2024",
+    category: "CONFERENCE",
+    date: "2024.10.17",
+    description: "Attending KIChE fall meeting and international symposium in Busan",
+    images: [
+      "/-----/images/2024.10.17.%202024%20Fall%20KICHE,%20Busan.PNG",
+      "/-----/images/2024.10.17.%202024%20Fall%20KICHE,%20Busan%20Taeyoung%20Kim%20(Poster%20presentation).PNG",
+      "/-----/images/2024.10.17. 2024%20Fall%20KICHE,%20Busan%20Joon%20Young%20Park%20(Poster%20presentation).PNG",
+      "/-----/images/2024.10.17. 2024%20Fall%20KICHE,%20Busan%20Chan%20Hee%20Lee%20(Poster%20presentation).PNG"
     ]
   },
 
