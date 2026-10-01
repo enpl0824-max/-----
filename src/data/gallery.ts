@@ -516,14 +516,14 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
-  {
+   {
     id: "gal",
     title: "Kyung-Ji's graduation",
     category: "GRADUATION",
     date: "2023.02.15",
     description: "Congratulations to Kyung-Ji on his Master's graduation!",
     images: [
-      "/-----/images/2023.02.15.%20Choi%20Kyung-Ji's%20graduation(Master%20course)%20(2)_edited.png",
+     "/-----/images/2023.02.15.%20Choi%20Kyung-Ji's%20graduation(Master%20course)%20(2)_edited.png",
       "/-----/images/2023.02.15.%20Choi%20Kyung-Ji's%20graduation(Master%20course)%20(3)_edited.jpg"
     ]
   },
@@ -643,14 +643,14 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
-   {
+     {
     id: "gal",
     title: "Kyeong-Rim's graduation",
     category: "GRADUATION",
     date: "2021.02.",
-    description: "Congratulations on Kyeong-Rim Yeo's graduation!",
+    description: "Congratulations on Kyeong-Rim Yeo's graduation (undergraduation)!",
     images: [
-      "/-----/2021.02.%20Kyeong-Rim%20Yeo's%20graduation(undergraduation)_edited.jpg"
+     "/-----/2021.02.%20Kyeong-Rim%20Yeo's%20graduation(undergraduation)_edited.jpg"
     ]
   },
 ];
