@@ -330,4 +330,26 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
+  {
+    id: "gal",
+    title: "Teacher's day poster",
+    category: "LAB LIFE",
+    date: "2024.05.15",
+    description: "Celebrating Teacher's day together with a poster",
+    images: [
+      "/-----/images/2024.05.15.%202024%20Teacher's%20day%20poster.PNG"
+    ]
+  },
+  
+  {
+    id: "gal",
+    title: "Lab Dinner",
+    category: "LAB LIFE",
+    date: "2024.04.18",
+    description: "Lab dinner",
+    images: [
+      "/-----/images/2024.04.18.%20Lab%20dinner%20(2).PNG",
+      "/-----/images/2024.04.18.%20Lab%20dinner.PNG"
+    ]
+  },
 ];
