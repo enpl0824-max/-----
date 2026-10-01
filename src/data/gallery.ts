@@ -272,4 +272,40 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
+   {
+    id: "gal",
+    title: "PRiME 2024",
+    category: "CONFERENCE",
+    date: "2024.10.06-11",
+    description: "Attending PRiME 2024 (Pacific Rim Meeting on Electrochemical and Solid-State Science) in Hawaii: Kyeong-Rim (poster)",
+    images: [
+      "/-----/images/2024.10.6-11.%20PRiME%202024(Pacific%20Rim%20Meeting%20on%20Electrochemical%20and%20Solid-State%20Science),%20Hawaii,%20Keyong%20Rim%20Yeo%20(Poster%20present.PNG",
+      "/-----/images/2024.10.6-11.%20PRiME%202024(Pacific%20Rim%20Meeting%20on%20Electrochemical%20and%20Solid-State%20Science),%20Hawaii.png"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "MCARE 2024",
+    category: "CONFERENCE",
+    date: "2024.08.20-23",
+    description: "Attending MCARE 2024 conference: Kyeong-Rim (poster)",
+    images: [
+      "/-----/images/2024.08.20-23.%202024%20MCARE%20conference,%20Kyeong%20Rim%20Yeo%20(Poster%20presentation).PNG"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "2024 ENPL Summer MT",
+    category: "LAB LIFE",
+    date: "2025.07.12-13",
+    description: "2024 ENPL Summer MT",
+    images: [
+      "/-----/images/2024.07.12-13.%202024%20ENPL%20Summer%20MT%20(2).PNG",
+      "/-----/images/2024.07.12-13.%202024%20ENPL%20Summer%20MT.PNG"
+    ]
+  },
+
+
 ];
