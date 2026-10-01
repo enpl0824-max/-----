@@ -34,13 +34,12 @@ export const galleryData: GalleryItem[] = [
 
   {
     id: "gal-3",
-    title: "KECS Conference Academic Award",
-    category: "AWARDS",
-    date: "2023",
-    description: "Recognition for outstanding graduate research poster presentation.",
+    title: "Lab Dinner",
+    category: "LAB LIFE",
+    date: "2026.02.23",
+    description: "Lab dinner",
     images: [
-      "/-----/images/gallery/award-01.jpg",
-      "/-----/images/gallery/award-02.jpg"
+      "/-----/public/images/260223",
     ]
   },
 
