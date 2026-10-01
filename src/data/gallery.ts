@@ -215,8 +215,8 @@ export const galleryData: GalleryItem[] = [
     images: [
       "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course).jpg",
       "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20(3).jpg",
-      "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20(4).jpg",
-      "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20(2).jpg",
+      "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20%20(4).jpg",
+      "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20%20(2).jpg",
       "/-----/images/2025.02.21.%20Congraturations!%20Kyeong-Rim.jpg",
       "/-----/images/2025.02.21.%20Thank%20you%20for%20your%20hard%20work!%20Kyeong-Rim _edited.jpg"
     ]
