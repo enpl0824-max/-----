@@ -213,7 +213,7 @@ export const galleryData: GalleryItem[] = [
     date: "2025.02.21",
     description: "Congratulations to Kyeong-Rim on her Ph.D. graduation and Chanhee on his Master’s graduation!",
     images: [
-       "/-----/images2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course).jpg",
+      "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course).jpg",
       "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20(3).jpg",
       "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20(4).jpg",
       "/-----/images/2025.02.21.%20Kyeong-Rim%20&%20Chan-Hee's%20graduation%20(Ph.D.%20&%20Master%20course)%20(2).jpg",
