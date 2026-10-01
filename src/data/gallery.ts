@@ -126,7 +126,7 @@ export const galleryData: GalleryItem[] = [
     title: "HEREM 2025",
     category: "CONFERENCE",
     date: "2025.10.08-12",
-    description: "Attending the HEREM 2025 conference in singapore",
+    description: "Attending the HEREM 2025 conference in singapore: Suyeon (poster), Joon-Young (poster), Taeyoung (poster)",
     images: [
       "/-----/images/2510HEREMJY.png",
       "/-----/images/2025.10.HEREM,%20Suyeon%20Lee%20(Poster%20presentation).jpg",
@@ -362,6 +362,32 @@ export const galleryData: GalleryItem[] = [
     images: [
       "/-----/images/2024.04.08.%20Lab%20picnic%20(2).PNG",
       "/-----/images/2024.04.08.%20Lab%20picnic.PNG"
+    ]
+  },
+
+    {
+    id: "gal",
+    title: "KES 2024",
+    category: "CONFERENCE",
+    date: "2024.04.03-05",
+    description: "Attending KES 2024 conference in Busan: Kyeong-Rim (poster), Chan Hee (poster)",
+    images: [
+      "/-----/images/2024.04.03-05.2024%20Spring%20Meeting%20of%20the%20Korean%20Electrchemical%20Society,%20Busan,%20Kyeong%20Rim%20Yeo%20(Poster%20presentation).PNG",
+      "/-----/images/2024.04.03-05.2024%20Spring%20Meeting%20of%20the%20Korean%20Electrchemical%20Society,%20Busan,%20Chan%20Hee%20Lee%20(Poster%20presentation).PNG"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Hong-Seong's graduation",
+    category: "GRADUATION",
+    date: "2024.02.23",
+    description: "Congratulations to Hong-Seong on his Master's graduation!",
+    images: [
+      "/-----/images/2024.02.23.%20Hong-Seong's%20graduation(Master%20course)%20(4).jpg",
+      "/-----/images/2024.02.23.%20Hong-Seong's%20graduation(Master%20course)%20(3)_edited.jpg",
+      "/-----/images/2024.02.23.%20Hong-Seong's%20graduation(Master%20course)%20(2)_edited_edited.png",
+      "/-----/images/2024.02.23.%20Hong-Seong's%20graduation(Master%20course)%20_edited.jpg"
     ]
   },
 ];
