@@ -5,6 +5,11 @@ import { getAllPublicationsByYear } from '../../data/publications';
 
 const pubsByYear = getAllPublicationsByYear();
 const years = Object.keys(pubsByYear).map(Number).sort((a, b) => b - a);
+
+const totalPublications = years.reduce(
+  (sum, year) => sum + pubsByYear[year].length,
+  0
+);
 ---
 
 <BaseLayout 
