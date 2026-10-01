@@ -75,10 +75,37 @@ export const galleryData: GalleryItem[] = [
     date: "2026.02.13",
     description: "Congratulations to Joon-Young and Taeyoung on their Master's graduation!",
     images: [
+      "/-----/images/26.02졸업.jpg"
       "/-----/images/졸업김태영.jpg",
       "/-----/images/졸업김태영2.jpg",
       "/-----/images/졸업박준영.jpg",
       "/-----/images/졸업박준영2.jpg"
+    ]
+  },
+
+{
+    id: "gal-7",
+    title: "ICAE 2025",
+    category: "CONFERENCE",
+    date: "2025.11.26-28",
+    description: "Attending the ICAE 2025 conference at jeju ICC",
+    images: [
+      "/-----/images/20251126ICAE2025%20김태영포스터.jpg",
+      "/-----/images/20251126ICAE2025%20박준영포스터.jpg",
+      "/-----/images/20251126ICAE2025%20이수연포스터.jpg",
+      "/-----/images/20251126ICAE2025%20김태원포스터.jpg",
+      "/-----/images/20251126ICAE2025%20박선영포스터.jpg"
+    ]
+  },
+
+  {
+    id: "gal-8",
+    title: "Lab Dinner",
+    category: "LAB LIFE",
+    date: "2025.11.17",
+    description: "Lab dinner after Joon-Young & Taeyoung's defense",
+    images: [
+      "/-----/images/251117labdinner.jpg"
     ]
   }
 ];
