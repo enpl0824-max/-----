@@ -16,60 +16,50 @@ const recentGallery = galleryData.slice(0, 3);
 
 <BaseLayout title="ENPL | Energy Nano-material Process Laboratory">
   <!-- 1. HERO SECTION -->
-  <section class="hero-section section--white">
-    <div class="container hero-container">
-      <div class="hero-content">
-        <div class="hero-badge-wrapper">
-          <span class="hero-accent-bar"></span>
-          <span class="hero-badge">중앙대학교 에너지나노소재공정 연구실</span>
-        </div>
+  <section class="hero-section">
+  <div class="hero-background"></div>
 
-        <h1 class="hero-title">
-          <span class="lab-initial">E</span>nergy{' '}
-          <span class="lab-initial">N</span>anomaterial{' '} 
-          <span class="lab-initial">P</span>rocess{' '}
-          <span class="lab-initial">L</span>ab
-        </h1>
-
-
-        <p class="hero-description">
-          We focus on the development of electrochemical energy conversion devices of water electrolysis, CO2 conversion, and fuel cell, which are the core technologies of next-generation clean energy storage/conversion systems based on hydrogen.
-          
-          The research is to synthesize nano electrode materials through a variety of methods, including Electrodeposition, Sputter Deposition, and Chemical Reduction, to maximize energy conversion/storage efficiency.
-          
-          In addition, the manufacturing process of these nanomaterials can extend its application by grafting them into various fields such as thin films, catalysts, and electronic materials.
-        </p>
-
-        <!-- Research Keywords -->
-        <div class="hero-keywords">
-          <span class="badge-keyword">PEMWE</span>
-          <span class="keyword-dot">·</span>
-          <span class="badge-keyword">AEMWE</span>
-          <span class="keyword-dot">·</span>
-          <span class="badge-keyword">HER / OER</span>
-          <span class="keyword-dot">·</span>
-          <span class="badge-keyword">ELECTROCATALYSTS</span>
-          <span class="keyword-dot">·</span>
-          <span class="badge-keyword">ELECTRODEPOSITION</span>
-        </div>
-
-        <div class="hero-cta-group">
-          <a href={withBase("/research/")} class="btn-primary">EXPLORE RESEARCH</a>
-          <a href={withBase("/publications/papers/")} class="btn-secondary">PUBLICATIONS</a>
-        </div>
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="hero-badge-wrapper">
+        <span class="hero-accent-bar"></span>
+        <span class="hero-badge">중앙대학교 에너지나노소재공정 연구실</span>
       </div>
 
-      <!-- Large Hero Visual Placeholder -->
-      <div class="hero-visual">
-        <PlaceholderImage 
-          type="hero" 
-          title="중앙대학교 에너지나노소재공정 연구실" 
-          subtitle="Chung-Ang University · ENPL Research Framework"
-          aspectRatio="16/9"
-        />
+      <h1 class="hero-title">
+        <span class="lab-initial">E</span>nergy{' '}
+        <span class="lab-initial">N</span>anomaterial{' '} 
+        <span class="lab-initial">P</span>rocess{' '}
+        <span class="lab-initial">L</span>ab
+      </h1>
+
+      <p class="hero-description">
+        We focus on the development of electrochemical energy conversion devices of water electrolysis, CO2 conversion, and fuel cell, which are the core technologies of next-generation clean energy storage/conversion systems based on hydrogen.
+        
+        The research is to synthesize nano electrode materials through a variety of methods, including Electrodeposition, Sputter Deposition, and Chemical Reduction, to maximize energy conversion/storage efficiency.
+        
+        In addition, the manufacturing process of these nanomaterials can extend its application by grafting them into various fields such as thin films, catalysts, and electronic materials.
+      </p>
+
+      <div class="hero-keywords">
+        <span class="badge-keyword">PEMWE</span>
+        <span class="keyword-dot">·</span>
+        <span class="badge-keyword">AEMWE</span>
+        <span class="keyword-dot">·</span>
+        <span class="badge-keyword">HER / OER</span>
+        <span class="keyword-dot">·</span>
+        <span class="badge-keyword">ELECTROCATALYSTS</span>
+        <span class="keyword-dot">·</span>
+        <span class="badge-keyword">ELECTRODEPOSITION</span>
+      </div>
+
+      <div class="hero-cta-group">
+        <a href={withBase("/research/")} class="btn-primary">EXPLORE RESEARCH</a>
+        <a href={withBase("/publications/papers/")} class="btn-secondary">PUBLICATIONS</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- 2. RESEARCH TOPICS (EDITORIAL NUMBERED LAYOUT) -->
   <section class="section section--gray" id="research-topics">
@@ -213,18 +203,39 @@ const recentGallery = galleryData.slice(0, 3);
 
 <style>
   /* HERO STYLES */
-  .hero-section {
-    padding-top: 4.5rem;
-    padding-bottom: 5.5rem;
-    border-bottom: 1px solid var(--color-gray);
-  }
+.hero-section {
+  position: relative;
+  min-height: 620px;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
 
-  .hero-container {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 4rem;
-    align-items: center;
-  }
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.82),
+      rgba(255, 255, 255, 0.82)
+    ),
+    url('/-----/images/research/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.hero-content {
+  max-width: 900px;
+}
 
   .hero-badge-wrapper {
     display: inline-flex;
