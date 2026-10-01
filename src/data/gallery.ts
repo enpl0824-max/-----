@@ -420,7 +420,7 @@ export const galleryData: GalleryItem[] = [
     date: "2023.12.15",
     description: "2023 Year-end party! Thank you for our alumnis for joining us!",
     images: [
-      "/-----/images/2023.12.15.%202024%20ENPL%20Year-end%20party!.jpg",
+      "/-----/images/2023.12.15.%202024%20ENPL%20Year-end%20party!.jpg"
     ]
   },
 ];
