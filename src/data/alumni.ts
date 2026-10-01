@@ -33,7 +33,7 @@ export const alumniData: Alumni[] = [
     id: "alumni-4",
     name: "Kyeong Rim Yeo",
     degree: "Ph.D.",
-    currentAffiliation: "Postdoc @Chungbuk National University",
+    currentAffiliation: "Chungbuk National University",
     researchArea: "Development of electrocatalysts for PEMWE and AEMWE"
   },
   {
