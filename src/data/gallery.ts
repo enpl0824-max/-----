@@ -107,5 +107,18 @@ export const galleryData: GalleryItem[] = [
     images: [
       "/-----/images/251117labdinner.jpg"
     ]
-  }
+  },
+
+  {
+    id: "gal-9",
+    title: "HEREM 2025",
+    category: "CONFERENCE",
+    date: "2025.10.08-12",
+    description: "Attending the HEREM 2025 conference in singapore",
+    images: [
+      "/-----/images/2510HEREMJY.png"
+      "/-----/images/2025.10.HEREM,%20Suyeon%20Lee%20(Poster%20presentation).jpg",
+      "/-----/images/2025.10.HEREM,%20TaeyoungKim%20(Poster%20presentation).jpg",
+      "/-----/images/2025.10.HEREM.jpg",
+    ]
 ];
