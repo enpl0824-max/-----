@@ -398,11 +398,11 @@ export const galleryData: GalleryItem[] = [
     date: "2024.01.24",
     description: "Congratulations on publishing Kyeong-Rim's Appl. Catal, B paper!",
     images: [
-      "/-----/images/2024.01.24.%20Congratulations%20on%20publishing%20Kyeong-Rim's_edited.png",
+      "/-----/images/2024.01.24.%20Congratulations%20on%20publishing%20Kyeong-Rim's_edited.png"
     ]
   },
 
-    {
+  {
     id: "gal",
     title: "Goodbye, Hong-seong!",
     category: "LAB LIFE",
@@ -410,6 +410,17 @@ export const galleryData: GalleryItem[] = [
     description: "Goodbye, Hong-Seong!",
     images: [
       "/-----/images/2024.01.17.%20GOODBYE,%20Hong-Seong!.png",
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "2023 ENPL Year-End Party",
+    category: "LAB LIFE",
+    date: "2023.12.15",
+    description: "2023 Year-end party! Thank you for our alumnis for joining us!",
+    images: [
+      "/-----/images/2023.12.15.%202024%20ENPL%20Year-end%20party!.jpg",
     ]
   },
 ];
