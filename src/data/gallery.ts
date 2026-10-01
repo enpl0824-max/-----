@@ -483,4 +483,38 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2023.05.15.%20Kyeong-rim%20Yeo%20received%20the%20Graduate%20School%20Alumni%20Association%20Award!_edited.jpg",
     ]
   },
+
+    {
+    id: "gal",
+    title: "Teacher's day poster",
+    category: "LAB LIFE",
+    date: "2023.05.15",
+    description: "Celebrating Teacher's day together with a poster",
+    images: [
+      "/-----/images/2023.05.15.%202023%20Teacher's%20day%20poster_edited.png",
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "KES 2023",
+    category: "CONFERENCE",
+    date: "2023.04.06",
+    description: "Attending 2023 spring meeting of the Korean Electrochemical Society in Jeju: Kyeong-Rim (poster)",
+    images: [
+      "/-----/images/2023.04.06.%202023%20Spring%20Meeting%20of%20the%20Korean%20Electrochemical%20Society,%20Jeju,%20Kyeong-Rim%20Yeo%20(Poster%20presentation)edited_edited_edited.jpg",
+    ]
+  },
+
+  
+    {
+    id: "gal",
+    title: "Spring picnic",
+    category: "LAB LIFE",
+    date: "2023.03.29",
+    description: "Spring picnic in Yeouido",
+    images: [
+      "/-----/images/2023.03.29.%20Spring%20picnic,%20Yeouido%20cherry%20blossom%20_edited_edited.jpg",
+    ]
+  },
 ];
