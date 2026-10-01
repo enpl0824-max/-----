@@ -131,7 +131,7 @@ export const galleryData: GalleryItem[] = [
     description: "2025 ENPL Summer MT in Yangpyeong",
     images: [
       "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT%20(3).jpg",
-      "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT%20.jpg",
+      "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT.jpg",
       "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT%20(2).jpg",
       "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT%20(4).jpg",
       "/-----/images/2026.07.25-26.%202025%20ENPL%20Summer%20MT%20(미기재%20사진).jpg",
