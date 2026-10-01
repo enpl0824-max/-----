@@ -352,4 +352,16 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2024.04.18.%20Lab%20dinner.PNG"
     ]
   },
+
+   {
+    id: "gal",
+    title: "Lab Picnic",
+    category: "LAB LIFE",
+    date: "2024.04.08",
+    description: "Lab picnic in CAU campus (◕ᴗ◕✿)",
+    images: [
+      "/-----/images/2024.04.08.%20Lab%20picnic%20(2).PNG",
+      "/-----/images/2024.04.08.%20Lab%20picnic.PNG"
+    ]
+  },
 ];
