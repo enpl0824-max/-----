@@ -39,7 +39,7 @@ export const galleryData: GalleryItem[] = [
     date: "2026.02.23",
     description: "Lab dinner",
     images: [
-      "/-----/public/images/260223.jpg",
+      "/-----/images/260223.jpg",
     ]
   },
 
@@ -50,10 +50,10 @@ export const galleryData: GalleryItem[] = [
     date: "2026.05.24-28",
     description: "Attending ECS conference ",
     images: [
-      "/-----/public/images/260525%20ECS.jpg",
-      "/-----/public/images/260525%20ECS%20태원.jpg",
-      "/-----/public/images/260525%20ECS%20태원포스터.jpg"
-      "/-----/public/images/260525%20ECS%20수연포스터.jpg"
+      "/-----/images/260525%20ECS.jpg",
+      "/-----/images/260525%20ECS%20태원.jpg",
+      "/-----/images/260525%20ECS%20태원포스터.jpg"
+      "/-----/images/260525%20ECS%20수연포스터.jpg"
     ]
   },
 
