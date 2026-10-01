@@ -424,7 +424,7 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
-      {
+  {
     id: "gal",
     title: "2023 7th ICAE",
     category: "CONFERENCE",
@@ -437,4 +437,29 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2023.10.31-11.2.%202023%207th%20ICAE%20conference,%20Hong%20Seong%20Park%20(Poster%20presentation).jpg",
     ]
   },
+
+  {
+    id: "gal",
+    title: "74th Annual Meeting of the International Society of Electrochemistry,",
+    category: "CONFERENCE",
+    date: "2023.09.03-08",
+    description: "74th Annual Meeting of the International Society of Electrochemistry, Lyon, France: Kyeong-Rim (poster)",
+    images: [
+      "/-----/images/2023.09.03-08.%2074th%20Annual%20Meeting%20of%20the%20International%20Society%20of%20Electrochemistry,%20Lyon,%20France%20,%20Kyeong-Rim%20Yeo%20(Poster%20presentation).jpg",
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "2023 ENPL Summer MT",
+    category: "LAB LIFE",
+    date: "2023.07.21-22",
+    description: "2023 ENPL Summer MT",
+    images: [
+      "/-----/images/2023.07.21-22.%202023%20ENPL%20Summer%20MT%20(3).jpg",
+      "/-----/images/2023.07.21-22.%202023%20ENPL%20Summer%20MT.jpg",
+      "/-----/images/2023.07.21-22.%202023%20ENPL%20Summer%20MT%20(2).jpg"
+    ]
+  },
+
 ];
