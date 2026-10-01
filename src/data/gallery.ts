@@ -440,7 +440,7 @@ export const galleryData: GalleryItem[] = [
 
   {
     id: "gal",
-    title: "74th Annual Meeting of the International Society of Electrochemistry,",
+    title: "74th Annual Meeting of the International Society of Electrochemistry",
     category: "CONFERENCE",
     date: "2023.09.03-08",
     description: "74th Annual Meeting of the International Society of Electrochemistry, Lyon, France: Kyeong-Rim (poster)",
@@ -462,4 +462,25 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
+   {
+    id: "gal",
+    title: "HBD Chan Hee!",
+    category: "LAB LIFE",
+    date: "2023.07.10",
+    description: "Happy Birthday Chan Hee!",
+    images: [
+      "/-----/images/2023.07.10.%20Happy%20Birthday%20Chan Hee!.jpg",
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Graduate School Alumni Association Awards",
+    category: "AWARDS",
+    date: "2023.05.15",
+    description: "Kyeong-Rim received the Graduate School Alumni Association Award!",
+    images: [
+      "/-----/images/2023.05.15.%20Kyeong-rim%20Yeo%20received%20the%20Graduate%20School%20Alumni%20Association%20Award!_edited.jpg",
+    ]
+  },
 ];
