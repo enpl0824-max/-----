@@ -326,7 +326,7 @@ export const galleryData: GalleryItem[] = [
     date: "2024.05.29",
     description: "CAU WINNING DAY!",
     images: [
-      "/-----/images/public/images/2024.05.29.%20CAU%20WINNING%20DAY.PNG"
+      "/-----/images/2024.05.29.%20CAU%20WINNING%20DAY.PNG"
     ]
   },
 
