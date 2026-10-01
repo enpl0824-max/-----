@@ -390,4 +390,26 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2024.02.23.%20Hong-Seong's%20graduation(Master%20course)%20_edited.jpg"
     ]
   },
+
+    {
+    id: "gal",
+    title: "Kyeong-Rim's Appl.Catal, B Paper Accepted!",
+    category: "LAB LIFE",
+    date: "2024.01.24",
+    description: "Congratulations on publishing Kyeong-Rim's Appl. Catal, B paper!",
+    images: [
+      "/-----/images/2024.01.24.%20Congratulations%20on%20publishing%20Kyeong-Rim's_edited.png",
+    ]
+  },
+
+    {
+    id: "gal",
+    title: "Goodbye, Hong-seong!",
+    category: "LAB LIFE",
+    date: "2024.01.24",
+    description: "Goodbye, Hong-Seong!",
+    images: [
+      "/-----/images/2024.01.17.%20GOODBYE,%20Hong-Seong!.png",
+    ]
+  },
 ];
