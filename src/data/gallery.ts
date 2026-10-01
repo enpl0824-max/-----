@@ -245,7 +245,6 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
-
    {
     id: "gal",
     title: "BRL Workshop",
@@ -506,8 +505,7 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
-  
-    {
+ {
     id: "gal",
     title: "Spring picnic",
     category: "LAB LIFE",
@@ -515,6 +513,29 @@ export const galleryData: GalleryItem[] = [
     description: "Spring picnic in Yeouido",
     images: [
       "/-----/images/2023.03.29.%20Spring%20picnic,%20Yeouido%20cherry%20blossom%20_edited_edited.jpg",
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "Kyung-Ji's graduation",
+    category: "GRADUATION",
+    date: "2023.02.15",
+    description: "Congratulations to Kyung-Ji on his Master's graduation!",
+    images: [
+      "/-----/images/2023.02.15.%20Choi%20Kyung-Ji's%20graduation(Master%20course)%20(2)_edited.png",
+      "/-----/images/2023.02.15.%20Choi%20Kyung-Ji's%20graduation(Master%20course)%20(3)_edited.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "2022 ENPL Year-end party",
+    category: "LAB LIFE",
+    date: "2022.12.20",
+    description: "2022 ENPL Year-end party. Thank you to our alumni for joining us!",
+    images: [
+      "/-----/images/2022.12.26.%202022%20ENPL%20Year-end%20party!_edited.jpg"
     ]
   },
 ];
