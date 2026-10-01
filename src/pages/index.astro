@@ -155,11 +155,10 @@ const recentGallery = galleryData.slice(0, 3);
         {recentGallery.map((item) => (
           <div class="gallery-preview-card">
             <div class="card-visual">
-              <PlaceholderImage 
-                type="general" 
-                title={item.placeholderLabel || item.title}
-                subtitle={`${item.category} · ${item.date}`}
-                aspectRatio="4/3"
+              <img 
+                src={item.images[0]} 
+                alt={item.title}
+                class="gallery-highlight-image"
               />
             </div>
             <div class="card-caption">
@@ -432,6 +431,13 @@ const recentGallery = galleryData.slice(0, 3);
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
+
+.gallery-highlight-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
 
   .gallery-preview-card {
     background-color: var(--color-white);
