@@ -299,7 +299,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal",
     title: "2024 ENPL Summer MT",
     category: "LAB LIFE",
-    date: "2025.07.12-13",
+    date: "2024.07.12-13",
     description: "2024 ENPL Summer MT",
     images: [
       "/-----/images/2024.07.12-13.%202024%20ENPL%20Summer%20MT%20(2).PNG",
@@ -307,5 +307,27 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
+ {
+    id: "gal",
+    title: "Ph.D. Proposal",
+    category: "LAB LIFE",
+    date: "2024.06.27",
+    description: "Ph.D. proposal",
+    images: [
+      "/-----/images/2024.06.27.%20Ph.D.%20Proposal%20(Kyeong%20Rim%20Yeo).PNG",
+      "/-----/images/2024.06.27.%20Ph.D.%20Proposal%20(Kyeong%20Rim%20Yeo)%20(2).PNG"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "CAU WINNING DAY",
+    category: "LAB LIFE",
+    date: "2024.05.29",
+    description: "CAU WINNING DAY!",
+    images: [
+      "/-----/images/public/images/2024.05.29.%20CAU%20WINNING%20DAY.PNG"
+    ]
+  },
 
 ];
