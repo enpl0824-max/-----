@@ -46,7 +46,13 @@ const totalPublications = years.reduce(
               {pubsByYear[year].map((pub, idx) => (
                 <article class="paper-item">
                   <div class="paper-index">
-                    <span>{String(idx + 1).padStart(2, '0')}</span>
+                    <span>
+    {totalPublications -
+      years
+        .filter((y) => y > year)
+        .reduce((sum, y) => sum + pubsByYear[y].length, 0) -
+      idx}
+  </span>
                   </div>
 
                   <div class="paper-details">
