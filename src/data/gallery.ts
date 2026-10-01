@@ -148,4 +148,38 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/250721_edited.jpg"
     ]
   },
+
+  {
+    id: "gal",
+    title: "Lab Dinner",
+    category: "LAB LIFE",
+    date: "2025.06.02",
+    description: "Lab dinner",
+    images: [
+      "/-----/images/2025.06.02. LAB dinner_edited.png"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Graduate Student's Festival",
+    category: "LAB LIFE",
+    date: "2025.05.27",
+    description: "Graduate student's festival_cheering for DOOSAN vs. KT",
+    images: [
+      "/-----/images/2025.05.27.%20Graduate%20Students'%20Festival.jpg"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Teacher's day poster",
+    category: "LAB LIFE",
+    date: "2025.05.15",
+    description: "Celebrating Teacher's day together with a poster",
+    images: [
+      "/-----/images/public/images/2025.05.15.%202025%20Teacher's%20day%20poster_edited_edited_edited.png"
+      "/-----/images/2025.05.15.%202025%20Teacher's%20day%20poster_edited.png"
+    ]
+  },
 ];
