@@ -528,7 +528,7 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
-  {
+ {
     id: "gal",
     title: "2022 ENPL Year-end party",
     category: "LAB LIFE",
@@ -536,6 +536,29 @@ export const galleryData: GalleryItem[] = [
     description: "2022 ENPL Year-end party. Thank you to our alumni for joining us!",
     images: [
       "/-----/images/2022.12.26.%202022%20ENPL%20Year-end%20party!_edited.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "MCARE 2022 Conference, Poster Award",
+    category: "AWARDS",
+    date: "2022.08.26",
+    description: "Kyeong-Rim Yeo received a poster award at MCARE 2022!",
+    images: [
+      "/-----/images/2022.08.26%202022%20MCARE%20Conference,%20Poster%20award%20(Kyeong-Rim%20Yeo)_edited_edited_edited.jpg"
+    ]
+  },
+
+ {
+    id: "gal",
+    title: "2022 ENPL Summer MT",
+    category: "LAB LIFE",
+    date: "2022.07.14-15",
+    description: "2022 ENPL Summer MT",
+    images: [
+      "/-----/images/2022.07.14-15.%202022%20ENPL%20Summer%20MT%20(4).jpg",
+      "/-----/images/2022.07.14-15.%202022%20ENPL%20Summer%20MT%20(3).jpg"
     ]
   },
 ];
