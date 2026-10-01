@@ -52,7 +52,7 @@ export const galleryData: GalleryItem[] = [
     images: [
       "/-----/images/260525%20ECS.jpg",
       "/-----/images/260525%20ECS%20태원.jpg",
-      "/-----/images/260525%20ECS%20태원포스터.jpg"
+      "/-----/images/260525%20ECS%20태원포스터.jpg",
       "/-----/images/260525%20ECS%20수연포스터.jpg"
     ]
   },
