@@ -796,4 +796,63 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2018.09.%20​Graduate%20School%20Dinner.jpg"
     ]
   },
+
+  {
+    id: "gal",
+    title: "2020 ENPL-NEED Union Summer MT",
+    category: "LAB LIFE",
+    date: "2018.08",
+    description: "2020 ENPL-NEED Union Summer MT",
+    images: [
+      "/-----/images/2018.08.%202018%20ENPL-NEED%20Union%20Summer%20MT.jpg",
+      "/-----/images/2018.08.%202018%20ENPL-NEED%20Union%20Summer%20MT%20(2)_edited.jpg",
+      "/-----/images/2018.08.%202018%20ENPL-NEED%20Union%20Summer%20MT%20(3).jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "ENPL-NEED Watching Baseball Game",
+    category: "LAB LIFE",
+    date: "2018.05",
+    description: "ENPL-NEED watching baseball game",
+    images: [
+      "/-----/images/2018.05.%20ENPL-NEED%20Watching%20baseball%20game.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "2018 Teacher's Day",
+    category: "LAB LIFE",
+    date: "2018.05",
+    description: "2018 Teacher's day",
+    images: [
+      "/-----/images/2018.05.%202018%20Teacher's%20day!.jpg",
+      "/-----/images/2018.05.%202018%20Teacher's%20day!%20(2).jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "ISE 2018",
+    category: "CONFERENCE",
+    date: "2018.04",
+    description: "Attending ISE 2018 in Japan: Hyanjoo (poster), Hoyoung (poster)",
+    images: [
+      "/-----/images/2018.04.%202018%20ISE%20Topical%20Conference%20In%20japan%20Hyanjoo%20Park%20(Posteer%20presentation).jpg",
+      "/-----/images/2018.04.%202018%20ISE%20Topical%20Conference%20In%20japan%20Hoyoung%20Kim%20(Poster%20presentation)_edited.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "Graduate School Dinner",
+    category: "LAB LIFE",
+    date: "2018.03",
+    description: "Graduate school Dinner",
+    images: [
+      "/-----/images/2018.03.%20​Graduate%20School%20Dinner.jpg"
+    ]
+  },
 ];
