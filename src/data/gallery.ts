@@ -1024,8 +1024,8 @@ export const galleryData: GalleryItem[] = [
     date: "2015.03",
     description: "Attending SUN-SNO-GUIDENANO Sustainable Nanotechnology Conference 2015 in Italy: Hoyoung (poster), Jihui (poster)",
     images: [
-      "/-----/images/2015.03.%202015%20Italy%20SUN-SNO-GUIDENANO%20Sustainable%20Nanotechnology%20Conference,%20Hoyoung%20Kim%20(Poster%20presentation)%20_edited.jpg",
-      "/----/images/2015.03.%202015%20Italy%20SUN-SNO-GUIDENANO%20Sustainable%20Nanotechnology%20Conference,%20Jihui%20Choi%20(Poster%20presentation).jpg"
+      "/-----/images/2015.03.Italy_HY.jpg",
+      "/-----/images/2015.03.Italy_JH.jpg"
     ]
   },
 
