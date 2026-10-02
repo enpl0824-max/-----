@@ -932,7 +932,7 @@ export const galleryData: GalleryItem[] = [
 
   {
     id: "gal",
-    title: "PriME 2016",
+    title: "PRiME 2016",
     category: "CONFERENCE",
     date: "2017.10.02-07",
     description: "Attending PRiME 2016",
