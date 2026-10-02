@@ -971,12 +971,49 @@ export const galleryData: GalleryItem[] = [
     id: "gal",
     title: "KIChE 2016",
     category: "CONFERENCE",
-    date: "2017.04",
+    date: "2016.04",
     description: "Attending KIChE 2016 in Busan",
     images: [
       "/-----/images/2016.04.%202016%20Spring%20KICHE,%20Busan_edited.jpg",
       "/-----/images/2016.04.%202016%20Spring%20KICHE,%20Busan%20(3)_edited.jpg",
       "/-----/images/2016.04.%202016%20Spring%20KICHE,%20Busan%20(4)_edited.jpg"
   ]
+  },
+
+  {
+    id: "gal",
+    title: "2015 ENPL Year-end Party",
+    category: "LAB LIFE",
+    date: "2015.12",
+    description: "2015 ENPL Year-end party in Hyehwa!",
+    images: [
+      "/-----/images/2015.12.%202015%20ENPL%20Year-end%20party!%20,%20Hyehwa_edited.jpg",
+      "/-----/images/2015.12.%202015%20ENPL%20Year-end%20party!%20,%20Hyehwa%20(3).jpg",
+      "/-----/images/2015.12.%202015%20ENPL%20Year-end%20party!%20,%20Hyehwa%20(2)_edited.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "ISE 2015",
+    category: "CONFERENCE",
+    date: "2015.10",
+    description: "Attending ISE 2015 in Taiwan: Jin Yeong (poster), Eunkyoung (poster)",
+    images: [
+      "/-----/images/2015.10.%202015%20ISE%20conference%20in%20taiwan,%20Eunkyoung%20Hwang%20(Poster%20presentation)_edited.jpg",
+      "/-----/images/2015.10.%202015%20ISE%20conference%20in%20taiwan,%20Jin%20Yeong%20Kim%20(Poster%20presentation)_edited.jpg",
+      "/-----/images/2015.10.%202015%20ISE%20conference%20in%20taiwan_edited.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "KIChE 2015",
+    category: "CONFERENCE",
+    date: "2015.04",
+    description: "Attending KIChE 2015 in Jeju",
+    images: [
+      "/-----/images/2015.04.%202015%20Spring%20KICHE,%20Jeju.jpg"
+    ]
   },
 ];
