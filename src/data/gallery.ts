@@ -749,7 +749,7 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
-   {
+  {
     id: "gal",
     title: "2018 ENPL Year-end Party",
     category: "LAB LIFE",
@@ -853,6 +853,57 @@ export const galleryData: GalleryItem[] = [
     description: "Graduate school Dinner",
     images: [
       "/-----/images/2018.03.%20​Graduate%20School%20Dinner.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "2017 ENPL Year-end Party",
+    category: "LAB LIFE",
+    date: "2017.12",
+    description: "2017 ENPL Year-end party",
+    images: [
+      "/-----/images/2017.12.%202017%20ENPL%20Year-end%20party!.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "2017 ENPL-NEED Union MT",
+    category: "LAB LIFE",
+    date: "2017.09",
+    description: "2017 ENPL-NEED Union MT",
+    images: [
+      "/-----/images/2017.09.%202017%20ENPL-NEED%20Union%20MT.jpg",
+      "/-----/images/2017.09.%202017%20ENPL-NEED%20Union%20MT%20(2).jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "ANM Conference 2017",
+    category: "CONFERENCE",
+    date: "2017.07",
+    description: "Attending ANM conference 2017 in Portugal",
+    images: [
+      "/-----/images/2017.07.%202017%20ANM%20conference%20in%20Portugal,%20Dong-Kwon%20Kim%20(Poster%20presentation)_edited.jpg",
+      "/-----/images/2017.07.%202017%20ANM%20conference%20in%20Portugal%20(2).jpg",
+      "/-----/images/2017.07.%202017%20ANM%20conference%20in%20Portugal%20(3).jpg",
+      "/-----/images/2017.07.%202017%20ANM%20conference%20in%20Portugal%20(4).jpg",
+      "/-----/images/2017.07.%202017%20ANM%20conference%20in%20Portugal%20(7).jpg",
+      "/-----/images/2017.07.%202017%20ANM%20conference%20in%20Portugal%20(8).jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "Lab Picnic",
+    category: "LAB LIFE",
+    date: "2017.03",
+    description: "Lab picnic in Everland",
+    images: [
+      "/-----/images/2017.03.%20LAB%20Picnic,%20Everland.jpg",
+      "/-----/images/2017.03.%20LAB%20Picnic,%20Everland%20(2)_edited.jpg"
     ]
   },
 ];
