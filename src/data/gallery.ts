@@ -749,4 +749,51 @@ export const galleryData: GalleryItem[] = [
     ]
   },
 
+   {
+    id: "gal",
+    title: "2018 ENPL Year-end Party",
+    category: "LAB LIFE",
+    date: "2018.12",
+    description: "2018 ENPL Year-end party",
+    images: [
+      "/-----/images/2018.12.%202018%20ENPL%20Year-end%20party!_edited.jpg"
+    ]
+  },
+
+    {
+    id: "gal",
+    title: "KES 2018",
+    category: "CONFERENCE",
+    date: "2018.11",
+    description: "Attending KES fall meeting 2018 in Yeosu: Hyanjoo (poster), Hoyoung (poster)",
+    images: [
+      "/-----/images/2018.11.%202018%20Fall%20Meeting%20of%20the%20Korean%20Electrochemical%20Society,%20Hyanjoo%20Park%20(Poster%20presentation)_edited.jpg",
+      "/-----/images/2018.11.%202018%20Fall%20Meeting%20of%20the%20Korean%20Electrochemical%20Society,%20Hoyoung%20Kim%20(Poster%20presentation).jpg",
+      "/-----/images/2018.11.%202018%20Fall%20Meeting%20of%20the%20Korean%20Electrochemical%20Society%20,%20Yeo%20su_edited.jpg"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "ENGE 2018",
+    category: "CONFERENCE",
+    date: "2018.11",
+    description: "Attending ENGE 2018 in Jeju: Dong-Kwon (poster)",
+    images: [
+      "/-----/images/2018.11.%202018%20ENGE%20In%20Jeju,%20Dong-Kwon%20Kim%20(Poster%20presentation).jpg",
+      "/-----/images/2018.11.%202018%20ENGE%20In%20Jeju%20(2).jpg",
+      "/-----/images/2018.11.%202018%20ENGE%20In%20Jeju.jpg",
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "Graduate School Dinner",
+    category: "LAB LIFE",
+    date: "2018.09",
+    description: "Graduate school Dinner",
+    images: [
+      "/-----/images/2018.09.%20​Graduate%20School%20Dinner.jpg"
+    ]
+  },
 ];
