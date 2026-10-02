@@ -940,6 +940,7 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2016.10.2-7.%202016%20Prime%20conference%20in%20Hawaii%20(2)_edited.png",
       "/-----/images/2016.10.2-7.%202016%20Prime%20conference%20in%20Hawaii,%202016%20ENGE%20conference%20in%20Jeju,Eunkyoung%20Hwang,%20Hyanjoo%20Park(Poster%20presentation)_edited.jpg",
       "/-----/images/2016.10.2-7. 2016 Prime conference in Hawaii_edited.jpg",
+  ]
   },
 
   {
@@ -976,5 +977,6 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2016.04.%202016%20Spring%20KICHE,%20Busan_edited.jpg",
       "/-----/images/2016.04.%202016%20Spring%20KICHE,%20Busan%20(3)_edited.jpg",
       "/-----/images/2016.04.%202016%20Spring%20KICHE,%20Busan%20(4)_edited.jpg"
+  ]
   },
 ];
