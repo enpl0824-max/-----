@@ -691,4 +691,62 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2020.1.31-2.1.%202020%20ENPL-NEED%20Union%20Winter%20MT_edited.jpg"
     ]
   },
+
+   {
+    id: "gal",
+    title: "ICAE 2019",
+    category: "CONFERENCE",
+    date: "2019.11",
+    description: "Attending ICAE 2019 conference in Jeju: Hyanjoo Park (poster, oral)",
+    images: [
+      "/-----/images/2019.11.%202019%20ICAE%20conference%20in%20Jeju,%20Hyanjoo%20Park(Poster%20presentation)_edited.jpg",
+      "/-----/images/2019.11.%202019%20ICAE%20conference%20in%20Jeju,%20Hyanjoo%20Park(Oral%20presentation).jpg",
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Hyanjoo Park's Wedding💍",
+    category: "LAB LIFE",
+    date: "2019.06",
+    description: "Congratulations to Hyanjoo on her wedding!",
+    images: [
+      "/-----/images/2019.06.%20Hyanjoo%20Park%20's%20wedding.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "Graduate School Dinner",
+    category: "LAB LIFE",
+    date: "2019.04",
+    description: "Graduate school Dinner",
+    images: [
+      "/-----/images/2019.04.%20​Graduate%20School%20Dinner.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "6th ICMHN Conference 2019",
+    category: "CONFERENCE",
+    date: "2019.11",
+    description: "Attending 6th ICMHN (International Conference on Multifunctional, Hybrid and Nanomaterials) in spain",
+    images: [
+      "/-----/images/2019.03.%202019%206th%20ICMHN%20conference%20in%20spain.jpg",
+      "/-----/images/2019.03.%202019%206th%20ICMHN%20conference%20in%20spain%20(2).jpg"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Dong-Kwon Kim's graduation",
+    category: "GRADUATION",
+    date: "2019.02",
+    description: "Congratulations to Dong-Kwon on his Master's graduation!",
+    images: [
+     "/-----/images/2019.02.%20Dong-Kwon%20Kim's%20graduation(Master%20course)_edited.jpg"
+    ]
+  },
+
 ];
