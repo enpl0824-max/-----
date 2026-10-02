@@ -654,4 +654,41 @@ export const galleryData: GalleryItem[] = [
      "/-----/images/2021.02.%20Kyeong-Rim%20Yeo's%20graduation(undergraduation)_edited.jpg",
     ]
   },
+  
+ {
+    id: "gal",
+    title: "HBD Prof. KIM!",
+    category: "LAB LIFE",
+    date: "2020.10.28",
+    description: "Happy birthday professor Soo-Kil Kim!",
+    images: [
+      "/-----/images/2020.10.28.%20Happy%20Birthday%20Prof.%20KIM!.jpg",
+      "/-----/images/2020.10.28.%20Happy%20Birthday%20Prof.%20KIM!%20(케이크).jpg",
+      "/-----/images/2020.10.28.%20Happy%20Birthday%20Prof.%20KIM!%20(미기재%20사진)%20(2).jpg",
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "Celebrating Our Graduates: M.S. & Ph.D.",
+    category: "GRADUATION",
+    date: "2020.02.",
+    description: "Congratulations to Seonhwa and Young Sang on their Master's graduation, and to Hoyoung and Hyanjoo on their Ph.D. graduation!",
+    images: [
+     "/-----/images/2020.02.grad1.jpg",
+     "/-----/images/2020.02.grad2.jpg",
+     "/-----/images/2020.02.grad3.jpg"
+    ]
+  },
+
+   {
+    id: "gal",
+    title: "2020 ENPL-NEED Union Winter MT",
+    category: "LAB LIFE",
+    date: "2020.01.31-02.01",
+    description: "2020 ENPL-NEED Union Winter MT",
+    images: [
+      "/-----/images/2020.1.31-2.1.%202020%20ENPL-NEED%20Union%20Winter%20MT_edited.jpg"
+    ]
+  },
 ];
