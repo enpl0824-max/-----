@@ -37,10 +37,18 @@ const isActive = (itemHref: string, children?: { href: string }[]) => {
 
 <header class="header">
   <div class="header-inner container">
-    <a href={withBase("/")} class="logo">
-      <span class="logo-title">E N P L</span>
-      <span class="logo-sub">CHUNG-ANG UNIVERSITY</span>
-    </a>
+   <div class="header-brand">
+  <img
+    src="/-----/images/CAU_symbol.png"
+    alt="Chung-Ang University"
+    class="header-cau-logo"
+  />
+
+  <a href={withBase("/")} class="logo">
+    <span class="logo-title">E N P L</span>
+    <span class="logo-sub">CHUNG-ANG UNIVERSITY</span>
+  </a>
+</div>
 
     <!-- Desktop Navigation -->
     <nav class="desktop-nav" aria-label="Main Navigation">
@@ -142,6 +150,19 @@ const isActive = (itemHref: string, children?: { href: string }[]) => {
     align-items: center;
     justify-content: space-between;
   }
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-cau-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+}
 
   .logo {
     display: flex;
