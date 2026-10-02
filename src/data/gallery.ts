@@ -906,4 +906,16 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2017.03.%20LAB%20Picnic,%20Everland%20(2)_edited.jpg"
     ]
   },
+
+  {
+    id: "gal",
+    title: "Hoyoung & Eunkyoung's graduation",
+    category: "GRADUATION",
+    date: "2017.02",
+    description: "Congratulations to Hoyoung and Eunkyoung on their Master's graduation!",
+    images: [
+     "/-----/images/2017.02.%20Hoyoung%20Kim%20&%20Eunkyoung%20Hwang'%20s%20graduation%20(Master%20course).jpg",
+     "/-----/images/2017.02.%20Hoyoung%20Kim%20&%20Eunkyoung%20Hwang'%20s%20graduation%20(Master%20course)%20(3)_edited.jpg"
+    ]
+  },
 ];
