@@ -5,62 +5,108 @@ const currentYear = new Date().getFullYear();
 
 <footer class="footer">
   <div class="container footer-inner">
+
     <div class="footer-top">
+
+      <!-- LEFT: LAB BRANDING -->
       <div class="footer-branding">
         <img
-          src="/-----/images/1.중앙대학교%20로고.png"
+          src="/-----/images/cau-logo.png"
           alt="Chung-Ang University"
           class="cau-logo"
         />
 
         <h2 class="footer-lab-name">{labInfo.labName}</h2>
         <p class="footer-sub">{labInfo.labFullName}</p>
-        <p class="footer-institution">{labInfo.department} · {labInfo.university}</p>
+        <p class="footer-institution">
+          {labInfo.department} · {labInfo.university}
+        </p>
       </div>
 
+
+      <!-- RIGHT: RESEARCH + CONTACT -->
+      <div class="footer-links">
+
+        <!-- RESEARCH FOCUS -->
         <div class="footer-nav-col">
           <span class="col-title">RESEARCH FOCUS</span>
+
           <ul class="col-list">
-            <li><a href="/research/#pemwe">PEM Water Electrolysis</a></li>
-            <li><a href="/research/#aemwe">AEM Water Electrolysis</a></li>
-            <li><a href="/research/#electrodeposition">Electrodeposition</a></li>
+            <li>
+              <a href="/research/#pemwe">
+                PEM Water Electrolysis
+              </a>
+            </li>
+
+            <li>
+              <a href="/research/#aemwe">
+                AEM Water Electrolysis
+              </a>
+            </li>
+
+            <li>
+              <a href="/research/#electrodeposition">
+                Electrodeposition
+              </a>
+            </li>
           </ul>
         </div>
 
-<div class="footer-links">
-  <div class="footer-nav-col">
-    <span class="col-title">RESEARCH FOCUS</span>
-    <ul class="col-list">
-      <li><a href="/research/#pemwe">PEM Water Electrolysis</a></li>
-      <li><a href="/research/#aemwe">AEM Water Electrolysis</a></li>
-      <li><a href="/research/#electrodeposition">Electrodeposition</a></li>
-    </ul>
-  </div> 
 
-<div class="footer-nav-col">
+        <!-- CONTACT -->
+        <div class="footer-nav-col">
           <span class="col-title">CONTACT</span>
+
           <div class="contact-brief">
-            <p><strong>Email:</strong> <a href={`mailto:${labInfo.email}`}>{labInfo.email}</a></p>
-            <p><strong>Tel:</strong> {labInfo.phone}</p>
-            <p><strong>Office:</strong> {labInfo.officeLocation}</p>
-            <p><strong>Lab:</strong> {labInfo.labLocation}</p>
+            <p>
+              <strong>Email:</strong>
+              <a href={`mailto:${labInfo.email}`}>
+                {labInfo.email}
+              </a>
+            </p>
+
+            <p>
+              <strong>Tel:</strong>
+              {labInfo.phone}
+            </p>
+
+            <p>
+              <strong>Office:</strong>
+              {labInfo.officeLocation}
+            </p>
+
+            <p>
+              <strong>Lab:</strong>
+              {labInfo.labLocation}
+            </p>
           </div>
         </div>
+
       </div>
     </div>
 
+
+    <!-- DIVIDER -->
     <div class="footer-divider"></div>
 
+
+    <!-- BOTTOM -->
     <div class="footer-bottom">
+
       <p class="address-text">
         {labInfo.address} ({labInfo.postalCode})
       </p>
+
       <p class="copyright">
-        &copy; {currentYear} {labInfo.labName}, Chung-Ang University. All rights reserved.
+        &copy; {currentYear} {labInfo.labName}, Chung-Ang University.
+        All rights reserved.
       </p>
+
     </div>
+
   </div>
 </footer>
+
 
 <style>
   .footer {
@@ -77,11 +123,26 @@ const currentYear = new Date().getFullYear();
     gap: 3rem;
   }
 
+  /* TOP SECTION */
   .footer-top {
     display: grid;
     grid-template-columns: 1.4fr 2fr;
     gap: 3rem;
     align-items: start;
+  }
+
+  /* LAB BRANDING */
+  .footer-branding {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cau-logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin-bottom: 1.25rem;
   }
 
   .footer-lab-name {
@@ -91,13 +152,6 @@ const currentYear = new Date().getFullYear();
     color: var(--color-text);
     margin-bottom: 0.35rem;
   }
-
-.cau-logo {
-  width: 150px;
-  height: auto;
-  display: block;
-  margin-bottom: 1.25rem;
-}
 
   .footer-sub {
     font-size: 0.9375rem;
@@ -111,7 +165,13 @@ const currentYear = new Date().getFullYear();
     color: var(--color-text-secondary);
   }
 
-  grid-template-columns: repeat(2, 1fr);
+
+  /* RESEARCH + CONTACT */
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 
   .col-title {
     font-size: 0.75rem;
@@ -138,6 +198,8 @@ const currentYear = new Date().getFullYear();
     color: var(--color-primary);
   }
 
+
+  /* CONTACT */
   .contact-brief {
     display: flex;
     flex-direction: column;
@@ -158,12 +220,16 @@ const currentYear = new Date().getFullYear();
     color: var(--color-primary);
   }
 
+
+  /* DIVIDER */
   .footer-divider {
     height: 1px;
     background-color: var(--color-gray);
     width: 100%;
   }
 
+
+  /* BOTTOM */
   .footer-bottom {
     display: flex;
     justify-content: space-between;
@@ -182,6 +248,8 @@ const currentYear = new Date().getFullYear();
     font-size: 0.8125rem;
   }
 
+
+  /* TABLET */
   @media (max-width: 900px) {
     .footer-top {
       grid-template-columns: 1fr;
@@ -194,6 +262,8 @@ const currentYear = new Date().getFullYear();
     }
   }
 
+
+  /* MOBILE */
   @media (max-width: 600px) {
     .footer-links {
       grid-template-columns: 1fr;
