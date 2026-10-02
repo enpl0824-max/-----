@@ -954,4 +954,27 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2016.07.%202016%20ENPL-NEML%20Union%20Summer%20MT%20(4)_edited.jpg"
     ]
   },
+
+  {
+    id: "gal",
+    title: "Lab Dinner",
+    category: "LAB LIFE",
+    date: "2016.05",
+    description: "Lab dinner in Itaewon",
+    images: [
+      "/-----/images/2016.05.%20LAB%20Dinner,%20Itaewon.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "KIChE 2016",
+    category: "CONFERENCE",
+    date: "2017.04",
+    description: "Attending KIChE 2016 in Busan",
+    images: [
+      "/-----/images/2016.04.%202016%20Spring%20KICHE,%20Busan_edited.jpg",
+      "/-----/images/2016.04.%202016%20Spring%20KICHE,%20Busan%20(3)_edited.jpg",
+      "/-----/images/2016.04.%202016%20Spring%20KICHE,%20Busan%20(4)_edited.jpg"
+  },
 ];
