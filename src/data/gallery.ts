@@ -918,4 +918,40 @@ export const galleryData: GalleryItem[] = [
      "/-----/images/2017.02.%20Hoyoung%20Kim%20&%20Eunkyoung%20Hwang'%20s%20graduation%20(Master%20course)%20(3)_edited.jpg"
     ]
   },
+
+  {
+    id: "gal",
+    title: "2016 ENPL Year-end Party",
+    category: "LAB LIFE",
+    date: "2016.12",
+    description: "2017 ENPL Year-end party",
+    images: [
+      "/-----/images/2016.12.%202016%20ENPL%20Year-end%20party!_edited_edited.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "PriME 2016",
+    category: "CONFERENCE",
+    date: "2017.10.02-07",
+    description: "Attending PRiME 2016",
+    images: [
+      "/-----/images/2016.10.2-7.%202016%20Prime%20conference%20in%20Hawaii%20(2)_edited.png",
+      "/-----/images/2016.10.2-7.%202016%20Prime%20conference%20in%20Hawaii,%202016%20ENGE%20conference%20in%20Jeju,Eunkyoung%20Hwang,%20Hyanjoo%20Park(Poster%20presentation)_edited.jpg",
+      "/-----/images/2016.10.2-7. 2016 Prime conference in Hawaii_edited.jpg",
+  },
+
+  {
+    id: "gal",
+    title: "2016 ENPL-NEML Union Summer MT",
+    category: "LAB LIFE",
+    date: "2016.07",
+    description: "2016 ENPL-NEML Union Summer MT",
+    images: [
+      "/-----/images/2016.07.%202016%20ENPL-NEML%20Union%20Summer%20MT%20(2).jpg",
+      "/-----/images/2016.07.%202016%20ENPL-NEML%20Union%20Summer%20MT%20(3)_edited.jpg",
+      "/-----/images/2016.07.%202016%20ENPL-NEML%20Union%20Summer%20MT%20(4)_edited.jpg"
+    ]
+  },
 ];
