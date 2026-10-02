@@ -97,10 +97,10 @@ export const galleryData: GalleryItem[] = [
 
 {
     id: "gal-7",
-    title: "ICAE 2025",
+    title: "8th ICAE 2025",
     category: "CONFERENCE",
     date: "2025.11.26-28",
-    description: "Attending the ICAE 2025 conference at jeju ICC",
+    description: "Attending the 8th ICAE 2025 in Jeju",
     images: [
       "/-----/images/20251126ICAE2025%20김태영포스터.jpg",
       "/-----/images/20251126ICAE2025%20박준영포스터.jpg",
@@ -425,10 +425,10 @@ export const galleryData: GalleryItem[] = [
 
   {
     id: "gal",
-    title: "2023 7th ICAE",
+    title: "7th ICAE 2023",
     category: "CONFERENCE",
     date: "2023.10.31-11.02",
-    description: "Attending 7th ICAE in Jeju: Kyeong-Rim (oral), Hongs-seong (poster)",
+    description: "Attending 7th ICAE 2023 in Jeju: Kyeong-Rim (oral), Hongs-seong (poster)",
     images: [
       "/-----/images/2023.10.31-11.2.%202023%207th%20ICAE%20conference%20in%20Jeju%20(2).jpg",
       "/-----/images/2023.10.31-11.2.%202023%207th%20ICAE%20conference%20in%20Jeju_edited_edited.jpg",
