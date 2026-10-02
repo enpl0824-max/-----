@@ -523,8 +523,9 @@ export const galleryData: GalleryItem[] = [
     date: "2023.02.15",
     description: "Congratulations to Kyung-Ji on his Master's graduation!",
     images: [
-     "/-----/images/2023.02.15.%20Choi%20Kyung-Ji's%20graduation(Master%20course)%20(2)_edited.png",
-     "/-----/images/2023.02.15.%20Choi%20Kyung-Ji's%20graduation(Master%20course)%20(3)_edited.jpg"
+     "/-----/images/2023.02.15.KJ_graduation1.png",
+     "/-----/images/2023.02.15.KJ_graduation2.jpg",
+     "/-----/images/2023.02.15.KJ_graduation3.jpg"
     ]
   },
 
