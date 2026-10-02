@@ -1043,10 +1043,10 @@ export const galleryData: GalleryItem[] = [
 
   {
     id: "gal",
-    title: "SUN-SNO-GUIDENANO Sustainable Nanotechnology Conference 2015",
+    title: "2014 FC Expo",
     category: "CONFERENCE",
-    date: "2015.03",
-    description: "Attending SUN-SNO-GUIDENANO Sustainable Nanotechnology Conference 2015 in Italy: Hoyoung (poster), Jihui (poster)",
+    date: "2014.02",
+    description: "Attending 2014 FC expo in Japan",
     images: [
       "/-----/images/2014.02.%202014%20FC%20Expo%20In%20Japan.jpg",
       "/-----/images/2014.02.%202014%20FC%20Expo%20In%20Japan%20(2).jpg"
