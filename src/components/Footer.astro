@@ -11,6 +11,7 @@ const currentYear = new Date().getFullYear();
           src="/-----/images/1.중앙대학교%20로고.png"
           alt="Chung-Ang University"
           class="cau-logo"
+        />
 
         <h2 class="footer-lab-name">{labInfo.labName}</h2>
         <p class="footer-sub">{labInfo.labFullName}</p>
@@ -26,7 +27,17 @@ const currentYear = new Date().getFullYear();
           </ul>
         </div>
 
-        <div class="footer-nav-col">
+<div class="footer-links">
+  <div class="footer-nav-col">
+    <span class="col-title">RESEARCH FOCUS</span>
+    <ul class="col-list">
+      <li><a href="/research/#pemwe">PEM Water Electrolysis</a></li>
+      <li><a href="/research/#aemwe">AEM Water Electrolysis</a></li>
+      <li><a href="/research/#electrodeposition">Electrodeposition</a></li>
+    </ul>
+  </div> 
+
+<div class="footer-nav-col">
           <span class="col-title">CONTACT</span>
           <div class="contact-brief">
             <p><strong>Email:</strong> <a href={`mailto:${labInfo.email}`}>{labInfo.email}</a></p>
