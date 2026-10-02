@@ -1016,4 +1016,40 @@ export const galleryData: GalleryItem[] = [
       "/-----/images/2015.04.%202015%20Spring%20KICHE,%20Jeju.jpg"
     ]
   },
+
+  {
+    id: "gal",
+    title: "SUN-SNO-GUIDENANO Sustainable Nanotechnology Conference 2015",
+    category: "CONFERENCE",
+    date: "2015.03",
+    description: "Attending SUN-SNO-GUIDENANO Sustainable Nanotechnology Conference 2015 in Italy: Hoyoung (poster), Jihui (poster)",
+    images: [
+      "/-----/images/2015.03.%202015%20Italy%20SUN-SNO-GUIDENANO%20Sustainable%20Nanotechnology%20Conference,%20Hoyoung%20Kim%20(Poster%20presentation)%20_edited.jpg",
+      "/----/images/2015.03.%202015%20Italy%20SUN-SNO-GUIDENANO%20Sustainable%20Nanotechnology%20Conference,%20Jihui%20Choi%20(Poster%20presentation).jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "Lab Picnic",
+    category: "LAB LIFE",
+    date: "2014.05",
+    description: "Lab picnic in Everland",
+    images: [
+      "/-----/images/2014.05.%20LAB%20Picnic,%20Everland.jpg",
+      "/-----/images/2014.05.%20LAB%20Picnic,%20Everland%20(2)_edited.jpg"
+    ]
+  },
+
+  {
+    id: "gal",
+    title: "SUN-SNO-GUIDENANO Sustainable Nanotechnology Conference 2015",
+    category: "CONFERENCE",
+    date: "2015.03",
+    description: "Attending SUN-SNO-GUIDENANO Sustainable Nanotechnology Conference 2015 in Italy: Hoyoung (poster), Jihui (poster)",
+    images: [
+      "/-----/images/2014.02.%202014%20FC%20Expo%20In%20Japan.jpg",
+      "/-----/images/2014.02.%202014%20FC%20Expo%20In%20Japan%20(2).jpg"
+    ]
+  }
 ];
