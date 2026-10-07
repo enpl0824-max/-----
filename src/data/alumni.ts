@@ -19,7 +19,7 @@ export const alumniData: Alumni[] = [
     id: "alumni-2",
     name: "Taeyoung Kim",
     degree: "M.S.",
-    currentAffiliation: "LG chem",
+    currentAffiliation: "Lotte chem",
     researchArea: "Alkaline Hydrogen Evolution Reaction"
   },
   {
@@ -89,7 +89,7 @@ export const alumniData: Alumni[] = [
     id: "alumni-12",
     name: "Young Sang Park",
     degree: "M.S.",
-    currentAffiliation: "KIST",
+    currentAffiliation: "Postdoc @KIST",
     researchArea: "CO2 Reduction"
   },
    {
