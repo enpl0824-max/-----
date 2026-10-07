@@ -716,20 +716,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-133",
-  number: 133,
-  year: 2018,
-  title: "ICAE 2017-Symposium 7: Advanced materials and devices for hydrogen fuel cell and electrolysis technologies",
-  authors: "Soo-Kil Kim, Haekyoung Kim, Jong Hyun Jang, Yong-Tae Kim, Sang-Kyung Kim",
-  journal: "International Journal of Hydrogen Energy",
-  volume: "43",
-  pages: "11314-11314",
-  impactFactor: null,
-  doi: "10.1016/j.ijhydene.2018.04.184",
-  link: "https://doi.org/10.1016/j.ijhydene.2018.04.184",
-  selected: true
-},
-{
   id: "pub-132",
   number: 132,
   year: 2018,
@@ -1094,20 +1080,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-106",
-  number: 106,
-  year: 2014,
-  title: "Preface to the special section ICAE 2013",
-  authors: "Soo-Kil Kim, Haekyoung Kim, Jong Hyun Jang, Yong-Tae Kim, Sung Jong Yoo, Oh Joong Kwon",
-  journal: "International Journal of Hydrogen Energy",
-  volume: "39",
-  pages: "16450",
-  impactFactor: null,
-  doi: "10.1016/j.ijhydene.2014.09.001",
-  link: "https://doi.org/10.1016/j.ijhydene.2014.09.001",
-  selected: true
-},
-{
   id: "pub-105",
   number: 105,
   year: 2014,
@@ -1133,20 +1105,6 @@ export const publicationsData: Publication[] = [
   impactFactor: null,
   doi: "10.1016/j.apsusc.2014.03.197",
   link: "https://doi.org/10.1016/j.apsusc.2014.03.197",
-  selected: true
-},
-{
-  id: "pub-103",
-  number: 103,
-  year: 2014,
-  title: "Selectivities of an all-wet-processed electrode film on ITO, ZnO, SiNx and doped Si for solar cell applications",
-  authors: "Areum Kim, Hee Soo Choi, Seon Jea Lee, Eunmi Choi, Yinhua Cui, Ukjae Lee, Soo-Kil Kim, Songhun Yoon, Hyung Bin Son, Sung Gyu Pyo, Sung Pil Yoon",
-  journal: "Journal of the Korean Physical Society",
-  volume: "65",
-  pages: "222-228",
-  impactFactor: null,
-  doi: "10.3938/jkps.65.222",
-  link: "https://doi.org/10.3938/jkps.65.222",
   selected: true
 },
 {
@@ -1416,20 +1374,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-82",
-  number: 82,
-  year: 2012,
-  title: "Role of electronic perturbation in stability and activity of Pt-based alloy nanocatalysts for oxygen reduction",
-  authors: "Seung Jun Hwang, Soo-Kil Kim, June-Gunn Lee, Seung-Cheol Lee, Jong Hyun Jang, Pil Kim, Tae-Hoon Lim, Yung-Eun Sung, Sung Jong Yoo",
-  journal: "Journal of the American Chemical Society",
-  volume: "134",
-  pages: "19508-19511",
-  impactFactor: null,
-  doi: "10.1021/ja307951y",
-  link: "https://doi.org/10.1021/ja307951y",
-  selected: true
-},
-{
   id: "pub-81",
   number: 81,
   year: 2012,
@@ -1469,20 +1413,6 @@ export const publicationsData: Publication[] = [
   impactFactor: null,
   doi: "10.1039/c2jm31439h",
   link: "https://doi.org/10.1039/c2jm31439h",
-  selected: true
-},
-{
-  id: "pub-78",
-  number: 78,
-  year: 2012,
-  title: "Electrochemically Fabricated Metal Catalysts for Glucose Oxidation in Bio Fuel Cell Application",
-  authors: "Ji-Eun Lim, Sung Gyu Pyo, Donghyun Lee, Hansoo Park, Soo-Kil Kim",
-  journal: "Electrochemical Society Meeting Abstracts",
-  volume: "222",
-  pages: "3769-3769",
-  impactFactor: null,
-  doi: "10.1149/MA2012-02/54/3769",
-  link: "https://doi.org/10.1149/MA2012-02/54/3769",
   selected: true
 },
 {
@@ -1542,20 +1472,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-73",
-  number: 73,
-  year: 2012,
-  title: "Development of a galvanostatic analysis technique as an in-situ diagnostic tool for PEMFC single cells and stacks",
-  authors: "Kug-Seung Lee, Byung-Seok Lee, Sung Jong Yoo, Soo-Kil Kim, Seung Jun Hwang, Hyung-Juhn Kim, EunAe Cho, Dirk Henkensmeier, Jeong Woo Yun, Suk Woo Nam, Tae-Hoon Lim, Jong Hyun Jang",
-  journal: "International Journal of Hydrogen Energy",
-  volume: "37",
-  pages: "5891-5900",
-  impactFactor: null,
-  doi: "10.1016/j.ijhydene.2011.12.152",
-  link: "https://doi.org/10.1016/j.ijhydene.2011.12.152",
-  selected: true
-},
-{
   id: "pub-72",
   number: 72,
   year: 2012,
@@ -1581,20 +1497,6 @@ export const publicationsData: Publication[] = [
   impactFactor: null,
   doi: "10.1149/MA2012-02/6/251",
   link: "https://doi.org/10.1149/MA2012-02/6/251",
-  selected: true
-},
-{
-  id: "pub-70",
-  number: 70,
-  year: 2012,
-  title: "Electrochemical Reduction of Carbon Dioxide Using a Proton Exchange Membrane",
-  authors: "Hak-Yoon Kim, Sang Hyun Ahn, Seung Jun Hwang, Sung Jong Yoo, Jonghee Han, Jihyun Kim, Soo-Kil Kim, Jong Hyun Jang",
-  journal: "Journal of the Korean Electrochemical Society",
-  volume: "15",
-  pages: "216-221",
-  impactFactor: null,
-  doi: "10.5229/jkes.2012.15.4.216",
-  link: "https://doi.org/10.5229/jkes.2012.15.4.216",
   selected: true
 },
 {
@@ -1836,20 +1738,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-52",
-  number: 52,
-  year: 2010,
-  title: "Facile synthesis of highly active and stable Pt–Ir/C electrocatalysts for oxygen reduction and liquid fuel oxidation reaction",
-  authors: "Seung Jun Hwang, Sung Jong Yoo, Tae-Yeol Jeon, Kug-Seung Lee, Tae-Hoon Lim, Yung-Eun Sung, Soo-Kil Kim",
-  journal: "Chemical Communications",
-  volume: "46",
-  pages: "8401-8403",
-  impactFactor: null,
-  doi: "10.1039/c0cc03125a",
-  link: "https://doi.org/10.1039/c0cc03125a",
-  selected: true
-},
-{
   id: "pub-51",
   number: 51,
   year: 2010,
@@ -1948,20 +1836,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-44",
-  number: 44,
-  year: 2009,
-  title: "Complex capacitance analysis of ionic resistance and interfacial capacitance in PEMFC and DMFC catalyst layers",
-  authors: "Jong Hyun Jang, Sunyeol Jeon, Jae Hyung Cho, Soo-Kil Kim, Sang-Yeop Lee, EunAe Cho, Hyung-Juhn Kim, Jonghee Han, Tae-Hoon Lim",
-  journal: "Journal of The Electrochemical Society",
-  volume: "156",
-  pages: "B1293-B1300",
-  impactFactor: null,
-  doi: "10.1149/1.3187928",
-  link: "https://doi.org/10.1149/1.3187928",
-  selected: true
-},
-{
   id: "pub-43",
   number: 43,
   year: 2009,
@@ -2015,48 +1889,6 @@ export const publicationsData: Publication[] = [
   impactFactor: null,
   doi: "10.1016/j.ijhydene.2008.10.092",
   link: "https://doi.org/10.1016/j.ijhydene.2008.10.092",
-  selected: true
-},
-{
-  id: "pub-39",
-  number: 39,
-  year: 2009,
-  title: "Thin film silver deposition by electroplating for ULSI interconnect applications",
-  authors: "Joon-Mo Seo, Sung Ki Cho, Hyo-Chol Koo, Soo-Kil Kim, Oh Joong Kwon, Jae Jeong Kim",
-  journal: "Korean Journal of Chemical Engineering",
-  volume: "26",
-  pages: "265-268",
-  impactFactor: null,
-  doi: "10.1007/s11814-009-0045-6",
-  link: "https://doi.org/10.1007/s11814-009-0045-6",
-  selected: true
-},
-{
-  id: "pub-38",
-  number: 38,
-  year: 2009,
-  title: "Position-dependent cathode degradation of large scale membrane electrode assembly for direct methanol fuel cell",
-  authors: "Soo-Kil Kim, Eun-Sook Lee, Yi-Young Kim, Jang-Mi Kim, Han-Ik Joh, Heung-Yong Ha",
-  journal: "Journal of the Korean Electrochemical Society",
-  volume: "12",
-  pages: "148-154",
-  impactFactor: null,
-  doi: "10.5229/jkes.2009.12.2.148",
-  link: "https://doi.org/10.5229/jkes.2009.12.2.148",
-  selected: true
-},
-{
-  id: "pub-37",
-  number: 37,
-  year: 2009,
-  title: "Tubular type direct methanol fuel cell for in situ NMR diagnosis",
-  authors: "Han-Ik Joh, Myung-Sup Um, Kee-Sung Han, Oc-Hee Han, Heung-Yong Ha, Soo-Kil Kim",
-  journal: "Journal of the Korean Electrochemical Society",
-  volume: "12",
-  pages: "329-334",
-  impactFactor: null,
-  doi: "10.5229/jkes.2009.12.4.329",
-  link: "https://doi.org/10.5229/jkes.2009.12.4.329",
   selected: true
 },
 {
@@ -2116,20 +1948,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-32",
-  number: 32,
-  year: 2008,
-  title: "Preparation of Pt-Ru-Co ternary catalyst on carbon paper for PEMFC with electrodeposition and galvanic displacement",
-  authors: "Sang Hyun Ahn, Soo-Kil Kim, Oh Joong Kwon, Sun-Mi Hwang, Jae Jeong Kim",
-  journal: "ECS Transactions",
-  volume: "16",
-  pages: "1111-1116",
-  impactFactor: null,
-  doi: "10.1149/1.2981952",
-  link: "https://doi.org/10.1149/1.2981952",
-  selected: true
-},
-{
   id: "pub-31",
   number: 31,
   year: 2008,
@@ -2172,20 +1990,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-28",
-  number: 28,
-  year: 2008,
-  title: "Synthesis and Characterization of Pt based Alloy Catalysts for Direct Ethanol Fuel Cell",
-  authors: "Yi-Young Kim, Soo-Kil Kim, Jong-Hee Han, Han-Sung Kim",
-  journal: "Journal of the Korean Electrochemical Society",
-  volume: "11",
-  pages: "109-114",
-  impactFactor: null,
-  doi: "10.5229/jkes.2008.11.2.109",
-  link: "https://doi.org/10.5229/jkes.2008.11.2.109",
-  selected: true
-},
-{
   id: "pub-27",
   number: 27,
   year: 2008,
@@ -2200,20 +2004,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-26",
-  number: 26,
-  year: 2007,
-  title: "Pt-metal Oxide Anode Electrocatalysts for Direct Methanol Fuel Cells",
-  authors: "M Aulice Scibioh, Soo-Kil Kim, Tae-Hoon Lim, Seong-Ahn Hong, Heung Young Ha",
-  journal: "ECS Transactions",
-  volume: "6",
-  pages: "93-110",
-  impactFactor: null,
-  doi: "10.1149/1.2811699",
-  link: "https://doi.org/10.1149/1.2811699",
-  selected: true
-},
-{
   id: "pub-25",
   number: 25,
   year: 2007,
@@ -2225,20 +2015,6 @@ export const publicationsData: Publication[] = [
   impactFactor: null,
   doi: "10.1016/j.electacta.2007.03.025",
   link: "https://doi.org/10.1016/j.electacta.2007.03.025",
-  selected: true
-},
-{
-  id: "pub-24",
-  number: 24,
-  year: 2007,
-  title: "Acceleration effect of CuCN in Ag electroplating for ultralarge-scale interconnects",
-  authors: "Sung Ki Cho, Jong Kyun Lee, Soo-Kil Kim, Jae Jeong Kim",
-  journal: "Electrochemical and Solid-State Letters",
-  volume: "10",
-  pages: "D116-D119",
-  impactFactor: null,
-  doi: "10.1149/1.2769103",
-  link: "https://doi.org/10.1149/1.2769103",
   selected: true
 },
 {
@@ -2267,34 +2043,6 @@ export const publicationsData: Publication[] = [
   impactFactor: null,
   doi: "10.1149/1.2749188",
   link: "https://doi.org/10.1149/1.2749188",
-  selected: true
-},
-{
-  id: "pub-21",
-  number: 21,
-  year: 2007,
-  title: "Control of overfill bumps in damascene Cu electrodeposition",
-  authors: "Thomas P. Moffat, Soo-Kil Kim, Daniel Josell",
-  journal: "ECS Transactions",
-  volume: "2",
-  pages: "93-106",
-  impactFactor: null,
-  doi: "10.1149/1.2408867",
-  link: "https://doi.org/10.1149/1.2408867",
-  selected: true
-},
-{
-  id: "pub-20",
-  number: 20,
-  year: 2007,
-  title: "Cu metallization for giga level devices using electrodeposition",
-  authors: "Soo-Kil Kim, Min-Cheol Kang, Hyo-Chol Koo, Sung-Ki Cho, Jae-Jeong Kim, Jong-Kee Yeo",
-  journal: "Journal of the Korean Electrochemical Society",
-  volume: "10",
-  pages: "94-103",
-  impactFactor: null,
-  doi: "10.5229/jkes.2007.10.2.094",
-  link: "https://doi.org/10.5229/jkes.2007.10.2.094",
   selected: true
 },
 {
@@ -2354,20 +2102,6 @@ export const publicationsData: Publication[] = [
   selected: true
 },
 {
-  id: "pub-15",
-  number: 15,
-  year: 2006,
-  title: "Electrochemical/Chemical Deposition and Etching-Electrodeposition of Cu in the PEI-PEG-CI-SPS Additive System-Reduction of Overfill Bump Formation During Superfilling",
-  authors: "Soo-Kil Kim, Daniel Josell, Thomas P. Moffat",
-  journal: "Journal of The Electrochemical Society",
-  volume: "153",
-  pages: "C616",
-  impactFactor: null,
-  doi: "10.1149/1.2216356",
-  link: "https://doi.org/10.1149/1.2216356",
-  selected: true
-},
-{
   id: "pub-14",
   number: 14,
   year: 2005,
@@ -2388,20 +2122,6 @@ export const publicationsData: Publication[] = [
   title: "Superconformal Cu electrodeposition using DPS: a substitutive accelerator for bis (3-sulfopropyl) disulfide",
   authors: "Sung Ki Cho, Soo-Kil Kim, Jae Jeong Kim",
   journal: "Journal of The Electrochemical Society",
-  volume: "152",
-  pages: "C330",
-  impactFactor: null,
-  doi: "10.1149/1.1891645",
-  link: "https://doi.org/10.1149/1.1891645",
-  selected: true
-},
-{
-  id: "pub-12",
-  number: 12,
-  year: 2005,
-  title: "Electrochemical/Chemical Deposition and Etching-Superconformal Cu Electrodeposition Using DPS-A Substitutive Accelerator for Bis (3-sulfopropyl) Disulfide",
-  authors: "Sung Ki Cho, Soo-Kil Kim, Jae Jeong Kim",
-  journal: "Journal of The Electrochmical Society",
   volume: "152",
   pages: "C330",
   impactFactor: null,
