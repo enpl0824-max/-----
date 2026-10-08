@@ -12,7 +12,28 @@ export interface Publication {
   link?: string;
   selected?: boolean;
 }
+// 굵게 표시할 연구실 구성원 이름 (authors 문자열에 적힌 표기 그대로)
+export const labMembers: string[] = [
+  "Hoyoung Kim",
+  "Soo-Kil Kim",
+  "Taeyoung Kim",
+  "Kyeong-Rim Yeo"
+  "Chan Hee Lee"
+  "Joon-Young Park"
 
+];
+
+const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+// authors 문자열을 [{ text, bold }] 조각으로 나눠 줌
+export function splitAuthors(authors: string): { text: string; bold: boolean }[] {
+  if (labMembers.length === 0) return [{ text: authors, bold: false }];
+  const pattern = new RegExp(`(${labMembers.map(escapeRegExp).join("|")})`, "g");
+  return authors
+    .split(pattern)
+    .filter((part) => part !== "")
+    .map((part) => ({ text: part, bold: labMembers.includes(part) }));
+}
 // Papers data sorted automatically by year descending in pages
 export const publicationsData: Publication[] = [
   {
