@@ -17,9 +17,9 @@ export const labMembers: string[] = [
   "Hoyoung Kim",
   "Soo-Kil Kim",
   "Taeyoung Kim",
-  "Kyeong-Rim Yeo"
-  "Chan Hee Lee"
-  "Joon-Young Park"
+  "Kyeong-Rim Yeo",
+  "Chan Hee Lee",
+  "Joon-Young Park",
 
 ];
 
