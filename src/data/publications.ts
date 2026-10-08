@@ -1808,7 +1808,7 @@ export const publicationsData: Publication[] = [
   pages: "1671-1681",
   impactFactor: null,
   doi: "10.1007/s10800-010-0163-1",
-  link: “https://doi.org/10.1007/s10800-010-0163-1",
+  link: "https://doi.org/10.1007/s10800-010-0163-1",
   selected: true
 },
 {
