@@ -845,7 +845,21 @@ export const publicationsData: Publication[] = [
   id: "pub-123",
   number: 123,
   year: 2016,
-  title: "Microstructural Evolution of Cu Thin Film on the Nano-Thin TaN x/Oxygen Stuffed TaN x Structure",
+  title: "Characterization and Integration Performance of Methyl Silsesquioxane-Based Nano Porous Low-k Dielectric Films",
+  authors: "Eunmi Choi, Minwoo Nam, Areum Kim, Keunwon Kang, Longshou Zheng, Soon Hyeong Kwon, Sung Pil Yoon, Sang June Hahn, Soo-Kil Kim*, Hyungbin Son, Sung Gyu Pyo*",
+  journal: "Journal of Nanoscience and Nanotechnology",
+  volume: "16",
+  pages: "11224-11228",
+  impactFactor: null,
+  doi: "10.1166/jnn.2016.13482",
+  link: "https://www.ingentaconnect.com/content/asp/jnn/2016/00000016/00000011/art00018",
+  selected: true
+},
+  {
+  id: "pub-123",
+  number: 123,
+  year: 2016,
+  title: "Microstructural Evolution of Cu Thin Film on the Nano-Thin TaNx/Oxygen Stuffed TaNx Structure",
   authors: "Minwoo Nam, Eunmi Choi, Areum Kim, Sang June Hahn, Keunwon Kang, Longshou Zheng, Soon Hyeong Kwon, Soo-Kil Kim, Sang June Hahn, Ju Young Yun, Sung Gyu Pyo",
   journal: "Journal of Nanoscience and Nanotechnology",
   volume: "16",
@@ -1287,6 +1301,20 @@ export const publicationsData: Publication[] = [
   impactFactor: null,
   doi: "10.1038/srep01309",
   link: "https://doi.org/10.1038/srep01309",
+  selected: true
+},
+  {
+  id: "pub-89",
+  number: 89,
+  year: 2013,
+  title: "Role of Electronic Perturbation in Stability and Activity of Pt-Based Alloy Nanocatalysts for Oxygen Reduction",
+  authors: "Seung Jun Hwang, Soo-Kil Kim*, June-Gunn Lee, Seung-Cheol Lee, Jong Hyun Jang, Pil Kim, Tae-Hoon Lim, Yung-Eun Sung, Sung Jong Yoo*",
+  journal: "Journal of American Chemical Society",
+  volume: "134",
+  pages: "19508-19511",
+  impactFactor: null,
+  doi: "10.1021/ja307951y",
+  link: "https://pubs.acs.org/jacsat/article/134/48/19508/1657604/Role-of-Electronic-Perturbation-in-Stability-and",
   selected: true
 },
 {
