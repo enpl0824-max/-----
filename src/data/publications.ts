@@ -20,7 +20,7 @@ export const publicationsData: Publication[] = [
   number: 184,
   year: 2026,
   title: "High Entropy Materials for Durable Oxygen Evolution in Acidic Water Electrolysis",
-  authors: "<b>Hoyoung Kim</b>, Soo‐Kil Kim*",
+  authors: "Hoyoung Kim, Soo‐Kil Kim",
   journal: "ChemCatChem",
   volume: "18",
   pages: "e70909",
