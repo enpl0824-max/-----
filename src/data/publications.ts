@@ -85,18 +85,18 @@ export const publicationsData: Publication[] = [
   link: "https://doi.org/10.1155/er/5468552",
   selected: true
 },
-{
-  id: "pub-179",
-  number: 179,
+  {
+  id: "pub-176",
+  number: 176,
   year: 2025,
-  title: "Advances in anode porous transport layer: structural design and coating strategy for efficient proton exchange membrane water electrolyzer",
-  authors: "Hoyoung Kim, Kyeong-Rim Yeo, Hee-Young Park, Jong Hyun Jang, Soo-Kil Kim",
-  journal: "Korean Journal of Chemical Engineering",
-  volume: "42",
-  pages: "3365-3378",
-  impactFactor: 3.0,
-  doi: "10.1007/s11814-025-00455-8",
-  link: "https://doi.org/10.1007/s11814-025-00455-8",
+  title: "Impact of phosphide–phosphate ratio on NiCoP catalysts for hydrogen evolution in anion exchange membrane water electrolysis",
+  authors: "Taeyoung Kim, Kyeong-Rim Yeo, Hoyoung Kim, Jinwoo Lee, Soo-Kil Kim",
+  journal: "International Journal of Energy Research",
+  volume: "2025",
+  pages: "6685212",
+  impactFactor: 4.672,
+  doi: "10.1155/er/6685212",
+  link: "https://doi.org/10.1155/er/6685212",
   selected: true
 },
 {
@@ -113,6 +113,34 @@ export const publicationsData: Publication[] = [
   link: "https://doi.org/10.1016/j.jechem.2025.05.012",
   selected: true
 },
+  {
+  id: "pub-175",
+  number: 175,
+  year: 2025,
+  title: "Highly Active and Durable NiMoMn Hydrogen Evolution Catalysts for Proton Exchange Membrane Water Electrolysis",
+  authors: "Chan Hee Lee, Kyeong-Rim Yeo, Soo-Kil Kim",
+  journal: "International Journal of Energy Research",
+  volume: "2025",
+  pages: "5812374",
+  impactFactor: 4.672,
+  doi: "10.1155/er/5812374",
+  link: "https://doi.org/10.1155/er/5812374",
+  selected: true
+},
+{
+  id: "pub-179",
+  number: 179,
+  year: 2025,
+  title: "Advances in anode porous transport layer: structural design and coating strategy for efficient proton exchange membrane water electrolyzer",
+  authors: "Hoyoung Kim, Kyeong-Rim Yeo, Hee-Young Park, Jong Hyun Jang, Soo-Kil Kim",
+  journal: "Korean Journal of Chemical Engineering",
+  volume: "42",
+  pages: "3365-3378",
+  impactFactor: 3.0,
+  doi: "10.1007/s11814-025-00455-8",
+  link: "https://doi.org/10.1007/s11814-025-00455-8",
+  selected: true
+},
 {
   id: "pub-177",
   number: 177,
@@ -125,34 +153,6 @@ export const publicationsData: Publication[] = [
   impactFactor: 6.3,
   doi: "10.1016/j.apsusc.2025.162842",
   link: "https://doi.org/10.1016/j.apsusc.2025.162842",
-  selected: true
-},
-{
-  id: "pub-176",
-  number: 176,
-  year: 2025,
-  title: "Impact of phosphide–phosphate ratio on NiCoP catalysts for hydrogen evolution in anion exchange membrane water electrolysis",
-  authors: "Taeyoung Kim, Kyeong-Rim Yeo, Hoyoung Kim, Jinwoo Lee, Soo-Kil Kim",
-  journal: "International Journal of Energy Research",
-  volume: "2025",
-  pages: "6685212",
-  impactFactor: 4.672,
-  doi: "10.1155/er/6685212",
-  link: "https://doi.org/10.1155/er/6685212",
-  selected: true
-},
-{
-  id: "pub-175",
-  number: 175,
-  year: 2025,
-  title: "Highly Active and Durable NiMoMn Hydrogen Evolution Catalysts for Proton Exchange Membrane Water Electrolysis",
-  authors: "Chan Hee Lee, Kyeong-Rim Yeo, Soo-Kil Kim",
-  journal: "International Journal of Energy Research",
-  volume: "2025",
-  pages: "5812374",
-  impactFactor: 4.672,
-  doi: "10.1155/er/5812374",
-  link: "https://doi.org/10.1155/er/5812374",
   selected: true
 },
 {
