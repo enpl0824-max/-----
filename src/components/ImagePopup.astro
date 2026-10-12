@@ -107,20 +107,16 @@ const imageAlt = "ENPL 학부연구생 모집";
   }
 </style>
 
+```html
 <script>
-  const popup = document.querySelector<HTMLElement>(
-    "#enpl-image-popup"
-  );
+  const popup = document.querySelector("#enpl-image-popup");
 
   if (popup) {
-    const closeButton = popup.querySelector<HTMLButtonElement>(
-      ".popup-close"
-    );
-
+    const closeButton = popup.querySelector(".popup-close");
     const storageKey = "enpl-notice-dismissed-at";
     const oneDay = 24 * 60 * 60 * 1000;
 
-    let dismissedAt: number | null = null;
+    let dismissedAt = null;
 
     try {
       const storedValue = localStorage.getItem(storageKey);
@@ -169,3 +165,5 @@ const imageAlt = "ENPL 학부연구생 모집";
     });
   }
 </script>
+```
+
