@@ -36,6 +36,20 @@ export function splitAuthors(authors: string): { text: string; bold: boolean }[]
 }
 // Papers data sorted automatically by year descending in pages
 export const publicationsData: Publication[] = [
+ {
+  id: "pub-184",
+  number: 1885
+  year: 2026,
+  title: "Facet-engineered Pt electrodes for scalable and stable ammonia electrolysis in multi-cell stack",
+  authors: "Minwoo Shin, Hyunki Kim, Andi Haryanto, Jihyun Choi, Junbeom Bang, Dong Young Hwang, Soo‐Kil Kim, Jong Hyun Jang, Hyun S.Park, Chan Woo Lee, Sang Hyun Ahn",
+  journal: "Applied Catalysis B: Environment and Energy",
+  volume: "404",
+  pages: "127669",
+  impactFactor: 4.1,
+  doi: "10.1016/j.apcatb.2026.127669",
+  link: "https://doi.org/10.1016/j.apcatb.2026.127669",
+  selected: true
+},
   {
   id: "pub-184",
   number: 184,
