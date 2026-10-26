@@ -72,7 +72,7 @@ const LAB_MEMBERS = [
                       )}
                     </h3>
 
-                    <p class="paper-authors">{pub.authors}</p>
+                 <p class="paper-authors" set:html={formatAuthors(pub.authors)} />
 
                     <p class="paper-journal-line">
                       <strong class="journal-name">{pub.journal}</strong>
@@ -251,6 +251,22 @@ const LAB_MEMBERS = [
   .doi-link {
     color: var(--color-primary);
     text-decoration: underline;
+  }
+.paper-authors :global(.lab-author) {
+    color: var(--color-text);
+    font-weight: 700;
+  }
+
+  .paper-authors :global(.corr-mark) {
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-left: 1px;
+  }
+
+  .author-legend {
+    font-size: 0.8125rem;
+    color: var(--color-text-secondary);
+    margin: -2.5rem 0 3rem;
   }
 
   @media (max-width: 640px) {
