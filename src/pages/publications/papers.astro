@@ -10,7 +10,19 @@ const totalPublications = years.reduce(
   (sum, year) => sum + pubsByYear[year].length,
   0
 );
----
+const LAB_MEMBERS = [
+  'Sookil Kim',
+  'Sookil  Kim',
+  'Hyeongseok Yang',
+  // 'Gildong Hong',
+];
+
+// 교신저자 (볼드 + * 표시)
+const CORRESPONDING = [
+  'Sookil Kim',
+  'Kim Sookil',
+  'S. Kim',
+];
 
 <BaseLayout 
   title="Papers | Sookil Kim Lab (ENPL)"
