@@ -38,7 +38,7 @@ export function splitAuthors(authors: string): { text: string; bold: boolean }[]
 export const publicationsData: Publication[] = [
  {
   id: "pub-184",
-  number: 1885
+  number: 185,
   year: 2026,
   title: "Facet-engineered Pt electrodes for scalable and stable ammonia electrolysis in multi-cell stack",
   authors: "Minwoo Shin, Hyunki Kim, Andi Haryanto, Jihyun Choi, Junbeom Bang, Dong Young Hwang, Soo‐Kil Kim, Jong Hyun Jang, Hyun S.Park, Chan Woo Lee, Sang Hyun Ahn",
