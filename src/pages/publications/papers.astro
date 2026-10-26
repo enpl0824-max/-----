@@ -17,7 +17,29 @@ const LAB_MEMBERS = [
   'Kyeong-Rim Yeo',
 ];
 
+const normalize = (s: string) =>
+  s.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+const labSet = new Set(LAB_MEMBERS.map(normalize));
+
+const escapeHtml = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+function formatAuthors(authors: string): string {
+  return authors
+    .split(/\s*,\s*|\s+and\s+/)
+    .map((raw) => raw.trim())
+    .filter(Boolean)
+    .map((name) => {
+      const safe = escapeHtml(name);
+      return labSet.has(normalize(name))
+        ? `<strong class="lab-author">${safe}</strong>`
+        : safe;
+    })
+    .join(', ');
+}
 ---
+
 <BaseLayout 
   title="Papers | Sookil Kim Lab (ENPL)"
   description="Peer-reviewed scientific journal publications by the Energy Nano-material Process Laboratory."
@@ -72,7 +94,7 @@ const LAB_MEMBERS = [
                       )}
                     </h3>
 
-                 <p class="paper-authors" set:html={formatAuthors(pub.authors)} />
+                    <p class="paper-authors" set:html={formatAuthors(pub.authors)} />
 
                     <p class="paper-journal-line">
                       <strong class="journal-name">{pub.journal}</strong>
@@ -257,11 +279,10 @@ const LAB_MEMBERS = [
     font-weight: 700;
   }
 
-  .paper-authors :global(.corr-mark) {
-    color: var(--color-primary);
-    font-weight: 800;
-    margin-left: 1px;
-  }
+.paper-authors :global(.lab-author) {
+  color: var(--color-text);
+  font-weight: 700;
+}
 
   .author-legend {
     font-size: 0.8125rem;
