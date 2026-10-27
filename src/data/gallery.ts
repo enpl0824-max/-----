@@ -8,19 +8,30 @@ export interface GalleryItem {
 }
 
 export const galleryData: GalleryItem[] = [
-  {
+ {
     id: "gal-1",
     title: "Dinner",
     category: "LAB LIFE",
-    date: "2026.08.14",
+    date: "2026.10.27",
     description: "Dinner w/ prof. Haesun Park's lab members",
     images: [
       "/-----/images/260814%20박해선교수님%20연구실%20저녁.jpg",
     ]
   },
-
+  
   {
     id: "gal-2",
+    title: "Dinner",
+    category: "LAB LIFE",
+    date: "2026.08.14",
+    description: "Lab dinner",
+    images: [
+      "/-----/images/261027%20lab%20dinner.jpg",
+    ]
+  },
+
+  {
+    id: "gal-3",
     title: "2026 ENPL Summer MT",
     category: "LAB LIFE",
     date: "2026.07.10-11",
