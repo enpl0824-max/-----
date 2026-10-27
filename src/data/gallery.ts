@@ -12,7 +12,7 @@ export const galleryData: GalleryItem[] = [
     id: "gal-1",
     title: "Dinner",
     category: "LAB LIFE",
-    date: "2026.10.27",
+    date: "2026.10.26",
     description: "Lab dinner",
     images: [
       "/-----/images/261027%20lab%20dinner.jpg",
