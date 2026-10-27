@@ -15,7 +15,7 @@ export const galleryData: GalleryItem[] = [
     date: "2026.10.27",
     description: "Lab dinner",
     images: [
-      "/-----/images/",261027%20lab%20dinner.jpg",
+      "/-----/images/261027%20lab%20dinner.jpg",
     ]
   },
   
