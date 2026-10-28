@@ -33,8 +33,12 @@ import { galleryData } from '../../data/gallery';
                 alt={item.title} 
                 class="gallery-main-image"
               />
+        
+                {item.images.length > 1 && (
+                  <span class="photo-count">+{item.images.length - 1}</span>
+                )}
 
-              <div class="gallery-overlay">
+                <div class="gallery-overlay">
                 <span class="view-btn">ENLARGE</span>
               </div>
             </div>
@@ -195,7 +199,19 @@ import { galleryData } from '../../data/gallery';
     letter-spacing: 0.1em;
     border-radius: 2px;
   }
-
+  .photo-count {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    pointer-events: none;
+  }
   /* INFO */
 
   .gallery-info {
