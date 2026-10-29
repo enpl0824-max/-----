@@ -17,7 +17,7 @@ export const studentsData: Student[] = [
     name: "[Charlie Moon]",
     degreeCategory: "phd",
     position: "Integrated Ph.D. course",
-    researchInterest: "TBD",
+    researchInterest: "Electrocatalyst for oxygen evolution reaction",
     email: "charliehmoon@cau.ac.kr",
     photo: "/-----/images/2.%20문창환%20박사%20프로필%20사진.jpg"
   },
@@ -26,7 +26,7 @@ export const studentsData: Student[] = [
     name: "[Suyeon Lee]",
     degreeCategory: "phd",
     position: "Ph.D. Candidate (2025.03~)",
-    researchInterest: "TBD",
+    researchInterest: "Electrocatalysts for hydrogen evolution",
     email: "sylee6276@cau.ac.kr",
     photo: "/-----/images/2.%20이수연%20박사%20프로필%20사진.jpg"
   },
@@ -35,7 +35,7 @@ export const studentsData: Student[] = [
     name: "[Tae-Won Kim]",
     degreeCategory: "ms",
     position: "M.S. Candidate (2025.03~)",
-    researchInterest: "TBD",
+    researchInterest: "Electrocatalysts for oxygen evolution",
     email: "taewonkim1017@naver.com",
     photo: "/-----/images/김태원.jpg"
   },
@@ -44,7 +44,7 @@ export const studentsData: Student[] = [
     name: "[Seon-Yeong Park]",
     degreeCategory: "ms",
     position: "M.S. Candidate (2025.09~)",
-    researchInterest: "TBD",
+    researchInterest: "Electrocatalysts for hydrogen evolution",
     email: "iris3481@naver.com",
     photo: "/-----/images/박선영.jpg"
   },
@@ -53,7 +53,7 @@ export const studentsData: Student[] = [
     name: "[Dan-Bi Kang]",
     degreeCategory: "ms",
     position: "M.S. Candidate (2026.03~)",
-    researchInterest: "TBD",
+    researchInterest: "Electrocatalysts for oxygen evolution",
     email: "eksql6545@naver.com",
     photo: "/-----/images/강단비.jpg"
   },
@@ -62,7 +62,7 @@ export const studentsData: Student[] = [
     name: "[Ga-Yeong Nam]",
     degreeCategory: "ms",
     position: "M.S. Candidate (2026.03~)",
-    researchInterest: "TBD",
+    researchInterest: "Electrocatalysts for oxygen evolution",
     email: "ngy6412@naver.com",
     photo: "/-----/images/2.%20남가영%20석사%20프로필%20사진.png"
   },
@@ -71,7 +71,7 @@ export const studentsData: Student[] = [
     name: "[Seong-Jae Bang]",
     degreeCategory: "ms",
     position: "M.S. Candidate (2026.03~)",
-    researchInterest: "TBD",
+    researchInterest: "Electrocatalysts for hydrogen evolution",
     email: "jcynns@naver.com",
     photo: "/-----/images/2.%20방성재%20석사%20프로필%20사진.jpg"
   },
