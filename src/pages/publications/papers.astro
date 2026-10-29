@@ -119,8 +119,8 @@ function formatAuthors(authors: string): string {
 
                     <p class="paper-journal-line">
                       <strong class="journal-name">{pub.journal}</strong>
-                      {pub.volume && <span class="journal-vol">, Vol. {pub.volume}</span>}
-                      {pub.pages && <span class="journal-pages">, pp. {pub.pages}</span>}
+                      {pub.volume && <span class="journal-vol">, {pub.volume}</span>}
+                      {pub.pages && <span class="journal-pages">, {pub.pages}</span>}
                       <span class="journal-year"> ({pub.year})</span>
                     </p>
 
