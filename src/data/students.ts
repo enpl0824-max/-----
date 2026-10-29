@@ -17,7 +17,7 @@ export const studentsData: Student[] = [
     name: "[Charlie Moon]",
     degreeCategory: "phd",
     position: "Integrated Ph.D. course",
-    researchInterest: "Electrocatalyst for oxygen evolution reaction",
+    researchInterest: "Electrocatalyst for oxygen evolution",
     email: "charliehmoon@cau.ac.kr",
     photo: "/-----/images/2.%20문창환%20박사%20프로필%20사진.jpg"
   },
