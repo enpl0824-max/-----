@@ -37,9 +37,10 @@ const LAB_MEMBERS = [
   'Ga-Yeong Nam',
   
 ];
-
 const normalize = (s: string) =>
   s.toLowerCase().replace(/[^a-z0-9]/g, '');
+
+const PROFESSOR = normalize('Soo-kil Kim');
 
 const labSet = new Set(LAB_MEMBERS.map(normalize));
 
@@ -53,7 +54,11 @@ function formatAuthors(authors: string): string {
     .filter(Boolean)
     .map((name) => {
       const safe = escapeHtml(name);
-      return labSet.has(normalize(name))
+      const key = normalize(name);
+      if (key === PROFESSOR) {
+        return `<strong class="lab-author prof-author">${safe}</strong>`;
+      }
+      return labSet.has(key)
         ? `<strong class="lab-author">${safe}</strong>`
         : safe;
     })
@@ -260,6 +265,11 @@ function formatAuthors(authors: string): string {
     color: var(--color-primary);
   }
 
+
+.paper-authors :global(.prof-author) {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
   .paper-authors {
     font-size: 0.9375rem;
     color: var(--color-text-secondary);
