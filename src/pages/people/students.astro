@@ -133,18 +133,20 @@ const categories = [
     transform: translateY(-2px);
   }
 
-  .member-photo-wrapper {
+   .member-photo-wrapper {
     width: 100%;
-    aspect-ratio: 1 / 1;    
+    aspect-ratio: 3 / 4;
     background-color: #FAFAFA;
+    overflow: hidden;
   }
 
-.member-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+  .member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+  }
 
   .member-info {
     padding: 1.75rem;
