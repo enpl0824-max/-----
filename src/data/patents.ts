@@ -12,6 +12,16 @@ export interface Patent {
 export const patentsData: Patent[] = [
   {
     id: "pat-1",
+    title: "수전해 촉매, 이의 제조방법 및 이를 포함하는 수전해 장치",
+    inventors: "여경림, 김호영, 김성빈, 이진우, 박해선, 김수길",
+    patentNumber: "KR 10-2024-0047182",
+    year: 2026,
+    country: "대한민국",
+    status: "출원",
+    link: ""
+  },
+  {
+    id: "pat-1",
     title: "수전해용 비백금계 삼원계 합금 촉매, 이의 제조방법, 이를 포함하는 수전해 전극 및 상기 수전해용 전극을 포함하는 수전해용 막전극 접합체",
     inventors: "이찬희, 여경림, 조성기, 장종현, 김수길",
     patentNumber: "KR 10-2025-0037156",
