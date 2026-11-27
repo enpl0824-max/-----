@@ -12,6 +12,17 @@ export const galleryData: GalleryItem[] = [
     id: "gal-1",
     title: "Dinner",
     category: "LAB LIFE",
+    date: "2026.11.25",
+    description: "Lab dinner after Taewon's Master's defense",
+    images: [
+      "/-----/images/261125Labdinner.jpg",
+    ]
+  },
+  
+  {
+    id: "gal-2",
+    title: "Dinner",
+    category: "LAB LIFE",
     date: "2026.10.26",
     description: "Lab dinner",
     images: [
@@ -20,7 +31,7 @@ export const galleryData: GalleryItem[] = [
   },
   
  {
-    id: "gal-2",
+    id: "gal-3",
     title: "Dinner",
     category: "LAB LIFE",
     date: "2026.08.14",
@@ -31,7 +42,7 @@ export const galleryData: GalleryItem[] = [
   },
 
   {
-    id: "gal-3",
+    id: "gal-4",
     title: "2026 ENPL Summer MT",
     category: "LAB LIFE",
     date: "2026.07.10-11",
